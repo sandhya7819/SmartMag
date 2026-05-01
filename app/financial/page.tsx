@@ -1,6 +1,7 @@
 import FinancialHeader from "@/components/FinancialHeader";
 import TechBlogFooter from "@/components/TechBlogFooter";
 import { Play, Search, Mail as MailIcon, ChevronRight, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 export default function FinancialPage() {
    return (
