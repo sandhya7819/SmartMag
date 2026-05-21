@@ -1,425 +1,375 @@
+"use client";
 import PoliticalHeader from "@/components/PoliticalHeader";
-import PoliticalFooter from "@/components/PoliticalFooter";
-import Link from "next/link";
-import { ChevronRight, Play, TrendingUp, Mail as MailIcon, Instagram, Twitter, Facebook } from "lucide-react";
+
+const B = "https://smartmag.theme-sphere.com/political/wp-content/uploads/sites/54/2024/06/";
+
+function SHead({ title, center }: { title: string; center?: boolean }) {
+  return (
+    <div className={`mb-5 ${center ? "text-center" : ""}`}>
+      <div className="border-b-2 border-gray-200">
+        <span className="inline-block font-extrabold text-[13px] uppercase tracking-wider text-gray-900 border-b-[3px] border-gray-900 pb-[10px] -mb-[2px]">
+          {title}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function Cat({ name, date, color = "#c0392b" }: { name?: string; date?: string; color?: string }) {
+  return (
+    <div className="flex items-center gap-2 mt-1 flex-wrap">
+      {name && <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color }}>{name}</span>}
+      {date && <span className="text-[10px] text-gray-400">{date}</span>}
+    </div>
+  );
+}
+
+const ARTICLES = {
+  hero1: { img: `${B}8ad0f0d0ec802e746210ad584fda95a7-768x576.jpeg`, t: "New Government, New Opportunity To End The Hostile Environment For Refugees", cat: "Politics", d: "Jun 30, 2024" },
+  hero2: { img: `${B}e2ef634e41f7cc8deb0ec0ec70651166-1024x576.jpeg`, t: "Mount Etna Erupts Dramatically, Sending ash 4.5 Kilometers High", cat: "Science & Tech", d: "Jun 30, 2024" },
+  hero3: { img: `${B}eebef64be67aa7c0e24060147fd919dd-200x300.jpeg`, t: "City Council Audit Trail is an Audit Fail After Disastrous Oracle ERP Rollout", cat: "Economy", d: "Jun 30, 2024" },
+  hero4: { img: `${B}Depositphotos_241506218_XL-1-450x300.jpg`, t: "Beijing ready to cooperate with Doha to enhance role of Shanghai Cooperation Organisation", cat: "Politics", d: "Jun 30, 2024" },
+  hero5: { img: `${B}a51e68eb08355feb0d951b9194080e62-450x278.jpeg`, t: "How the Middle East Became an Arena for Putin's Power Struggle with the US", cat: "Politics", d: "Jun 30, 2024" },
+};
 
 export default function PoliticalPage() {
   return (
-    <main className="min-h-screen bg-[#f4f4f4] text-[#111] font-pt-serif selection:bg-[#e01111] selection:text-white">
+    <main className="min-h-screen bg-white text-gray-900" style={{ fontFamily: "'Georgia', serif" }}>
       <PoliticalHeader />
 
-      {/* 1. Ticker Row */}
-      <div className="bg-white border-b border-gray-100 py-3 hidden lg:block">
-        <div className="container mx-auto max-w-[1200px] px-4 flex items-center gap-6 overflow-hidden">
-          <div className="flex items-center gap-2 shrink-0">
-            <span className="bg-[#e01111] text-white text-[10px] font-bold uppercase tracking-widest px-2 py-0.5">Ticker</span>
+      <div className="max-w-[1200px] mx-auto px-4 pt-7 pb-12">
+
+        {/* ── HERO GRID: 1 big left + 4 right ── */}
+        <div className="grid grid-cols-12 gap-4 mb-8">
+
+          {/* Big feature – 7 cols */}
+          <article className="col-span-7 relative group cursor-pointer overflow-hidden">
+            <img src={ARTICLES.hero1.img}
+              className="w-full h-[490px] object-cover group-hover:scale-105 transition-transform duration-500" alt="" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-red-600 text-white px-2 py-0.5 mb-2">Politics</span>
+              <h1 className="text-white font-bold text-[24px] leading-tight mb-2">
+                {ARTICLES.hero1.t}
+              </h1>
+              <div className="flex items-center gap-3 text-gray-300 text-[11px]">
+                <span>Jun 30, 2024</span><span>·</span><span>5 Mins Read</span>
+              </div>
+            </div>
+          </article>
+
+          {/* Right 2x2 grid – 5 cols */}
+          <div className="col-span-5 grid grid-rows-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
+              {[ARTICLES.hero2, ARTICLES.hero3].map((a, i) => (
+                <article key={i} className="relative group cursor-pointer overflow-hidden">
+                  <img src={a.img} className="w-full h-[235px] object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <span className="inline-block text-[9px] font-bold uppercase tracking-wider text-yellow-400 mb-1">{a.cat}</span>
+                    <h2 className="text-white font-bold text-[13px] leading-snug line-clamp-3">{a.t}</h2>
+                    <p className="text-gray-300 text-[10px] mt-1">{a.d}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[ARTICLES.hero4, ARTICLES.hero5].map((a, i) => (
+                <article key={i} className="relative group cursor-pointer overflow-hidden">
+                  <img src={a.img} className="w-full h-[235px] object-cover group-hover:scale-105 transition-transform duration-500" alt="" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <span className="inline-block text-[9px] font-bold uppercase tracking-wider text-blue-400 mb-1">{a.cat}</span>
+                    <h2 className="text-white font-bold text-[13px] leading-snug line-clamp-3">{a.t}</h2>
+                    <p className="text-gray-300 text-[10px] mt-1">{a.d}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-          <div className="flex gap-12 whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
+        </div>
+
+        {/* ── POLITICS + SIDEBAR ── */}
+        <div className="grid grid-cols-3 gap-7 mb-8">
+          <div className="col-span-2">
+            <SHead title="Politics" />
+            {/* Featured article */}
+            <article className="mb-5 cursor-pointer group">
+              <div className="overflow-hidden mb-3">
+                <img src={`${B}Depositphotos_241506218_XL-1-450x300.jpg`}
+                  className="w-full h-[280px] object-cover group-hover:opacity-90 transition-opacity" alt="" />
+              </div>
+              <h2 className="font-bold text-[21px] leading-snug mb-1">
+                Beijing ready to cooperate with Doha to enhance role of Shanghai Cooperation Organisation: Envoy
+              </h2>
+              <Cat date="Jun 30, 2024" />
+              <p className="text-[13px] text-gray-500 mt-2 leading-relaxed line-clamp-3">
+                To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation. In the high-profile case of US politics…
+              </p>
+            </article>
+            {/* 2-col sub grid */}
+            <div className="grid grid-cols-2 gap-5 border-t border-gray-100 pt-4">
+              {[
+                { img: `${B}a51e68eb08355feb0d951b9194080e62-450x278.jpeg`, t: "How the Middle East Became an Arena for Putin's Power Struggle with the US", d: "Jun 30, 2024" },
+                { img: `${B}1caf0937d7c1a250f47d864b049f9b79-450x253.jpeg`, t: "Morocco Allows Israeli Warship to Dock After Spain Refused", d: "Jun 30, 2024" },
+                { img: `${B}e2ef634e41f7cc8deb0ec0ec70651166-1024x576.jpeg`, t: "Mount Etna Erupts Dramatically, Sending ash 4.5 Kilometers High", d: "Jun 30, 2024" },
+                { img: `${B}1f62f16c278c045d5f00c5e2f528b39f-450x675.jpeg`, t: "New Government, New Opportunity To End The Hostile Environment For Refugees", d: "Jun 30, 2024" },
+              ].map((a, i) => (
+                <article key={i} className="flex gap-3 py-3 border-b border-gray-100 last:border-0 cursor-pointer group">
+                  <img src={a.img} className="w-[100px] h-[70px] object-cover flex-shrink-0 group-hover:opacity-90" alt="" />
+                  <div>
+                    <h4 className="font-bold text-[13px] leading-snug line-clamp-3 group-hover:text-gray-600">{a.t}</h4>
+                    <Cat date={a.d} />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT SIDEBAR */}
+          <div className="col-span-1 border-l border-gray-100 pl-7">
+            <SHead title="What's Hot" />
             {[
-              "Senate Passes Historic Infrastructure Bill Amidst Debates",
-              "Economic Policy Shifts Impact Global Trade Markets",
-              "New Measures Introduced to Combat Climate Change",
-              "Global Leaders Meet to Discuss the Future of Renewable Energy",
-              "Mars Rover Discovers Signs of Ancient Rivers",
-              "Tech Giants Announce Unified Privacy Standards"
-            ].map((text, i) => (
-              <div key={i} className="flex items-center gap-3 cursor-pointer group">
-                <span className="w-1.5 h-1.5 bg-[#e01111] rotate-45"></span>
-                <span className="text-[13px] font-bold hover:text-[#e01111] transition-colors">{text}</span>
+              { img: `${B}1f62f16c278c045d5f00c5e2f528b39f-150x225.jpeg`, t: "New Government, New Opportunity To End The Hostile Environment For Refugees", d: "Jun 30, 2024" },
+              { img: `${B}e2ef634e41f7cc8deb0ec0ec70651166-300x169.jpeg`, t: "Mount Etna Erupts Dramatically, Sending ash 4.5 Kilometers High", d: "Jun 30, 2024" },
+              { img: `${B}eebef64be67aa7c0e24060147fd919dd-150x225.jpeg`, t: "City Council Audit Trail is an Audit Fail After Disastrous Oracle ERP Rollout", d: "Jun 30, 2024" },
+            ].map((a, i) => (
+              <article key={i} className="flex gap-3 py-3 border-b border-gray-100 last:border-0 cursor-pointer">
+                <img src={a.img} className="w-[72px] h-[72px] object-cover flex-shrink-0" alt="" />
+                <div>
+                  <h4 className="font-bold text-[12px] leading-snug hover:text-gray-600 line-clamp-3">{a.t}</h4>
+                  <p className="text-[10px] text-gray-400 mt-0.5">{a.d}</p>
+                </div>
+              </article>
+            ))}
+
+            {/* Ad */}
+            <div className="bg-gray-100 h-[250px] flex items-center justify-center my-5 text-gray-400 text-[11px] uppercase tracking-wider">Advertisement</div>
+
+            {/* Trending text list */}
+            <SHead title="Trending" />
+            {[
+              "Singapore Economy Expands Slower Than Expected in First Quarter",
+              "Kevin Durant Pulled from Game Due to Health & Safety Protocols",
+              "British Soccer Clubs Barred From Traveling to Germany, TCL is Disrupted",
+              "Trump Outraised by Nikki Haley PAC By $5M Thanks to Wall Street Donors",
+            ].map((t, i) => (
+              <div key={i} className="flex gap-3 py-2.5 border-b border-gray-100 last:border-0 cursor-pointer">
+                <span className="text-[26px] font-black text-gray-100 leading-none flex-shrink-0 w-7">{i + 1}</span>
+                <p className="text-[12px] font-semibold leading-snug hover:text-gray-600">{t}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
 
-      <div className="container mx-auto max-w-[1200px] px-4 py-8">
-        {/* 2. 5-Column Hero Grid */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
-          
-          {/* Left Column: Popular (2 cols) */}
-          <div className="lg:col-span-2 hidden lg:block space-y-6">
-            <h4 className="text-[12px] font-bold uppercase tracking-widest border-b border-gray-200 pb-2 mb-4">Popular</h4>
+        {/* ── ECONOMY: 4-col overlay grid ── */}
+        <section className="mb-8 border-t-2 border-gray-100 pt-6">
+          <SHead title="Economy" />
+          <div className="grid grid-cols-4 gap-4">
             {[
-              { title: "The Strategy Behind Recent Policy Changes", time: "2 Hours Ago" },
-              { title: "Global Markets React to Inflation Data", time: "4 Hours Ago" },
-              { title: "New Environmental Regulation Face Backlash", time: "6 Hours Ago" },
-              { title: "Tech Stocks Rally After Strong Earnings", time: "8 Hours Ago" }
-            ].map((post, i) => (
-              <div key={i} className="group cursor-pointer border-b border-gray-100 pb-4 last:border-0">
-                <h5 className="text-[14px] font-bold leading-tight group-hover:text-[#e01111] transition-colors mb-2">{post.title}</h5>
-                <span className="text-[10px] text-gray-400 font-sans uppercase font-bold">{post.time}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Center Column: Big Feature (6 cols) */}
-          <div className="lg:col-span-6 space-y-4">
-            <div className="group cursor-pointer relative overflow-hidden bg-gray-900 aspect-[16/10]">
-              <img 
-                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" 
-                alt="Hero Main" 
-                className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="bg-[#e01111] text-white text-[10px] font-sans font-bold uppercase tracking-wider px-2 py-1 inline-block mb-3">
-                  World Politics
+              { img: `${B}Depositphotos_241506218_XL-1-450x300.jpg`, t: "Beijing ready to cooperate with Doha to enhance role of Shanghai Cooperation Organisation" },
+              { img: `${B}a51e68eb08355feb0d951b9194080e62-450x278.jpeg`, t: "How the Middle East Became an Arena for Putin's Power Struggle with the US" },
+              { img: `${B}1caf0937d7c1a250f47d864b049f9b79-450x253.jpeg`, t: "Morocco Allows Israeli Warship to Dock After Spain Refused" },
+              { img: `${B}e2ef634e41f7cc8deb0ec0ec70651166-1024x576.jpeg`, t: "Mount Etna Erupts Dramatically, Sending Ash 4.5 Kilometers High" },
+            ].map((a, i) => (
+              <article key={i} className="relative overflow-hidden group cursor-pointer">
+                <img src={a.img} className="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-300" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <h2 className="text-white font-bold text-[12px] leading-snug line-clamp-3">{a.t}</h2>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4 group-hover:text-[#e01111] transition-colors">
-                  Global Leaders Address the UN General Assembly on Climate Action
-                </h2>
-                <div className="flex items-center gap-3 text-[11px] font-sans text-gray-300 font-bold uppercase tracking-wider">
-                  <span>Oct 15, 2023</span>
-                  <span className="w-1 h-1 bg-[#e01111] rounded-full"></span>
-                  <span>By James Smith</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Stacked Grid (2 cols) */}
-          <div className="lg:col-span-2 space-y-6">
-            {[
-              { title: "New Economic Tariffs Placed on Goods", cat: "Economy", img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=600&auto=format&fit=crop" },
-              { title: "Midterm Polling Shows Key Shifts", cat: "Elections", img: "https://images.unsplash.com/photo-1575318634080-60b5e28ec7d3?q=80&w=600&auto=format&fit=crop" }
-            ].map((post, i) => (
-              <div key={i} className="group cursor-pointer relative overflow-hidden bg-gray-900 aspect-[4/3] lg:aspect-square">
-                <img 
-                  src={post.img} 
-                  alt={post.title} 
-                  className="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <div className="bg-[#e01111] text-white text-[9px] font-sans font-bold uppercase tracking-wider px-1.5 py-0.5 inline-block mb-2">
-                    {post.cat}
-                  </div>
-                  <h3 className="text-[15px] font-bold text-white leading-tight group-hover:text-[#e01111] transition-colors">
-                    {post.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Far Right Column: Editor's Picks (2 cols) */}
-          <div className="lg:col-span-2 hidden lg:block space-y-6 border-l border-gray-200 pl-6">
-            <h4 className="text-[12px] font-bold uppercase tracking-widest border-b border-gray-200 pb-2 mb-4">Editor's Picks</h4>
-            {[
-              { title: "The Impact of Artificial Intelligence", cat: "Tech" },
-              { title: "Health Reform Stalls in Committee", cat: "Politics" },
-              { title: "The Future of Sustainable Cities", cat: "Global" },
-              { title: "New Space Exploration Records", cat: "Science" }
-            ].map((post, i) => (
-              <div key={i} className="group cursor-pointer border-b border-gray-100 pb-4 last:border-0">
-                <div className="text-[9px] text-[#e01111] font-sans font-bold uppercase mb-1">{post.cat}</div>
-                <h5 className="text-[13px] font-bold leading-tight group-hover:text-[#e01111] transition-colors">{post.title}</h5>
-              </div>
+              </article>
             ))}
           </div>
         </section>
 
-        <div className="flex flex-col lg:flex-row gap-10">
-          {/* Main Area */}
-          <div className="lg:w-2/3 space-y-16">
-            
-            {/* 3. The News Roundup */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-gray-200 pb-2">
-                <h3 className="text-xl font-black uppercase tracking-tight">The News Roundup</h3>
-                <div className="flex-1 h-[1px] bg-gray-100"></div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Roundup Left */}
-                <div className="space-y-4 group cursor-pointer">
-                  <div className="aspect-[3/2] overflow-hidden bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <h4 className="text-[18px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">Supreme Court Ruling Alter Landscape of Voting Rights</h4>
-                  <p className="text-gray-500 text-[14px] leading-relaxed">The recent ruling by the Supreme Court has sparked intense debate over the future of voting protections in the country.</p>
-                </div>
-                {/* Roundup Center */}
-                <div className="space-y-6">
-                  {[
-                    "Foreign Policy Decisions Heavily Criticized by Opposition",
-                    "Tech CEOs Summoned for Congressional Hearing on Privacy",
-                    "Public Opinion Polls Reflect Changing Demographics",
-                    "Economic Forecasts Predict Steady Growth in 2024"
-                  ].map((title, i) => (
-                    <div key={i} className="group cursor-pointer border-b border-gray-100 pb-4 last:border-0">
-                      <h5 className="text-[14px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">{title}</h5>
-                    </div>
-                  ))}
-                </div>
-                {/* Roundup Right */}
-                <div className="space-y-4 group cursor-pointer">
-                  <div className="aspect-[3/2] overflow-hidden bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <h4 className="text-[18px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">Defense Budget Allocation Faces New Scrutiny</h4>
-                  <div className="flex items-center gap-2 text-[10px] text-gray-400 font-sans uppercase font-bold">
-                    <span>Oct 12, 2023</span>
-                    <span>•</span>
-                    <span>No Comments</span>
-                  </div>
-                </div>
-              </div>
-            </section>
+        {/* ── WORLD POLITICS: 3 EQUAL COLS ── */}
+        <section className="mb-8 border-t-2 border-gray-100 pt-6">
+          <SHead title="World Politics" />
+          <div className="grid grid-cols-3 gap-7">
 
-            {/* 4. Business & Economy (Dark Layout) */}
-            <section className="bg-[#111] text-white p-10 -mx-4 lg:-mx-10">
-              <div className="flex items-center justify-between mb-10 border-b border-white/10 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-tight">Business & Economy</h3>
-                <Link href="#" className="text-[11px] font-sans font-bold uppercase hover:text-[#e01111] transition-colors">View All</Link>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                {[
-                  { title: "Wall Street Reacts to Rate Hike", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=400&auto=format&fit=crop" },
-                  { title: "New Crypto Regulation Debated", img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=400&auto=format&fit=crop" },
-                  { title: "Global Supply Chain Disruptions", img: "https://images.unsplash.com/photo-1586528116311-ad86d7c7170a?q=80&w=400&auto=format&fit=crop" },
-                  { title: "The Rise of Digital Currencies", img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=400&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="group cursor-pointer space-y-3">
-                    <div className="aspect-square overflow-hidden bg-gray-800 relative">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
-                    </div>
-                    <h4 className="text-[14px] font-bold group-hover:text-[#e01111] transition-colors leading-tight text-center">{post.title}</h4>
-                  </div>
-                ))}
-              </div>
-            </section>
+            {/* Col 1: Big featured + 1 small text */}
+            <div>
+              <article className="mb-4 cursor-pointer group">
+                <div className="overflow-hidden mb-2">
+                  <img src={`${B}a4bc720a75f03680c1f888b23d010241-768x512.jpeg`}
+                    className="w-full h-[210px] object-cover group-hover:opacity-90" alt="" />
+                </div>
+                <span className="text-[10px] font-bold text-blue-600 uppercase">Europe</span>
+                <h2 className="font-bold text-[16px] leading-snug mt-0.5 group-hover:text-gray-600">
+                  The Far-Right is Set to Make Huge Gains in EU Elections. It Could Define the Next Five Years of European Politics
+                </h2>
+                <Cat date="Mar 11, 2022" />
+                <p className="text-[12px] text-gray-500 mt-1.5 line-clamp-3">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation.</p>
+              </article>
+              <article className="flex gap-3 cursor-pointer py-3 border-t border-gray-100">
+                <img src={`${B}33b9e77a3513f9a76b559386ed356758-200x300.jpeg`} className="w-[68px] h-[68px] object-cover flex-shrink-0" alt="" />
+                <div>
+                  <h4 className="font-bold text-[12px] leading-snug hover:text-gray-600">Kenya's Mission to Haiti Faces Scrutiny After Deadly Protests</h4>
+                  <p className="text-[10px] text-gray-400 mt-0.5">Mar 11, 2022</p>
+                </div>
+              </article>
+            </div>
 
-            {/* 5. World Politics (3-column) */}
-            <section className="space-y-8 pt-8">
-              <div className="flex items-center gap-4 border-b border-gray-200 pb-2">
-                <h3 className="text-xl font-black uppercase tracking-tight">World Politics</h3>
-              </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* World Left - Large */}
-                <div className="space-y-4 group cursor-pointer lg:col-span-1">
-                  <div className="aspect-[4/5] overflow-hidden bg-gray-100 relative">
-                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6">
-                      <h4 className="text-[20px] font-bold text-white group-hover:text-[#e01111] transition-colors leading-tight">Diplomatic Strains Emerge Between Nations</h4>
-                    </div>
+            {/* Col 2: 3 medium posts */}
+            <div className="border-x border-gray-100 px-7 space-y-0">
+              {[
+                { img: `${B}e8d2562f3cd5f3d894d338921d0d4af8-450x300.jpeg`, t: "Biden v Trump: What are they thinking in Moscow & Beijing?", cat: "World", d: "Mar 11, 2022" },
+                { img: `${B}a706a43bf3bf9d4560f229ff846dc83b-450x300.jpeg`, t: "Here's Who's Leading Trump Vs. Biden Election Polls", cat: "US Politics", d: "Mar 11, 2022" },
+                { img: `${B}43d7b5e506539c3792a64cc8858f39f9-450x338.jpeg`, t: "Russian-Made Car Putin Gifted to Kim Uses South Korean Parts", cat: "Russia", d: "Mar 11, 2022" },
+              ].map((a, i) => (
+                <article key={i} className="flex gap-3 py-3 border-b border-gray-100 last:border-0 cursor-pointer group">
+                  <img src={a.img} className="w-[90px] h-[65px] object-cover flex-shrink-0 group-hover:opacity-90" alt="" />
+                  <div>
+                    <span className="text-[10px] font-bold text-red-600 uppercase">{a.cat}</span>
+                    <h4 className="font-bold text-[13px] leading-snug group-hover:text-gray-600 line-clamp-2 mt-0.5">{a.t}</h4>
+                    <p className="text-[10px] text-gray-400 mt-0.5">{a.d}</p>
                   </div>
-                </div>
-                {/* World Center - Stack */}
-                <div className="space-y-6 lg:col-span-1">
-                  {[
-                    { title: "New Peace Treaty Negotiated in Europe", img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop" },
-                    { title: "Election Results Spark Protests in Region", img: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=400&auto=format&fit=crop" },
-                    { title: "Trade Agreement Signed by Global Powers", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop" }
-                  ].map((post, i) => (
-                    <div key={i} className="flex gap-4 group cursor-pointer">
-                      <div className="w-[100px] h-[75px] shrink-0 overflow-hidden bg-gray-100">
-                        <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                      </div>
-                      <h5 className="text-[14px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">{post.title}</h5>
-                    </div>
-                  ))}
-                </div>
-                {/* World Right - List */}
-                <div className="space-y-4 lg:col-span-1 border-l border-gray-100 pl-6">
-                  {[
-                    "Unrest in Border Regions Increases Tension",
-                    "New Humanitarian Aid Package Announced",
-                    "Environmental Accords Face Compliance Issues",
-                    "Global Health Initiative Gains Support",
-                    "Military Spending Reaches New Record High"
-                  ].map((title, i) => (
-                    <div key={i} className="group cursor-pointer border-b border-gray-100 pb-4 last:border-0">
-                      <h5 className="text-[13px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">{title}</h5>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
+                </article>
+              ))}
+            </div>
 
-            {/* 6. Election 2024 Central */}
-            <section className="bg-white p-10 rounded-sm shadow-sm space-y-8 border-t-4 border-[#e01111]">
-              <div className="flex items-center justify-between border-b border-gray-100 pb-4">
-                <h3 className="text-2xl font-black uppercase tracking-tighter italic">Election 2024</h3>
-                <Link href="#" className="text-[11px] font-sans font-bold uppercase text-[#e01111] hover:underline">Full Coverage</Link>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-4 group cursor-pointer">
-                  <div className="aspect-video overflow-hidden rounded-sm bg-gray-100 relative">
-                    <img src="https://images.unsplash.com/photo-1575318634080-60b5e28ec7d3?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute top-4 left-4 bg-white px-2 py-0.5 text-[10px] font-sans font-bold text-black border border-gray-200">ANALYSIS</div>
-                  </div>
-                  <h4 className="text-2xl font-bold leading-tight group-hover:text-[#e01111] transition-colors">The Swing State Strategy: How Candidates are Targeting the Midwest</h4>
-                  <p className="text-gray-500 text-[15px] leading-relaxed">As the campaign trail heats up, both parties are pouring record amounts of funding into key battleground states...</p>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    "Polling Trends: Young Voters Show Increasing Engagement",
-                    "The Impact of Social Media on Modern Campaigning",
-                    "Economic Policy Platforms Compared: A Deep Dive",
-                    "Voter Registration Drives See Record Numbers Nationwide"
-                  ].map((title, i) => (
-                    <div key={i} className="flex gap-4 group cursor-pointer items-start border-b border-gray-50 pb-4 last:border-0 last:pb-0">
-                      <div className="w-2 h-2 bg-[#e01111] mt-2 shrink-0"></div>
-                      <h5 className="text-[17px] font-bold group-hover:text-[#e01111] transition-colors leading-snug">{title}</h5>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* 7. Opinion & Columnists */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-gray-200 pb-2">
-                <h3 className="text-xl font-black uppercase tracking-tight text-[#e01111]">Opinion & Columns</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  { name: "Robert Henderson", title: "Why Diplomacy is Our Best Tool in the Modern Age", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" },
-                  { name: "Elena Rodriguez", title: "The Economic Case for Green Energy Transition", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" },
-                  { name: "David Chen", title: "Technology Governance in a Globalized World", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" }
-                ].map((col, i) => (
-                  <div key={i} className="bg-white p-6 rounded-sm text-center space-y-4 group cursor-pointer border border-transparent hover:border-gray-100 transition-all shadow-sm hover:shadow-md">
-                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto border-2 border-gray-50 p-1">
-                      <img src={col.img} className="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <div className="space-y-1">
-                      <div className="text-[12px] font-sans font-black text-[#e01111] uppercase tracking-widest">{col.name}</div>
-                      <h4 className="text-[16px] font-bold leading-tight group-hover:text-[#111] transition-colors italic">"{col.title}"</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* 8. Video Highlights Desk */}
-            <section className="bg-[#0b0c10] text-white p-12 -mx-4 lg:-mx-10 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-10 transition-transform duration-1000 group-hover:scale-105"></div>
-              <div className="relative z-10 space-y-10">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <h3 className="text-xl font-black uppercase tracking-widest text-[#e01111]">Political Video Desk</h3>
-                  <Link href="#" className="text-[11px] font-sans font-bold uppercase hover:text-[#e01111] transition-colors">Watch All Reports</Link>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="aspect-video bg-black rounded-sm overflow-hidden relative group cursor-pointer shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-[#e01111] rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                        <Play fill="currentColor" size={24} />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black to-transparent w-full">
-                      <h4 className="text-2xl font-bold">Documentary: The Hidden Forces in Washington</h4>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    {[
-                      { title: "Special Report: The Future of NATO Expansion", time: "5:20" },
-                      { title: "Interview: The Secretary of State on Global Trade", time: "8:15" },
-                      { title: "Debate Highlights: Climate Policy and the Economy", time: "4:45" },
-                      { title: "Field Report: Voting Shifts in Rural Battlegrounds", time: "6:30" }
-                    ].map((vid, i) => (
-                      <div key={i} className="flex gap-5 group cursor-pointer items-center border-b border-white/5 pb-5 last:border-0 last:pb-0">
-                        <div className="w-28 h-16 bg-black rounded-sm overflow-hidden relative shrink-0">
-                          <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?q=80&w=200&auto=format&fit=crop`} className="w-full h-full object-cover opacity-40" />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <Play fill="currentColor" size={14} />
-                          </div>
-                        </div>
-                        <div>
-                          <h5 className="text-[15px] font-bold group-hover:text-[#e01111] transition-colors leading-tight">{vid.title}</h5>
-                          <span className="text-[11px] text-white/40 font-sans font-bold uppercase">{vid.time}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </section>
-
+            {/* Col 3: text+image small list (image right) */}
+            <div className="space-y-0">
+              {[
+                { img: `${B}13f451fba5175c85a63f72660d1a5d81-150x99.jpeg`, t: "Trump Outraised by Nikki Haley PAC By $5M Thanks to Wall Street Donors" },
+                { img: `${B}0614cc992ea6f725abe46c5d99e5d1e8-300x139.jpeg`, t: "A Crisis of One's Own: The Politics of Trauma in Europe's Election Year" },
+                { img: `${B}b020f6f089b5f9b2c0ad64ca3dc4cd41-300x225.jpeg`, t: "Celebrating Russian Art: Exhibition of Contemporary Works in the Capital" },
+                { img: `${B}16f258c7845ae429e81cc0da525a25b1-300x195.jpeg`, t: "US Bid to Curb Iranian Oil Bedeviled by Economic, Election Risks" },
+                { img: `${B}9541dbc15ff9e6c5fd353b43fd7b699b-300x187.jpeg`, t: "Growing Democratic Concerns Over Biden's 2024 Re-Election Bid" },
+                { img: `${B}3f6333e1047405381936a317684d6748-300x188.jpeg`, t: "UAE Armed Forces Unification Anniversary is Rich in Lessons and Experiences" },
+                { img: `${B}c25d934c23d0395fac94493baea06425-200x300.jpeg`, t: "The Black Lives Matter Movement Goes Beyond Black and White" },
+              ].map((a, i) => (
+                <article key={i} className="flex gap-3 py-2.5 border-b border-gray-100 last:border-0 cursor-pointer group">
+                  <p className="font-semibold text-[12px] leading-snug flex-1 group-hover:text-gray-600">{a.t}</p>
+                  <img src={a.img} className="w-[68px] h-[50px] object-cover flex-shrink-0" alt="" />
+                </article>
+              ))}
+            </div>
           </div>
+        </section>
 
-          {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-12">
-            
-            {/* Editor's Picks Sidebar */}
-            <div className="bg-white p-6 border border-gray-100">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b-2 border-[#e01111] inline-block mb-6 pb-1">US Politics</h3>
-              <div className="space-y-6">
+        {/* ── SPORTS ROUNDUP: 4-col grid ── */}
+        <section className="mb-8 border-t-2 border-gray-100 pt-6">
+          <SHead title="Sports Roundup" />
+          <div className="grid grid-cols-4 gap-5 mb-5">
+            {[
+              { img: `${B}4a7975c604a0b24eb2c8f24e0e231a73-450x300.jpeg`, t: "Nations with Most Olympic Medals ft United States, France, China, Germany" },
+              { img: `${B}747c4a15c42e2f8899fcd528fd2314d2-450x300.jpeg`, t: "Top 5: List of Batters with Most Runs in 2024 ICC Men's T20 World Cup" },
+              { img: `${B}3969089f9d8b15304fe0670adefab72a-450x300.jpeg`, t: "Gallery: Flat-Track Motorcycle Racing Is a Midsummer Night's Dream" },
+              { img: `${B}2a5228c1accbbcd35190fe1f3bf0c90f-450x331.jpeg`, t: "5 Cycling Races Even More Intense Than the Tour de France" },
+            ].map((a, i) => (
+              <article key={i} className="cursor-pointer group">
+                <div className="overflow-hidden mb-2">
+                  <img src={a.img} className="w-full h-[155px] object-cover group-hover:opacity-90 transition-opacity" alt="" />
+                </div>
+                <h2 className="font-bold text-[13px] leading-snug line-clamp-3 group-hover:text-gray-600">{a.t}</h2>
+                <p className="text-[10px] text-gray-400 mt-1">Jun 30, 2024</p>
+              </article>
+            ))}
+          </div>
+          {/* Sports text-list row */}
+          <div className="grid grid-cols-4 gap-5 border-t border-gray-100 pt-4">
+            {[
+              "Singapore Economy Expands Slower Than Expected in First Quarter",
+              "Kevin Durant Pulled from Game Due to Health & Safety Protocols",
+              "British Soccer Clubs Barred From Traveling to Germany, TCL is Disrupted",
+              "Growing Democratic Concerns Over Biden's 2024 Re-Election Bid",
+            ].map((t, i) => (
+              <p key={i} className="text-[12px] font-semibold leading-snug hover:text-gray-600 cursor-pointer border-l-2 border-gray-200 pl-3">{t}</p>
+            ))}
+          </div>
+        </section>
+
+        {/* ── SCIENCE & TECH + SIDEBAR ── */}
+        <section className="border-t-2 border-gray-100 pt-6 mb-8">
+          <div className="grid grid-cols-3 gap-7">
+            <div className="col-span-2">
+              <SHead title="Science & Tech" />
+              <article className="mb-5 cursor-pointer group">
+                <div className="overflow-hidden mb-3">
+                  <img src={`${B}e2ef634e41f7cc8deb0ec0ec70651166-1024x576.jpeg`}
+                    className="w-full h-[270px] object-cover group-hover:opacity-90 transition-opacity" alt="" />
+                </div>
+                <h2 className="font-bold text-[20px] leading-snug mb-1">
+                  Mount Etna Erupts Dramatically, Sending ash 4.5 Kilometers High
+                </h2>
+                <Cat name="Science & Tech" date="Jun 30, 2024" color="#2980b9" />
+                <p className="text-[13px] text-gray-500 mt-2 line-clamp-3">
+                  To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation.
+                </p>
+              </article>
+              <div className="space-y-0 border-t border-gray-100 pt-4">
                 {[
-                  { title: "Campaign Funding Under Scrutiny Again", img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=200&auto=format&fit=crop" },
-                  { title: "Senate Minority Leader Outlines Strategy", img: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=200&auto=format&fit=crop" },
-                  { title: "Public Education Reform Bill Gains Speed", img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=200&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-center">
+                  { img: `${B}Depositphotos_241506218_XL-1-450x300.jpg`, t: "Beijing ready to cooperate with Doha to enhance role of Shanghai Cooperation Organisation: Envoy", d: "Jun 30, 2024" },
+                  { img: `${B}a51e68eb08355feb0d951b9194080e62-450x278.jpeg`, t: "How the Middle East Became an Arena for Putin's Power Struggle with the US", d: "Jun 30, 2024" },
+                  { img: `${B}1caf0937d7c1a250f47d864b049f9b79-450x253.jpeg`, t: "Morocco Allows Israeli Warship to Dock After Spain Refused", d: "Jun 30, 2024" },
+                ].map((a, i) => (
+                  <article key={i} className="flex gap-4 py-4 border-b border-gray-100 last:border-0 cursor-pointer group">
+                    <img src={a.img} className="w-[155px] h-[105px] object-cover flex-shrink-0 group-hover:opacity-90" alt="" />
                     <div className="flex-1">
-                      <h4 className="text-[14px] font-bold group-hover:text-[#e01111] transition-colors leading-snug">{post.title}</h4>
-                      <span className="text-[10px] text-gray-400 font-sans uppercase font-bold">Oct 14, 2023</span>
+                      <h2 className="font-bold text-[15px] leading-snug group-hover:text-gray-600 line-clamp-3 mb-1">{a.t}</h2>
+                      <Cat date={a.d} />
+                      <p className="text-[12px] text-gray-500 mt-1.5 line-clamp-2">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified…</p>
                     </div>
-                    <div className="w-[60px] h-[60px] shrink-0 overflow-hidden">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
-
-            {/* Newsletter Sidebar */}
-            <div className="bg-[#e01111] text-white p-8 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-black/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-              <MailIcon size={40} className="mb-4 opacity-30" />
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-2">Subscribe</h3>
-              <p className="text-[14px] opacity-80 mb-6 font-sans leading-relaxed">Join 25,000+ others who receive our daily political briefing.</p>
-              <form className="space-y-3 font-sans">
-                <input type="email" placeholder="Email Address" className="w-full bg-white/20 border border-white/30 px-4 py-3 text-sm text-white placeholder:text-white/60 focus:outline-none focus:bg-white focus:text-[#111] transition-all" />
-                <button className="w-full bg-black text-white font-bold uppercase tracking-widest text-[11px] py-3.5 hover:bg-white hover:text-black transition-colors">Join Now</button>
-              </form>
+            <div className="col-span-1 border-l border-gray-100 pl-7">
+              <div className="bg-gray-100 h-[300px] flex items-center justify-center mb-5 text-gray-400 text-[11px] uppercase tracking-wider">Advertisement</div>
+              <SHead title="Most Popular" />
+              {[
+                "New Government, New Opportunity To End The Hostile Environment For Refugees",
+                "Mount Etna Erupts Dramatically, Sending ash 4.5 Kilometers High",
+                "City Council Audit Trail is an Audit Fail After Disastrous Oracle ERP Rollout",
+                "Beijing ready to cooperate with Doha to enhance role of Shanghai Cooperation Organisation",
+                "How the Middle East Became an Arena for Putin's Power Struggle with the US",
+              ].map((t, i) => (
+                <div key={i} className="flex gap-3 py-2.5 border-b border-gray-100 last:border-0 cursor-pointer">
+                  <span className="text-[28px] font-black text-gray-100 leading-none w-8 flex-shrink-0">{i + 1}</span>
+                  <p className="text-[12px] font-semibold leading-snug hover:text-gray-600">{t}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
 
-            {/* Numbered Trending */}
-            <div className="space-y-6">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b-2 border-black inline-block mb-2 pb-1">Trending</h3>
-              <div className="space-y-6">
-                {[
-                  "Analysis: The Future of Global Diplomacy in a Digital Age",
-                  "Report: Economic Shifts Expected to Redefine Trade Routes",
-                  "Opinion: Why Climate Change is the Primary Political Challenge",
-                  "Deep Dive: The Evolution of Campaign Strategy in the 21st Century"
-                ].map((title, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                    <span className="text-[32px] font-black text-gray-200 group-hover:text-[#e01111] transition-colors leading-none">{i + 1}</span>
-                    <h4 className="text-[15px] font-bold group-hover:text-[#e01111] transition-colors leading-snug pt-1">{title}</h4>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Follow Us */}
-            <div className="space-y-6">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b-2 border-gray-100 w-full mb-6 pb-2">Follow Us</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { name: "Facebook", count: "1.2M", icon: Facebook, color: "#1877F2" },
-                  { name: "Twitter", count: "850K", icon: Twitter, color: "#1DA1F2" },
-                  { name: "Instagram", count: "2.4M", icon: Instagram, color: "#E4405F" },
-                  { name: "Youtube", count: "1.5M", icon: Play, color: "#FF0000" }
-                ].map((social, i) => (
-                  <a key={i} href="#" className="flex items-center gap-3 p-3 bg-white border border-gray-100 hover:border-[#e01111] transition-colors group">
-                    <social.icon size={16} style={{ color: social.color }} />
-                    <div>
-                      <div className="text-[11px] font-bold leading-none">{social.count}</div>
-                      <div className="text-[9px] text-gray-400 font-sans font-bold uppercase">{social.name}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-          </aside>
-        </div>
       </div>
 
-      <PoliticalFooter />
+      {/* ── FOOTER ── */}
+      <footer className="bg-[#111] text-white pt-10 pb-6">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="flex justify-center mb-8">
+            <img src="https://smartmag.theme-sphere.com/political/wp-content/uploads/sites/54/2024/09/Logo-Political-footer-1@2x.png"
+              className="h-10 object-contain" alt="Political" />
+          </div>
+          <div className="grid grid-cols-4 gap-8 mb-8">
+            {[
+              { h: "Categories", links: ["Politics", "Economy", "Science & Tech", "Sports", "World"] },
+              { h: "Quick Links", links: ["Home", "Features", "Contact", "Our Authors", "Privacy Policy"] },
+              { h: "Follow Us", links: ["Facebook", "X (Twitter)", "Instagram"] },
+            ].map((col, i) => (
+              <div key={i}>
+                <h5 className="font-bold text-[12px] uppercase tracking-wider mb-4 border-b border-gray-800 pb-2">{col.h}</h5>
+                <ul className="space-y-2">
+                  {col.links.map((l, j) => (
+                    <li key={j}><a href="#" className="text-gray-400 text-[12px] hover:text-white transition-colors">{l}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <div>
+              <h5 className="font-bold text-[12px] uppercase tracking-wider mb-4 border-b border-gray-800 pb-2">Newsletter</h5>
+              <input type="email" placeholder="Your email address.." className="w-full bg-gray-800 border border-gray-700 px-3 py-2 text-[12px] mb-2 outline-none text-white" />
+              <button className="w-full bg-white text-black text-[12px] font-bold py-2 hover:bg-gray-200 transition-colors">Subscribe</button>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-5 text-center">
+            <p className="text-gray-500 text-[11px]">© 2024 SmartMag Political. All rights reserved. Powered by ThemeSphere.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

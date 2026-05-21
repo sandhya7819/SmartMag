@@ -1,73 +1,130 @@
-import { Facebook, Twitter, Instagram, Youtube, Mail } from "lucide-react";
 import Link from "next/link";
+import { Facebook, Twitter, Instagram, Share2 } from "lucide-react";
+import { footerPopular, footerPicks } from "@/lib/digitalHubData";
+
+const ACCENT = "#00cf92";
+
+function MetaViews({ date, views, viral }: { date?: string; views?: string; viral?: boolean }) {
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-[11px] text-white/40 mt-1">
+      {date && <span>{date}</span>}
+      {views && (
+        <>
+          <span className="text-white/20">|</span>
+          <span className={viral ? "text-orange-400 font-semibold" : ""}>{views} Views</span>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function DigitalHubFooter() {
   return (
-    <footer className="bg-[#0b0c10] text-white pt-20 pb-10 font-sans mt-16">
-      <div className="container mx-auto max-w-[1200px] px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
-          
-          {/* Brand Column */}
-          <div className="space-y-6">
-            <Link href="/digital-hub" className="flex items-center gap-1 group">
-              <span className="text-[28px] font-black tracking-tight text-white">DIGITAL</span>
-              <span className="text-[28px] font-black tracking-tight text-[#00d1ac]">HUB</span>
-            </Link>
-            <p className="text-gray-400 text-[15px] leading-relaxed">
-              Your ultimate source for the latest tech trends, gadget reviews, and digital innovation. We simplify technology for the modern generation.
-            </p>
-            <div className="flex gap-4 pt-4">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center hover:bg-[#00d1ac] hover:text-[#111] transition-all">
-                  <Icon size={18} />
-                </a>
+    <footer className="bg-[#0f0f11] text-white font-['DM_Sans',system-ui,sans-serif] border-t border-[#00cf92]/30">
+      <div className="max-w-[1200px] mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/[0.08]">
+          <div>
+            <h5 className="text-[13px] font-bold uppercase tracking-wide mb-5 pb-2 border-b border-white/10">
+              Most Popular
+            </h5>
+            <div className="space-y-4">
+              {footerPopular.map((p) => (
+                <article key={p.title} className="flex gap-3 group">
+                  <div className="w-[102px] h-[82px] shrink-0 overflow-hidden rounded-sm bg-white/5">
+                    <img src={p.img} alt="" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-[13px] font-semibold leading-snug group-hover:text-[#00cf92] transition-colors">
+                      <Link href="#">{p.title}</Link>
+                    </h4>
+                    <MetaViews date={p.date} views={p.views} viral={p.viral} />
+                  </div>
+                </article>
               ))}
             </div>
           </div>
 
-          {/* Quick Nav */}
-          <div className="space-y-6">
-            <h4 className="text-[14px] font-black uppercase tracking-widest text-[#00d1ac]">Main Sections</h4>
-            <ul className="grid grid-cols-2 gap-y-3">
-              {["Smartphones", "Laptops", "Gaming", "Cybersecurity", "Artificial Intelligence", "Blockchain", "Digital Deals", "Software Reviews"].map((item, i) => (
-                <li key={i}>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors text-[14px] font-medium">
-                    {item}
-                  </Link>
-                </li>
+          <div>
+            <h5 className="text-[13px] font-bold uppercase tracking-wide mb-5 pb-2 border-b border-white/10">
+              Our Picks
+            </h5>
+            <div className="space-y-4">
+              {footerPicks.map((p) => (
+                <article key={p.title} className="flex gap-3 group">
+                  <div className="w-[102px] h-[82px] shrink-0 overflow-hidden rounded-sm bg-white/5">
+                    <img src={p.img} alt="" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="text-[13px] font-semibold leading-snug group-hover:text-[#00cf92] transition-colors">
+                      <Link href="#">{p.title}</Link>
+                    </h4>
+                    {p.date && <p className="text-[11px] text-white/40 mt-1">{p.date}</p>}
+                  </div>
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Subscribe */}
-          <div className="space-y-6">
-            <h4 className="text-[14px] font-black uppercase tracking-widest text-[#00d1ac]">Newsletter</h4>
-            <p className="text-gray-400 text-[14px] leading-relaxed">
-              Get the most important tech updates delivered directly to your inbox.
+          <div className="border border-white/10 rounded-sm p-6 bg-[#151516]">
+            <h3 className="text-[16px] font-bold text-center mb-2">Subscribe to Updates</h3>
+            <p className="text-[13px] text-white/50 text-center mb-4 leading-relaxed">
+              Get the latest creative news from FooBar about art, design and business.
             </p>
-            <form className="flex flex-col gap-3 mt-4">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#00d1ac] transition-colors"
+            <form className="space-y-2">
+              <input
+                type="email"
+                placeholder="Your email address.."
+                required
+                className="w-full bg-white/5 border border-white/15 px-3 py-2.5 text-[13px] text-white placeholder:text-white/35 focus:outline-none focus:border-[#00cf92]"
               />
-              <button className="w-full bg-[#00d1ac] text-[#111] font-black uppercase tracking-widest text-[11px] py-3.5 hover:bg-white transition-colors">
-                JOIN THE HUB
+              <button
+                type="submit"
+                className="w-full text-[12px] font-bold uppercase py-2.5 text-[#111] hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: ACCENT }}
+              >
+                Subscribe
               </button>
+              <label className="flex items-start gap-2 text-[11px] text-white/40">
+                <input type="checkbox" required className="mt-0.5" />
+                <span>
+                  By signing up, you agree to our terms and our{" "}
+                  <Link href="#" className="underline hover:text-white">
+                    Privacy Policy
+                  </Link>{" "}
+                  agreement.
+                </span>
+              </label>
             </form>
           </div>
-
         </div>
 
-        <div className="h-[1px] w-full bg-white/5 mb-8"></div>
-
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-gray-500">
-          <p>© {new Date().getFullYear()} Digital Hub Magazine. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link href="#" className="hover:text-white transition-colors">About Us</Link>
-            <Link href="#" className="hover:text-white transition-colors">Contact</Link>
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+        <div className="flex flex-col items-center gap-6 pt-8">
+          <div className="flex items-center gap-3">
+            {[Facebook, Twitter, Instagram, Share2].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:text-[#00cf92] hover:bg-white/10 transition-colors"
+                aria-label="Social"
+              >
+                <Icon size={15} />
+              </a>
+            ))}
           </div>
+          <nav className="flex flex-wrap justify-center gap-6 text-[12px] font-bold uppercase tracking-wide">
+            {["Home", "Phones", "About", "Contact"].map((l) => (
+              <Link key={l} href={l === "Home" ? "/digital-hub" : "#"} className="hover:text-[#00cf92] transition-colors">
+                {l}
+              </Link>
+            ))}
+          </nav>
+          <p className="text-[13px] text-white/40">
+            © {new Date().getFullYear()} ThemeSphere. Designed by{" "}
+            <Link href="https://theme-sphere.com" className="hover:text-[#00cf92]">
+              ThemeSphere
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </footer>

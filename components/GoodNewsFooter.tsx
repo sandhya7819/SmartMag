@@ -9,8 +9,9 @@ export default function GoodNewsFooter() {
           {/* About Us */}
           <div className="space-y-8">
             <h3 className="text-[13px] font-black uppercase tracking-[2px]">ABOUT US</h3>
-            <div className="flex items-center gap-2">
-               <span className="text-4xl font-black tracking-tighter">GO<span className="text-[#3bc492]">O</span>D</span>
+            <div className="flex items-center text-4xl font-black tracking-tighter">
+               <span className="bg-[#3bc492] text-black px-3 py-1 mr-1">GOOD</span>
+               <span className="text-white">NEWS</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Your source for the lifestyle news. This demo is crafted specifically to exhibit the use of the theme as a lifestyle site. Visit our main page for more demos.

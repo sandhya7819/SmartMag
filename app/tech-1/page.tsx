@@ -8,7 +8,7 @@ const featuredGrid = [
     title: "Apple Planning Big Mac Redesign and Half-Sized Old Mac",
     author: "Shane Doe",
     date: "Jan 5, 2021",
-    img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200",
+    img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/matias-islas-Nw0j-2YAnfI-unsplash-1-1024x683.jpg",
     rating: "85%",
     size: "large"
   },
@@ -16,14 +16,14 @@ const featuredGrid = [
     cat: "TECH",
     title: "Autonomous Driving Startup Attracts Chinese Investor",
     date: "Jan 5, 2021",
-    img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1200",
+    img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/why-kei-8e2gal_GIE8-unsplash-2-768x512.jpg",
     size: "small"
   },
   {
     cat: "GADGETS",
     title: "Onboard Cameras Allow Disabled Quadcopters to Fly",
     date: "Jan 5, 2021",
-    img: "https://images.unsplash.com/photo-1473960104372-7a4d8d9b60ad?q=80&w=1200",
+    img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/marko-blazevic-WFLRbk562Yo-unsplash-1-768x960.jpg",
     size: "small"
   }
 ];
@@ -31,29 +31,29 @@ const featuredGrid = [
 const categorySections = [
   {
     name: "Apps",
-    main: { title: "How Tinder Became the App That Defines Online Dating", img: "https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=600" },
+    main: { title: "How Tinder Became the App That Defines Online Dating", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/mika-baumeister-4xChyRlbyWM-unsplash-1-450x555.jpg" },
     small: [
-      { title: "Huawei Planning World's First 3-Nanometer Mobile Chipset", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1544244015-0cd4b3ff869d?q=80&w=150" },
-      { title: "The Best Free VPNs: Reasons Why They Don't Exist", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=150" },
-      { title: "Samsung Galaxy Fold 2 Gets Updated to Android 11", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=150" }
+      { title: "Huawei Planning World's First 3-Nanometer Mobile Chipset", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/brecht-denil-H54mZnQua8k-unsplash-225x300.jpg" },
+      { title: "The Best Free VPNs: Reasons Why They Don't Exist", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/petter-lagson-VH_L_H4w7U8-unsplash-1-300x191.jpg" },
+      { title: "Samsung Galaxy Fold 2 Gets Updated to Android 11", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/zana-latif-YVvfrXDYQXE-unsplash-1-300x298.jpg" }
     ]
   },
   {
     name: "Gadgets",
-    main: { title: "Apple Watch Series 7 Could Measure Your Blood Sugar Levels", img: "https://images.unsplash.com/photo-1544117518-29627d736272?q=80&w=600", hasVideo: true },
+    main: { title: "Apple Watch Series 7 Could Measure Your Blood Sugar Levels", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/daniel-korpai-L8y01mTuDZg-unsplash-1-450x563.jpg", hasVideo: true },
     small: [
-      { title: "A Science Breakthrough Will Help in Extending Life of Your Gadgets", date: "Jan 14, 2021", img: "https://images.unsplash.com/photo-1532187875605-2fe3587b1ee0?q=80&w=150" },
-      { title: "Nintendo's Mario Game & Watch is a Choice Gaming Stuffer", date: "Jan 14, 2021", img: "https://images.unsplash.com/photo-1531525645387-7f14be13bd33?q=80&w=150" },
-      { title: "Gravity Sketch VR 3D Modeling is Now Free to Use", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?q=80&w=150" }
+      { title: "A Science Breakthrough Will Help in Extending Life of Your Gadgets", date: "Jan 14, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/hussam-abd-augwZS-5neg-unsplash-1-300x200.jpg" },
+      { title: "Nintendo's Mario Game & Watch is a Choice Gaming Stuffer", date: "Jan 14, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/pexels-caleb-oquendo-3162044-1-300x200.jpg" },
+      { title: "Gravity Sketch VR 3D Modeling is Now Free to Use", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/kelly-sikkema-v9FQR4tbIq8-unsplash-1-300x200.jpg" }
     ]
   },
   {
     name: "Gear",
-    main: { title: "Apple Card Holders Can Earn Bonus for Spending with Apple Pay", img: "https://images.unsplash.com/photo-1436491865332-7a61a109c0f?q=80&w=600" },
+    main: { title: "Apple Card Holders Can Earn Bonus for Spending with Apple Pay", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/melvin-thambi-8U9CgUVan4M-unsplash-1-450x318.jpg" },
     small: [
-      { title: "CES 2021 Highlights: 79 Top Photos, Products, and Much More", date: "Jan 14, 2021", img: "https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=150", rating: "7.2" },
-      { title: "The Best of Pandemic Tech, The Robot Green Tech", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=150" },
-      { title: "Digital Calendars & Organizers to Get You Organized in 2021", date: "Jan 13, 2021", img: "https://images.unsplash.com/photo-1512941937669-90a1b58e72ef?q=80&w=150" }
+      { title: "CES 2021 Highlights: 79 Top Photos, Products, and Much More", date: "Jan 14, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/pexels-jeshootscom-834895-2-300x200.jpg", rating: "7.2" },
+      { title: "The Best of Pandemic Tech, The Robot Green Tech", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/possessed-photography-5tb8h8D9k3Y-unsplash-1-300x266.jpg" },
+      { title: "Digital Calendars & Organizers to Get You Organized in 2021", date: "Jan 13, 2021", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/daniel-korpai-o1utz9Neufo-unsplash-2-240x300.jpg" }
     ]
   }
 ];
@@ -64,7 +64,7 @@ export default function TechOnePage() {
       <Tech1Header />
 
       {/* Hero Grid Section */}
-      <section className="container mx-auto px-4 mt-8 mb-20">
+      <section className="w-full mb-20">
          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0.5 overflow-hidden">
             <div className="lg:col-span-6 relative group overflow-hidden cursor-pointer h-[500px] lg:h-[600px]">
                <img src={featuredGrid[0].img} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
@@ -115,7 +115,7 @@ export default function TechOnePage() {
       </section>
 
       {/* Triple Category Grid */}
-      <section className="container mx-auto px-4 mb-20">
+      <section className="container mx-auto px-4 mb-8">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {categorySections.map((section, idx) => (
                <div key={idx} className="space-y-8">
@@ -170,22 +170,14 @@ export default function TechOnePage() {
       </section>
 
       {/* AD Banner: New SmartMag */}
-      <section className="container mx-auto px-4 mb-20">
-         <div className="bg-[#b31b46] p-12 lg:p-16 relative overflow-hidden group cursor-pointer flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-10">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2000')] opacity-20 bg-cover bg-center mix-blend-overlay"></div>
-            <div className="relative z-10 space-y-4">
-               <span className="text-white/60 text-xs font-bold uppercase tracking-[2px]">NEW SMARTMAG</span>
-               <h2 className="text-white text-4xl lg:text-5xl font-black tracking-tight leading-none">TRY IT, YOU'LL LOVE IT</h2>
-               <button className="bg-white text-black px-10 py-4 font-black uppercase text-[11px] tracking-[2px] rounded-full hover:bg-black hover:text-white transition-all transform hover:scale-105">EXPLORE SMARTMAG</button>
-            </div>
-            <div className="relative z-10 w-full max-w-[500px]">
-               <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=800" className="w-full h-auto rounded-lg shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700" />
-            </div>
-         </div>
+      <section className="container mx-auto px-4 py-[120px] flex justify-center">
+         <Link href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" className="block max-w-[1200px] w-full hover:opacity-95 transition-opacity">
+            <img src="https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/banner-tech-02.jpg" alt="Demo" className="w-full h-auto shadow-lg" />
+         </Link>
       </section>
 
       {/* Main Feed + Sidebar Section */}
-      <section className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <section className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
          {/* Main Feed */}
          <div className="lg:col-span-8 space-y-16">
             <div className="flex items-center gap-4 mb-10 border-b border-gray-100 pb-3">
@@ -195,28 +187,48 @@ export default function TechOnePage() {
             
             <div className="space-y-12">
                {[
-                 { cat: "MOBILES", title: "Latest Huawei Mobiles P50 and P50 Pro Feature Kirin Chips", img: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800" },
-                 { cat: "MOBILES", title: "Samsung Galaxy M62 Benchmarked with Galaxy Note10's Chipset", img: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=800" },
-                 { cat: "GAMING", title: "Razer X With 16 Programmable Buttons Launched at MMO Gamers", img: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=800" },
-                 { cat: "COMPUTING", title: "2021 Apple MacBook Air: New leak Reveals Razor-Thin Redesign", img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=800" },
-                 { cat: "GAMING", title: "Tech Experts Predict 15 Areas AI And VR Are Set To Revolutionize", img: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=800" }
+                 { cat: "MOBILES", title: "Latest Huawei Mobiles P50 and P50 Pro Feature Kirin Chips", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/omid-armin-mP4sfCCoTrI-unsplash-2-300x198.jpg" },
+                 { cat: "MOBILES", title: "Samsung Galaxy M62 Benchmarked with Galaxy Note10's Chipset", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/screen-post-c7_blgDvOOs-unsplash-300x191.jpg" },
+                 { cat: "GAMING", title: "Razer X With 16 Programmable Buttons Launched at MMO Gamers", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/Depositphotos_299683750_xl-2015-300x200.jpg" },
+                 { cat: "COMPUTING", title: "2021 Apple MacBook Air: New leak Reveals Razor-Thin Redesign", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/remy_loz-teTksDuzEWc-unsplash-1-450x398.jpg" },
+                 { cat: "GAMING", title: "Tech Experts Predict 15 Areas AI And VR Are Set To Revolutionize", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/Depositphotos_242235046_xl-2015-1-1024x684.jpg", large: true },
+                 { cat: "COMPUTING", title: "Concept Images New 32-inch iMac with Edge-to-Edge Design", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/screen-post-Ya3r7oApP4g-unsplash-1-450x600.jpg" }
                ].map((post, i) => (
-                  <div key={i} className="flex flex-col md:flex-row gap-8 group pb-12 border-b border-gray-100 last:border-0 grow">
-                     <div className="md:w-[350px] aspect-[1.5/1] overflow-hidden bg-gray-100 relative shrink-0">
-                        <img src={post.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <span className="absolute bottom-0 left-0 bg-[#d40713] text-white text-[9px] font-black uppercase px-2 py-1">{post.cat}</span>
-                     </div>
-                     <div className="space-y-4">
-                        <h4 className="text-[28px] font-black leading-tight group-hover:text-[#d40713] transition-colors cursor-pointer tracking-tight">{post.title}</h4>
-                        <div className="flex items-center gap-2 text-[11px] font-bold text-gray-400 capitalize whitespace-nowrap">
-                           <span>By Shane Doe</span>
-                           <span className="text-gray-200">—</span>
-                           <span>Jan 15, 2021</span>
-                           <span className="flex items-center gap-1 ml-2"><MessageCircle size={12} /> 3</span>
+                  post.large ? (
+                     <div key={i} className="flex flex-col group pb-12 border-b border-gray-100 last:border-0 grow">
+                        <div className="w-full aspect-[16/9] overflow-hidden bg-gray-100 relative shrink-0 mb-6">
+                           <img src={post.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                           <span className="absolute bottom-0 left-0 bg-[#d40713] text-white text-[9px] font-black uppercase px-2 py-1">{post.cat}</span>
                         </div>
-                        <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-3">To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the latest trends that define our era...</p>
+                        <div className="space-y-4">
+                           <h4 className="text-[28px] font-black leading-tight group-hover:text-[#d40713] transition-colors cursor-pointer tracking-tight">{post.title}</h4>
+                           <div className="flex items-center gap-2 text-[11px] font-bold text-gray-400 capitalize whitespace-nowrap">
+                              <span>By Shane Doe</span>
+                              <span className="text-gray-200">—</span>
+                              <span>Jan 15, 2021</span>
+                              <span className="flex items-center gap-1 ml-2"><MessageCircle size={12} /> 3</span>
+                           </div>
+                           <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-3">To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the latest trends that define our era...</p>
+                        </div>
                      </div>
-                  </div>
+                  ) : (
+                     <div key={i} className="flex flex-col md:flex-row gap-8 group pb-12 border-b border-gray-100 last:border-0 grow">
+                        <div className="md:w-[350px] aspect-[1.5/1] overflow-hidden bg-gray-100 relative shrink-0">
+                           <img src={post.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                           <span className="absolute bottom-0 left-0 bg-[#d40713] text-white text-[9px] font-black uppercase px-2 py-1">{post.cat}</span>
+                        </div>
+                        <div className="space-y-4">
+                           <h4 className="text-[24px] font-black leading-tight group-hover:text-[#d40713] transition-colors cursor-pointer tracking-tight">{post.title}</h4>
+                           <div className="flex items-center gap-2 text-[11px] font-bold text-gray-400 capitalize whitespace-nowrap">
+                              <span>By Shane Doe</span>
+                              <span className="text-gray-200">—</span>
+                              <span>Jan 15, 2021</span>
+                              <span className="flex items-center gap-1 ml-2"><MessageCircle size={12} /> 3</span>
+                           </div>
+                           <p className="text-gray-500 text-[14px] leading-relaxed line-clamp-3">To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the latest trends that define our era...</p>
+                        </div>
+                     </div>
+                  )
                ))}
                <button className="w-full py-4 border-2 border-gray-100 text-[11px] font-black uppercase tracking-[2px] text-gray-400 hover:bg-[#d40713] hover:text-white hover:border-[#d40713] transition-all flex items-center justify-center gap-2 group bg-white">
                  LOAD MORE <MoveRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -225,7 +237,7 @@ export default function TechOnePage() {
          </div>
 
          {/* Sidebar */}
-         <aside className="lg:col-span-4 space-y-16">
+         <aside className="lg:col-span-4 space-y-16 sticky top-[100px] self-start">
             {/* In Spotlight Widget */}
             <div>
                <div className="flex items-center gap-4 mb-8">
@@ -235,10 +247,10 @@ export default function TechOnePage() {
                <div className="space-y-10">
                   <div className="group cursor-pointer">
                      <div className="relative overflow-hidden mb-5 aspect-[1.6/1]">
-                        <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=600" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <img src="https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/marko-blazevic-WFLRbk562Yo-unsplash-1-450x563.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                         <span className="absolute bottom-0 left-0 bg-[#d40713] text-white text-[9px] font-black uppercase px-2 py-1">SPOTLIGHT</span>
                      </div>
-                     <h4 className="text-[18px] font-black leading-tight mb-4 group-hover:text-[#d40713] transition-colors line-clamp-2">Sophia the Robots' Mass Rollout Amid Pandemic</h4>
+                     <h4 className="text-[18px] font-black leading-tight mb-4 group-hover:text-[#d40713] transition-colors line-clamp-2">Wingcopter Raises $22m to Launch a Next-Generation Drone</h4>
                      <div className="flex items-center gap-2 text-[10px] font-bold text-gray-400">
                         <span>By Shane Doe — Jan 13, 2021</span>
                         <span className="flex items-center gap-1.5 ml-2"><MessageCircle size={10} /> 3</span>
@@ -248,9 +260,9 @@ export default function TechOnePage() {
                   
                   <div className="space-y-6 pt-6 border-t border-gray-100">
                     {[
-                      { title: "Apple Announced MacBook Air with MagSafe charging", img: "https://images.unsplash.com/photo-1611186871348-71ce5249d238?q=80&w=400" },
-                      { title: "iPhone 13 Series to Launch in 2021: Possible Specs", img: "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?q=80&w=400" },
-                      { title: "Samsung Unleashed Newest 108Mp Mobile Image Sensor", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=400" }
+                      { title: "Tech Details of iMac Pro for 4k Video Editing and VFX", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/lucian-popescu-s3BF1SKa_co-unsplash-1-450x300.jpg" },
+                      { title: "Samsung Galaxy S21 Ultra Review: the New King of Android Phones", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/samsung-s21-5g-450x311.jpg" },
+                      { title: "Xiaomi Mi 10: New Variant with Snapdragon 870 Review", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/zana-latif-6kVDN0VGj3c-unsplash-1-450x276.jpg" }
                     ].map((post, i) => (
                        <div key={i} className="flex gap-4 group cursor-pointer items-start">
                           <img src={post.img} className="w-[85px] h-[65px] object-cover shrink-0" />
@@ -298,6 +310,20 @@ export default function TechOnePage() {
                         <span className="text-[11px] font-black">46.4K</span>
                      </div>
                      <span className="text-[9px] font-bold opacity-60">Instagram</span>
+                  </div>
+                  <div className="bg-[#ff0000] p-3 text-white flex items-center justify-between group cursor-pointer">
+                     <div className="flex items-center gap-2">
+                        <Youtube size={16} fill="white" />
+                        <span className="text-[11px] font-black">105K</span>
+                     </div>
+                     <span className="text-[9px] font-bold opacity-60">YouTube</span>
+                  </div>
+                  <div className="bg-[#1ab7ea] p-3 text-white flex items-center justify-between group cursor-pointer">
+                     <div className="flex items-center gap-2">
+                        <Play size={16} fill="white" />
+                        <span className="text-[11px] font-black">17.7K</span>
+                     </div>
+                     <span className="text-[9px] font-bold opacity-60">Vimeo</span>
                   </div>
                </div>
             </div>

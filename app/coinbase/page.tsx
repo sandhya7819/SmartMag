@@ -1,313 +1,304 @@
+"use client";
 import CoinbaseHeader from "@/components/CoinbaseHeader";
-import CoinbaseFooter from "@/components/CoinbaseFooter";
-import Link from "next/link";
-import { ChevronRight, Play, TrendingUp, Mail as MailIcon, ExternalLink, ArrowRight } from "lucide-react";
+
+const B19 = "https://smartmag.theme-sphere.com/coinbase/wp-content/uploads/sites/19/";
+
+const ACCENT = "#3b82f6";
+
+function SHead({ title, style = "b" }: { title: string; style?: "b" | "c" }) {
+  return (
+    <div className="mb-5">
+      <div className={`border-b ${style === "c" ? "border-white/10" : "border-white/10"} pb-[10px]`}>
+        <span className={`inline-block font-extrabold text-[13px] uppercase tracking-wider text-white border-b-[3px] pb-[10px] -mb-[2px]`}
+          style={{ borderColor: ACCENT }}>
+          {title}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 export default function CoinbasePage() {
+  const B = B19;
+
   return (
-    <main className="min-h-screen bg-[#0b1120] text-white font-sans selection:bg-[#ffb300] selection:text-[#0f172a]">
+    <main className="min-h-screen bg-[#141920] text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
       <CoinbaseHeader />
 
-      <div className="container mx-auto max-w-[1200px] px-4 py-12">
-        
-        {/* 1. Hero Grid */}
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
-          {/* Main Hero (2/3) */}
-          <div className="lg:col-span-2 group cursor-pointer relative overflow-hidden bg-gray-900 aspect-[16/10] rounded-sm">
-            <img 
-              src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=1200&auto=format&fit=crop" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" 
-              alt="Bitcoin Hero"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent"></div>
-            <div className="absolute bottom-0 left-0 p-10 w-full">
-              <div className="bg-[#ffb300] text-[#0f172a] text-[10px] font-black uppercase tracking-widest px-2 py-1 inline-block mb-4">
-                Bitcoin Focus
-              </div>
-              <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4 group-hover:text-[#ffb300] transition-colors">
-                Bitcoin Surges Past $65,000 as Institutional Interest Reaches All-Time High
+      <div className="max-w-[1200px] mx-auto px-4 pt-6 pb-12">
+
+        {/* ── HERO: Featured Overlay Grid (1 big + 2 right) ── */}
+        <div className="grid grid-cols-12 gap-4 mb-6">
+
+          {/* Big hero – 8 cols */}
+          <article className="col-span-8 relative group cursor-pointer overflow-hidden">
+            <img src={`${B}2021/03/Depositphotos_328674290_xl-2015-1-450x300.jpg`}
+              className="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-500" alt="" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-7">
+              <span className="inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 mb-3 text-white" style={{ backgroundColor: ACCENT }}>Bitcoin</span>
+              <h1 className="text-white font-bold text-[26px] leading-tight mb-3">
+                Bitcoin Climbs as Elon Musk Says Tesla 'Likely' to Accept it Again
               </h1>
-              <div className="flex items-center gap-4 text-[12px] font-bold text-white/60 uppercase tracking-widest">
-                <span>By Alex Crypto</span>
-                <span>•</span>
-                <span>Oct 15, 2023</span>
+              <div className="flex items-center gap-2 text-gray-300 text-[11px]">
+                <span>By John Doe</span><span>·</span><span>Mar 16, 2021</span>
               </div>
             </div>
+          </article>
+
+          {/* Right 2 stacked – 4 cols */}
+          <div className="col-span-4 flex flex-col gap-4">
+            {[
+              { img: `${B}2021/03/Depositphotos_471848636_xl-2015-1-450x253.jpg`, t: "XRP Price Chart 'Double Bottom' Puts Next Bullish Target at $1", cat: "XRP", d: "Mar 16, 2021" },
+              { img: `${B}2021/02/Depositphotos_50133523_xl-2015-1-450x277.jpg`, t: "Fidelity Buys 7.4% Of Bitcoin Mining Company Marathon Digital Holdings", cat: "Bitcoin", d: "Feb 11, 2021" },
+            ].map((a, i) => (
+              <article key={i} className="relative group cursor-pointer overflow-hidden flex-1">
+                <img src={a.img} className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="inline-block text-[9px] font-bold uppercase tracking-wider mb-1" style={{ color: ACCENT }}>{a.cat}</span>
+                  <h2 className="text-white font-bold text-[14px] leading-snug line-clamp-3">{a.t}</h2>
+                  <p className="text-gray-400 text-[10px] mt-1">{a.d}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* ── MAIN CONTENT: 66% + 33% SIDEBAR ── */}
+        <div className="grid grid-cols-3 gap-7 mb-8">
+
+          {/* Left: Business list posts (66%) */}
+          <div className="col-span-2">
+            <SHead title="Business" />
+
+            {/* Featured large */}
+            <article className="flex gap-5 pb-5 mb-5 border-b border-white/10 cursor-pointer group">
+              <div className="flex-shrink-0 overflow-hidden">
+                <img src={`${B}2021/02/Depositphotos_56545139_xl-2015-1-450x332.jpg`}
+                  className="w-[300px] h-[200px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
+              </div>
+              <div className="flex-1">
+                <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: ACCENT }}>Technology</span>
+                <h2 className="font-bold text-[18px] leading-snug mt-1 mb-2 group-hover:text-blue-400 transition-colors">
+                  Can Cryptocurrency Be Hacked, Stolen Or Scammed? How Can You Be Safe?
+                </h2>
+                <div className="text-[11px] text-gray-400 mb-2">By John Doe · Feb 11, 2021</div>
+                <p className="text-[13px] text-gray-400 line-clamp-3">
+                  To understand the new politics stance and other pro nationals of recent times, we should look to Silicon…
+                </p>
+              </div>
+            </article>
+
+            {/* List of posts */}
+            {[
+              { img: `${B}2021/08/Depositphotos_168713846_xl-2015-1-450x297.jpg`, cat: "Business", t: "How Investors Can Get In On Crypto Without Actually Buying Any", a: "John Doe", d: "Feb 4, 2021" },
+              { img: `${B}2021/08/Depositphotos_174889758_xl-2015-1-450x244.jpg`, cat: "Technology", t: "Ethereum Just Underwent a Major Change – Hence, The 25% Jump in a Week!", a: "John Doe", d: "Feb 4, 2021" },
+              { img: `${B}2021/08/Depositphotos_353861418_xl-2015-1-450x284.jpg`, cat: "Business", t: "HSBC Becomes Latest Bank to Suspend Payments to Crypto", a: "John Doe", d: "Feb 4, 2021" },
+            ].map((a, i) => (
+              <article key={i} className="flex gap-4 pb-5 mb-5 border-b border-white/10 last:border-0 last:mb-0 last:pb-0 cursor-pointer group">
+                <div className="flex-shrink-0 overflow-hidden">
+                  <img src={a.img} className="w-[280px] h-[180px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
+                </div>
+                <div className="flex-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: ACCENT }}>{a.cat}</span>
+                  <h2 className="font-bold text-[16px] leading-snug mt-1 mb-2 group-hover:text-blue-400 transition-colors line-clamp-2">{a.t}</h2>
+                  <div className="text-[11px] text-gray-400 mb-2">By {a.a} · {a.d}</div>
+                  <p className="text-[12px] text-gray-400 line-clamp-2">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon…</p>
+                </div>
+              </article>
+            ))}
+
+            <button className="mt-4 border border-white/20 text-gray-300 text-[12px] font-bold px-8 py-2.5 hover:bg-white/10 transition-colors flex items-center gap-2">
+              Load More <span>↻</span>
+            </button>
           </div>
 
-          {/* Side Hero Stack */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
+          {/* RIGHT STICKY SIDEBAR (33%) */}
+          <div className="col-span-1 border-l border-white/10 pl-7">
+            {/* "Europe" featured */}
+            <SHead title="Europe" style="c" />
+            <article className="mb-5 cursor-pointer group">
+              <div className="overflow-hidden mb-3">
+                <img src={`${B}2021/08/Depositphotos_130306336_xl-2015-1-450x300.jpg`}
+                  className="w-full h-[170px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
+              </div>
+              <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "#10b981" }}>Investments</span>
+              <h2 className="font-bold text-[15px] leading-snug mt-1 mb-1 group-hover:text-blue-400 transition-colors">
+                NCR Buys Cryptocurrency ATM Firm LibertyX – A Big Deal
+              </h2>
+              <p className="text-[11px] text-gray-400">By John Doe · Feb 1, 2021</p>
+            </article>
+
+            {/* Small list */}
             {[
-              { title: "Ethereum Foundation Announces Major Network Upgrade", cat: "ETH", img: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=600&auto=format&fit=crop" },
-              { title: "New DeFi Protocols to Watch This Quarter", cat: "DeFi", img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=600&auto=format&fit=crop" },
-              { title: "Regulatory Clarity Coming to Crypto Markets", cat: "Laws", img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=600&auto=format&fit=crop" }
-            ].map((post, i) => (
-              <div key={i} className="flex-1 group cursor-pointer relative overflow-hidden bg-gray-900 rounded-sm">
-                <img src={post.img} className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110" alt={post.title} />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-6 w-full">
-                  <div className="text-[#ffb300] text-[9px] font-black uppercase tracking-widest mb-1">{post.cat}</div>
-                  <h3 className="text-[15px] font-bold leading-snug group-hover:text-[#ffb300] transition-colors">{post.title}</h3>
+              { img: `${B}2021/08/Depositphotos_178035294_xl-2015-1-300x177.jpg`, t: "Crypto Payment Systems Have Increased Over 70% This Year", d: "Feb 1, 2021" },
+              { img: `${B}2021/08/Depositphotos_168183508_xl-2015-1-300x169.jpg`, t: "Bitcoin, Ether Lower Whereas XRP, Litecoin Gain", d: "Feb 1, 2021" },
+              { img: `${B}2021/08/Depositphotos_402408846_xl-2015-1-300x200.jpg`, t: "Millennials Are Quitting Job to Become Day Traders", d: "Jan 20, 2021" },
+              { img: `${B}2021/08/Depositphotos_458703222_xl-2015-1-300x150.jpg`, t: "EU Will Make Bitcoin Traceable & Ban Anonymous Crypto", d: "Jan 18, 2021" },
+              { img: `${B}2021/08/Depositphotos_475476518_xl-2015-1-300x199.jpg`, t: "Changing Crypto Trading Patterns Reveal the Market's Power", d: "Jan 16, 2021" },
+            ].map((a, i) => (
+              <article key={i} className="flex gap-3 py-3 border-b border-white/10 last:border-0 cursor-pointer group">
+                <img src={a.img} className="w-[80px] h-[58px] object-cover flex-shrink-0 group-hover:opacity-80" alt="" />
+                <div>
+                  <h4 className="font-semibold text-[12px] leading-snug text-gray-300 group-hover:text-white line-clamp-2">{a.t}</h4>
+                  <p className="text-[10px] text-gray-500 mt-0.5">{a.d}</p>
+                </div>
+              </article>
+            ))}
+
+            {/* Newsletter */}
+            <div className="bg-[#1a2130] border border-white/10 p-5 mt-5">
+              <h3 className="font-bold text-[15px] mb-1 text-white text-center">Subscribe to Updates</h3>
+              <p className="text-[11px] text-gray-400 mb-3 text-center">Get the latest creative news from FooBar about art, design and business.</p>
+              <input type="email" placeholder="Your email address.." className="w-full bg-[#0d1117] border border-white/20 px-3 py-2 text-[12px] mb-2 outline-none text-white placeholder-gray-600 rounded-sm" />
+              <button className="w-full text-white text-[12px] font-bold py-2.5 rounded-sm transition-colors" style={{ backgroundColor: ACCENT }}>Subscribe</button>
+              <p className="text-[10px] text-gray-500 mt-2 text-center">
+                <input type="checkbox" className="mr-1" />
+                By signing up, you agree to our <a href="#" className="text-blue-400">Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── FEATURED VIDEOS: 66% big overlay + 33% list ── */}
+        <section className="mb-8 border-t border-white/10 pt-6">
+          <SHead title="Featured Videos" />
+          <div className="grid grid-cols-3 gap-6">
+
+            {/* Big video overlay – 2 cols */}
+            <article className="col-span-2 relative group cursor-pointer overflow-hidden">
+              <img src={`${B}2021/08/Depositphotos_473000906_xl-2015-1-1024x576.jpg`}
+                className="w-full h-[340px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+              {/* Play button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                  <div className="w-0 h-0 border-t-[10px] border-b-[10px] border-l-[18px] border-transparent border-l-white ml-1"></div>
                 </div>
               </div>
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider mb-2" style={{ color: "#a78bfa" }}>Ethereum</span>
+                <h2 className="text-white font-bold text-[20px] leading-snug">
+                  Cryptocurrency Prices Today on August 11: Ethereum Gains 25% in a Week
+                </h2>
+                <p className="text-gray-300 text-[11px] mt-2">By John Doe · Jan 11, 2021</p>
+              </div>
+            </article>
+
+            {/* Right video list – 1 col */}
+            <div className="col-span-1 space-y-0">
+              {[
+                { img: `${B}2021/08/Depositphotos_474939806_xl-2015-1-450x300.jpg`, cat: "Bitcoin", t: "Crypto Lending in a Nutshell: Principles, Rates, Safety" },
+                { img: `${B}2021/08/Depositphotos_243022762_xl-2015-1-450x281.jpg`, cat: "Monero", t: "Bug Found in Decoy Algorithm for Privacy Coin Monero" },
+                { img: `${B}2021/08/Depositphotos_177502930_xl-2015-1-450x300.jpg`, cat: "Bitcoin", t: "Memestock AMC Now Plans to Accept Bitcoin" },
+                { img: `${B}2021/08/Depositphotos_24331933_xl-2015-1-450x300.jpg`, cat: "Eurozone", t: "Digital Euro: Aspirations of a Sovereign Alternative to Crypto-Assets" },
+              ].map((a, i) => (
+                <article key={i} className="flex gap-3 py-3 border-b border-white/10 last:border-0 cursor-pointer group">
+                  <div className="relative flex-shrink-0">
+                    <img src={a.img} className="w-[90px] h-[64px] object-cover group-hover:opacity-80" alt="" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full bg-white/30 flex items-center justify-center">
+                        <div className="w-0 h-0 border-t-[4px] border-b-[4px] border-l-[7px] border-transparent border-l-white ml-0.5"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase" style={{ color: ACCENT }}>{a.cat}</span>
+                    <h4 className="font-semibold text-[12px] leading-snug text-gray-300 group-hover:text-white line-clamp-2 mt-0.5">{a.t}</h4>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── ECONOMY INSIGHTS: 4-col grid ── */}
+        <section className="mb-8 border-t border-white/10 pt-6">
+          <SHead title="Economy Insights" style="c" />
+          <div className="grid grid-cols-4 gap-5">
+            {[
+              { img: `${B}2021/08/Depositphotos_216984086_xl-2015-1-450x300.jpg`, t: "PoS Coins, Lightning, DeFi & DEXes In Danger as US Bill Chaos Intensifies", d: "Jan 15, 2021" },
+              { img: `${B}2021/08/Depositphotos_193678754_xl-2015-1-450x282.jpg`, t: "Jack Dorsey Says Bitcoin Will Unite The World", d: "Jan 15, 2021", stars: "9.1" },
+              { img: `${B}2021/08/Depositphotos_252260404_xl-2015-1-450x232.jpg`, t: "Hong Kong Customs Arrest Four in Crypto Laundering Bust", d: "Jan 15, 2021" },
+              { img: `${B}2021/02/Depositphotos_433967254_xl-2015-1-450x300.jpg`, t: "Warren Buffett-Backed Brazilian Crypto Bank Plans $2B IPO", d: "Feb 3, 2021" },
+            ].map((a, i) => (
+              <article key={i} className="cursor-pointer group">
+                <div className="overflow-hidden mb-3">
+                  <img src={a.img} className="w-full h-[160px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
+                </div>
+                <h2 className="font-bold text-[13px] leading-snug text-gray-200 group-hover:text-blue-400 transition-colors line-clamp-3 mb-1">{a.t}</h2>
+                {(a as any).stars && (
+                  <div className="flex items-center gap-1 mb-1">
+                    <span className="text-yellow-400 text-[11px]">★★★★★</span>
+                    <span className="text-[11px] text-gray-400">{(a as any).stars}</span>
+                  </div>
+                )}
+                <p className="text-[10px] text-gray-500">{a.d}</p>
+              </article>
             ))}
           </div>
         </section>
 
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Main Content Area */}
-          <div className="lg:w-2/3 space-y-16">
-            
-            {/* The Latest List */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">The Latest</h3>
-                <div className="flex-1 h-[1px] bg-white/5"></div>
-              </div>
-              <div className="space-y-10">
-                {[
-                  { title: "Why Solana is Outperforming Major L1s This Week", cat: "Altcoins", img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=800&auto=format&fit=crop" },
-                  { title: "NFT Market Resurgence: The Return of Digital Art", cat: "NFTs", img: "https://images.unsplash.com/photo-1620712943543-bcc4628c9757?q=80&w=800&auto=format&fit=crop" },
-                  { title: "The Role of Web3 in Modern Gaming Communities", cat: "Web3", img: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800&auto=format&fit=crop" },
-                  { title: "Central Bank Digital Currencies: Pros and Cons", cat: "Economy", img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=800&auto=format&fit=crop" },
-                  { title: "Hardware Wallets: Protecting Your Digital Assets", cat: "Security", img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="flex flex-col md:flex-row gap-8 group cursor-pointer">
-                    <div className="md:w-[280px] aspect-video shrink-0 overflow-hidden rounded-sm relative">
-                      <img src={post.img} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={post.title} />
-                      <div className="absolute top-2 left-2 bg-[#ffb300] text-[#0f172a] text-[9px] font-black uppercase tracking-widest px-2 py-0.5">
-                        {post.cat}
-                      </div>
-                    </div>
-                    <div className="space-y-3 py-1">
-                      <h4 className="text-[22px] font-black leading-tight group-hover:text-[#ffb300] transition-colors">{post.title}</h4>
-                      <p className="text-white/50 text-[14px] leading-relaxed line-clamp-2">
-                        Investors are closely watching the latest developments in the crypto space as new technologies and regulations reshape the landscape...
-                      </p>
-                      <div className="flex items-center gap-3 text-[11px] font-bold text-white/40 uppercase tracking-widest">
-                        <span>OCT 14, 2023</span>
-                        <span className="w-1 h-1 bg-white/20 rounded-full"></span>
-                        <span>5 MIN READ</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Video Section (Full Width Style) */}
-            <section className="bg-[#0f172a] p-12 -mx-4 md:-mx-12 border border-white/5 relative group cursor-pointer rounded-sm overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:scale-105 transition-transform duration-700"></div>
-              <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-[#ffb300] rounded-full flex items-center justify-center text-[#0f172a] mb-6 shadow-2xl group-hover:scale-110 transition-transform">
-                  <Play size={24} fill="currentColor" />
-                </div>
-                <div className="text-[#ffb300] text-[12px] font-black uppercase tracking-widest mb-3">Crypto Spotlight</div>
-                <h3 className="text-3xl font-black mb-4">How Decentralized Exchanges Are Changing The World</h3>
-                <p className="text-white/60 max-w-xl mx-auto text-[15px] leading-relaxed">
-                  Join us as we explore the inner workings of the most successful DEXs and how they are providing financial freedom to millions.
-                </p>
-              </div>
-            </section>
-
-            {/* 3. DeFi & Yield Farming */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">DeFi & Yield</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-4 group cursor-pointer">
-                  <div className="aspect-video overflow-hidden rounded-sm bg-gray-900 border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:opacity-80 transition-opacity" />
-                  </div>
-                  <h4 className="text-2xl font-black group-hover:text-[#ffb300] transition-colors leading-tight">Mastering Yield Farming: Strategies for 2024</h4>
-                  <p className="text-white/50 text-sm leading-relaxed">As the DeFi landscape matures, new opportunities for high-yield farming are emerging across multiple chains...</p>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    { title: "Top 5 Decentralized Lending Protocols Compared", cat: "Lending" },
-                    { title: "The Rise of Liquid Staking: Risks and Rewards", cat: "Staking" },
-                    { title: "Cross-Chain Bridges: How to Move Assets Safely", cat: "Bridges" },
-                    { title: "Governance Tokens: Does Voting Power Matter?", cat: "DAO" }
-                  ].map((item, i) => (
-                    <div key={i} className="group cursor-pointer border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                      <div className="text-[9px] font-black text-[#ffb300] uppercase tracking-widest mb-1">{item.cat}</div>
-                      <h5 className="text-[16px] font-bold group-hover:text-[#ffb300] transition-colors leading-snug">{item.title}</h5>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* 4. NFT & Digital Collectibles */}
-            <section className="bg-[#1e293b] p-10 rounded-sm space-y-8">
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">NFT Hub</h3>
-                <Link href="#" className="text-[11px] font-black uppercase tracking-widest hover:text-white transition-colors">Explore Gallery</Link>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  { title: "The Next Generation of Generative Art on the Blockchain", img: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400&auto=format&fit=crop" },
-                  { title: "Phygital NFTs: Bridging the Gap Between Physical and Digital", img: "https://images.unsplash.com/photo-1620712943543-bcc4628c9757?q=80&w=400&auto=format&fit=crop" },
-                  { title: "Gaming NFTs: The Future of In-Game Asset Ownership", img: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=400&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="space-y-4 group cursor-pointer">
-                    <div className="aspect-square overflow-hidden rounded-sm bg-black border border-white/5">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    </div>
-                    <h4 className="text-[15px] font-bold group-hover:text-[#ffb300] transition-colors leading-tight">{post.title}</h4>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* 5. Crypto Learning Center */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">Learning Center</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[
-                  { title: "Crypto 101: A Beginner's Guide to Digital Assets", img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Understanding Smart Contracts: The Code That Powers DeFi", img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Security Best Practices: How to Never Get Hacked", img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Tax Implications of Crypto Trading: What You Need to Know", img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-center bg-white/5 p-4 rounded-sm border border-transparent hover:border-[#ffb300]/20 transition-all">
-                    <div className="w-[100px] h-[75px] shrink-0 overflow-hidden rounded-sm">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <h4 className="text-[14px] font-bold group-hover:text-[#ffb300] transition-colors leading-tight">{post.title}</h4>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* 6. Regulation & Policy */}
-            <section className="space-y-8 pt-8">
-              <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">Regulation & Policy</h3>
-              </div>
-              <div className="space-y-6">
-                {[
-                  { title: "EU's MiCA Framework: A Blueprint for Global Crypto Regulation?", date: "Oct 12, 2023" },
-                  { title: "US Congress Debates New Stablecoin Legislation", date: "Oct 11, 2023" },
-                  { title: "The Impact of CBDCs on Traditional Banking Systems", date: "Oct 10, 2023" },
-                  { title: "Global Tax Standards for Digital Assets: What's Changing?", date: "Oct 09, 2023" }
-                ].map((post, i) => (
-                  <div key={i} className="group cursor-pointer flex justify-between items-center border-b border-white/5 pb-4">
-                    <h4 className="text-[16px] font-bold group-hover:text-[#ffb300] transition-colors leading-tight">{post.title}</h4>
-                    <span className="text-[10px] text-white/30 font-bold uppercase shrink-0 ml-4">{post.date}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-          </div>
-
-          {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-12">
-            
-            {/* Trending Coins Sidebar */}
-            <div className="bg-[#0f172a] border border-white/5 p-8 rounded-sm">
-              <h3 className="text-[14px] font-black uppercase tracking-widest text-[#ffb300] mb-8 flex items-center gap-2">
-                <TrendingUp size={18} /> Trending Coins
-              </h3>
-              <div className="space-y-6">
-                {[
-                  { name: "Bitcoin", symbol: "BTC", price: "$64,231.50", change: "+2.4%", img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=100&auto=format&fit=crop" },
-                  { name: "Ethereum", symbol: "ETH", price: "$3,412.10", change: "+1.8%", img: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=100&auto=format&fit=crop" },
-                  { name: "Solana", symbol: "SOL", price: "$145.20", change: "-0.5%", img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=100&auto=format&fit=crop" },
-                  { name: "Cardano", symbol: "ADA", price: "$0.45", change: "+0.2%", img: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=100&auto=format&fit=crop" }
-                ].map((coin, i) => (
-                  <div key={i} className="flex items-center justify-between group cursor-pointer">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-white/5 overflow-hidden border border-white/10 group-hover:border-[#ffb300] transition-colors">
-                        <img src={coin.img} className="w-full h-full object-cover" alt={coin.name} />
-                      </div>
-                      <div>
-                        <div className="text-[14px] font-bold">{coin.name}</div>
-                        <div className="text-[10px] text-white/40 font-bold uppercase">{coin.symbol}</div>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-[14px] font-bold">{coin.price}</div>
-                      <div className={`text-[11px] font-black ${coin.change.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>
-                        {coin.change}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button className="w-full mt-8 py-3 bg-white/5 border border-white/10 text-[11px] font-black uppercase tracking-widest hover:bg-[#ffb300] hover:text-[#0f172a] transition-all">
-                View All Markets
-              </button>
-            </div>
-
-            {/* Newsletter Widget */}
-            <div className="bg-[#ffb300] p-8 text-[#0f172a] rounded-sm relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform"></div>
-              <MailIcon size={40} className="mb-4 opacity-40" />
-              <h3 className="text-2xl font-black uppercase tracking-tighter mb-2">Crypto Alert</h3>
-              <p className="text-[#0f172a]/70 text-[14px] font-bold mb-6 leading-snug">Get the biggest crypto moves delivered to your inbox instantly.</p>
-              <form className="space-y-3">
-                <input type="email" placeholder="Email Address" className="w-full bg-white/40 border border-[#0f172a]/10 px-4 py-3 text-sm text-[#0f172a] placeholder:text-[#0f172a]/40 focus:outline-none focus:bg-white transition-all" />
-                <button className="w-full bg-[#0f172a] text-[#ffb300] font-black uppercase tracking-widest text-[11px] py-3.5 hover:bg-white hover:text-black transition-colors shadow-lg">Join Pro List</button>
-              </form>
-            </div>
-
-            {/* Top Stories Small */}
-            <div className="space-y-8">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b-2 border-[#ffb300] inline-block pb-1">Top Stories</h3>
-              <div className="space-y-6">
-                {[
-                  { title: "Mining Profitability Reaches New Milestone This Month", time: "2 Hours Ago" },
-                  { title: "The Best Hardware Wallets for Secure Storage", time: "4 Hours Ago" },
-                  { title: "Why Institutional Investors are Moving to Ethereum", time: "6 Hours Ago" }
-                ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                    <span className="text-2xl font-black text-white/10 group-hover:text-[#ffb300] transition-colors leading-none pt-1">0{i+1}</span>
-                    <div>
-                      <h4 className="text-[15px] font-bold leading-snug group-hover:text-[#ffb300] transition-colors">{post.title}</h4>
-                      <span className="text-[10px] text-white/30 font-bold uppercase mt-2 block">{post.time}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </aside>
-        </div>
-
-        {/* Economy Insights Grid */}
-        <section className="mt-20 space-y-8">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4">
-            <h3 className="text-xl font-black uppercase tracking-widest text-[#ffb300]">Market Analysis</h3>
-            <Link href="#" className="flex items-center gap-1 text-[11px] font-black uppercase tracking-widest hover:text-[#ffb300] transition-colors group">
-              Explore All <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* ── MARKETS section ── */}
+        <section className="border-t border-white/10 pt-6 mb-8">
+          <SHead title="Markets" />
+          <div className="grid grid-cols-3 gap-6">
             {[
-              { title: "Technical Analysis: BTC Consolidates", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=400&auto=format&fit=crop" },
-              { title: "Whale Movements Indicate Bullish Trend", img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=400&auto=format&fit=crop" },
-              { title: "Exchange Reserves Hit 3-Year Low", img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=400&auto=format&fit=crop" },
-              { title: "The Impact of US Spot Bitcoin ETFs", img: "https://images.unsplash.com/photo-1622790698141-94e30457ef12?q=80&w=400&auto=format&fit=crop" }
-            ].map((post, i) => (
-              <div key={i} className="group cursor-pointer space-y-4">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-900 rounded-sm">
-                  <img src={post.img} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80" alt={post.title} />
+              { img: `${B}2021/03/Depositphotos_471848636_xl-2015-1-450x253.jpg`, cat: "XRP", t: "XRP Price Chart 'Double Bottom' Puts Next Bullish Target at $1", d: "Mar 16, 2021", desc: "XRP's technical chart shows a classic double bottom pattern, signaling a potential bullish reversal toward the $1 price target." },
+              { img: `${B}2021/02/Depositphotos_50133523_xl-2015-1-450x277.jpg`, cat: "Mining", t: "Fidelity Buys 7.4% Of Bitcoin Mining Company Marathon Digital Holdings", d: "Feb 11, 2021", desc: "Fidelity Investments has acquired a 7.4% stake in Marathon Digital Holdings, signaling growing institutional interest in crypto mining." },
+              { img: `${B}2021/08/Depositphotos_130306336_xl-2015-1-450x300.jpg`, cat: "Investments", t: "NCR Buys Cryptocurrency ATM Firm LibertyX – A Big Deal", d: "Feb 1, 2021", desc: "NCR Corporation has acquired LibertyX, a leading cryptocurrency ATM company, in a deal that expands its digital currency footprint." },
+            ].map((a, i) => (
+              <article key={i} className="cursor-pointer group bg-[#1a2130] border border-white/10 overflow-hidden">
+                <div className="overflow-hidden">
+                  <img src={a.img} className="w-full h-[170px] object-cover group-hover:opacity-80 transition-opacity" alt="" />
                 </div>
-                <h4 className="text-[16px] font-bold leading-tight group-hover:text-[#ffb300] transition-colors">{post.title}</h4>
-                <div className="text-[10px] text-white/30 font-bold uppercase tracking-widest">Oct 12, 2023</div>
-              </div>
+                <div className="p-4">
+                  <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: ACCENT }}>{a.cat}</span>
+                  <h2 className="font-bold text-[14px] leading-snug text-gray-200 group-hover:text-blue-400 transition-colors mt-1 mb-2 line-clamp-2">{a.t}</h2>
+                  <p className="text-[12px] text-gray-400 line-clamp-2">{a.desc}</p>
+                  <p className="text-[10px] text-gray-500 mt-2">{a.d}</p>
+                </div>
+              </article>
             ))}
           </div>
         </section>
 
       </div>
 
-      <CoinbaseFooter />
+      {/* ── FOOTER ── */}
+      <footer className="bg-[#0a0e14] border-t border-white/10 pt-10 pb-6">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="flex justify-start mb-8">
+            <img src="https://smartmag.theme-sphere.com/coinbase/wp-content/uploads/sites/19/2021/08/CoinBase-logo-white.png"
+              className="h-8 object-contain" alt="CoinBase" />
+          </div>
+          <div className="grid grid-cols-4 gap-8 mb-8">
+            {[
+              { h: "Categories", links: ["Technology", "Insights", "Business", "Markets", "Videos"] },
+              { h: "Quick Links", links: ["Home", "Features", "Contact", "Privacy Policy"] },
+              { h: "Follow Us", links: ["Facebook", "X (Twitter)", "Instagram"] },
+            ].map((col, i) => (
+              <div key={i}>
+                <h5 className="font-bold text-[12px] uppercase tracking-wider mb-4 border-b border-white/10 pb-2 text-gray-300">{col.h}</h5>
+                <ul className="space-y-2">
+                  {col.links.map((l, j) => (
+                    <li key={j}><a href="#" className="text-gray-500 text-[12px] hover:text-white transition-colors">{l}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <div>
+              <h5 className="font-bold text-[12px] uppercase tracking-wider mb-4 border-b border-white/10 pb-2 text-gray-300">Newsletter</h5>
+              <input type="email" placeholder="Your email address.." className="w-full bg-[#161b22] border border-white/20 px-3 py-2 text-[12px] mb-2 outline-none text-white placeholder-gray-600" />
+              <button className="w-full text-white text-[12px] font-bold py-2 transition-colors" style={{ backgroundColor: ACCENT }}>Subscribe</button>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-5 text-center">
+            <p className="text-gray-600 text-[11px]">© 2024 SmartMag CoinBase. All rights reserved. Powered by ThemeSphere.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

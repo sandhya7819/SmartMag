@@ -1,258 +1,371 @@
 import SmartTimesHeader from "@/components/SmartTimesHeader";
-import TechBlogFooter from "@/components/TechBlogFooter";
-import { MessageCircle, Clock, ArrowRight, Play, Eye, Share2, Facebook, Twitter, Instagram, Youtube, ChevronRight, Bookmark } from "lucide-react";
+import SmartTimesFooter from "@/components/SmartTimesFooter";
+import { Play } from "lucide-react";
 import Link from "next/link";
 
-const heroPosts = [
-  {
-    cat: "POLITICS",
-    title: "White House Preparing New Rules for Private Space Industry Expansion",
-    author: "James Dean",
-    date: "April 21, 2026",
-    img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200",
-    size: "huge"
-  },
-  {
-    cat: "BUSINESS",
-    title: "Global Markets Rally as Tech Giants Report Record Profits",
-    date: "April 20, 2026",
-    img: "https://images.unsplash.com/photo-1611974714851-48210433d711?q=80&w=800",
-    size: "small"
-  },
-  {
-    cat: "WORLD",
-    title: "Breakthrough in Fusion Energy Research Promises Clean Power",
-    date: "April 20, 2026",
-    img: "https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=800",
-    size: "small"
-  }
-];
+/* ─── Image assets (direct SmartTimes URLs from the original) ─── */
+const IMG = {
+  spacex: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/spacex-Ptd-iTdrCJM-unsplash-300x200.jpg",
+  china:  "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/arron-choi-cMyTiCrgnbE-unsplash-300x169.jpg",
+  antiwar:"https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/gayatri-malhotra-fhxGJj9lz-k-unsplash-1-300x200.jpg",
+  nato:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/cibi-chakravarthi-WPEx2mvZg20-unsplash-300x137.jpg",
+  hero:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_536809216_XL-1-1024x683.jpg",
+  tank:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_61395557_XL-1-450x300.jpg",
+  opinion:"https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_481566624_XL-1-450x300.jpg",
+  bush:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_287440426_XL-1-450x304.jpg",
+  bitcoin:"https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_373474714_XL-1-300x169.jpg",
+  ukraine:"https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/kedar-gadge-A69UZJ5cnaQ-unsplash-11-300x200.jpg",
+  europeans:"https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_442034052_XL-1-300x202.jpg",
+  pharma: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/angelo-abear-RHyJdCu9YbU-unsplash-200x300.jpg",
+  covid:  "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_49700347_XL-2-300x212.jpg",
+  oil:    "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_286561994_XL-1-300x139.jpg",
+  durant: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_527742458_XL-300x200.jpg",
+  senate: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/daniel-eledut-yk9qMOst4jk-unsplash-300x200.jpg",
+  oxford: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/jp-valery-BjbCnw18kpQ-unsplash-300x225.jpg",
+  moto:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_375698458_xl-2015-12-450x300.jpg",
+  bball:  "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/john-torcasio-GM4sf9ltjFE-unsplash-11-300x225.jpg",
+  wisc:   "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/sheri-hooley-tkwfu4R1Lxk-unsplash-300x219.jpg",
+  horse:  "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/Depositphotos_174144472_xl-2015-11-300x200.jpg",
+  rcb:    "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/6efcd9fdf4b988e8b3e8dc852e16b0f0-1-300x200.jpg",
+  banner: "https://smartmag.theme-sphere.com/smart-times/wp-content/uploads/sites/30/2022/03/TheSmartTimes-wide-middle.jpg",
+};
+
+/* ─── Reusable section heading ─── */
+function SectionHead({ title }: { title: string }) {
+  return (
+    <div className="flex items-center gap-0 mb-10 border-b border-gray-200">
+      <h4 className="text-[13px] font-black uppercase tracking-[2px] border-b-[3px] border-black pb-[11px] pr-6 font-sans whitespace-nowrap -mb-[1px]">
+        {title}
+      </h4>
+    </div>
+  );
+}
+
+function SmallPost({ img, title, date, review }: { img: string; title: string; date?: string; review?: string }) {
+  return (
+    <div className="flex gap-4 group cursor-pointer items-start border-b border-gray-100 py-5 last:border-0 last:pb-0">
+      <div className="flex-1 space-y-1">
+        <h4 className="text-[14px] font-bold leading-tight group-hover:text-red-600 transition-colors line-clamp-3">{title}</h4>
+        {date && <div className="text-[10px] text-gray-400 font-bold font-sans uppercase tracking-widest">{date}</div>}
+      </div>
+      <div className="relative w-[80px] h-[60px] shrink-0 overflow-hidden">
+        <img src={img} className="w-full h-full object-cover" alt={title} />
+        {review && (
+          <div className="absolute bottom-1 right-1 bg-[#e21c23] text-white text-[9px] font-black px-1 py-0.5">{review}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Text-only list post ─── */
+function TextPost({ title, date }: { title: string; date: string }) {
+  return (
+    <div className="group cursor-pointer border-b border-gray-100 py-6 last:border-0 last:pb-0">
+      <h4 className="text-[15px] font-bold leading-snug group-hover:text-red-600 transition-colors mb-2">{title}</h4>
+      <div className="text-[10px] text-gray-400 font-bold font-sans uppercase tracking-widest">{date}</div>
+    </div>
+  );
+}
 
 export default function SmartTimesPage() {
-   return (
-      <main className="min-h-screen bg-white font-serif selection:bg-[#e21c23] selection:text-white pb-0">
-         <SmartTimesHeader />
+  return (
+    <main className="min-h-screen bg-white font-sans selection:bg-[#e21c23] selection:text-white">
+      <SmartTimesHeader />
 
-         {/* 1. Featured Top Row (4 Small Articles) - Exact Match Screenshot 1 */}
-         <section className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6">
-               {[
-                  { cat: "SCIENCE", title: "SpaceX Launches Starlink Satellites on 'American Ground'", img: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=400" },
-                  { cat: "POLITICS", title: "The China-Built Ship that Pulled a US Navy Jet Wreckage", img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=400" },
-                  { cat: "EUROPE", title: "Anti-War Protests Intensify in World Along with Global", img: "https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=400" },
-                  { cat: "WORLD", title: "US Nod to Nato for Sending Fighter Jets to Ukraine", img: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=400" }
-               ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                     <div className="w-[85px] h-[75px] shrink-0 overflow-hidden rounded-[1px]">
-                        <img src={post.img} className="w-full h-full object-cover" />
-                     </div>
-                     <div className="space-y-1.5 pt-0.5">
-                        <span className="text-[11px] font-black text-[#e21c23] tracking-widest uppercase font-sans">{post.cat}</span>
-                        <h4 className="text-[14px] font-black leading-tight group-hover:text-red-700 transition-colors line-clamp-2">{post.title}</h4>
-                     </div>
-                  </div>
-               ))}
-            </div>
-            <div className="w-full h-[1px] bg-gray-100 mt-10"></div>
-         </section>
-
-         {/* 2. Main Hero Section (Large Left, Just In Right) */}
-         <section className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-            {/* Left Column: Big Article */}
-            <div className="lg:col-span-8 space-y-8">
-               <div className="group cursor-pointer space-y-6">
-                  <h2 className="text-[42px] lg:text-[52px] font-black leading-[1.05] group-hover:text-red-700 transition-colors tracking-tight">EU's New Sanctions Aim to Cut Russia Off From World Bank, IMF</h2>
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-gray-400 capitalize tracking-widest font-sans">
-                     <span className="text-[#e21c23] font-black uppercase">EUROPE</span>
-                     <span className="text-gray-300">By</span>
-                     <span className="text-black font-black">John Doe</span>
-                     <span>— Jan 4, 2021</span>
-                  </div>
-                  <div className="relative aspect-[16/9.2] overflow-hidden rounded-[1px]">
-                     <img src="https://images.unsplash.com/photo-1577017040065-650ee4d43339?q=80&w=1200" className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105" />
-                     <div className="absolute bottom-6 left-6 bg-white/95 px-6 py-3 text-[22px] font-black italic tracking-tighter shadow-2xl">#SPPraTodos</div>
-                  </div>
-                  <p className="text-[#333] text-[18px] leading-relaxed max-w-[95%]">The European Union is preparing a new round of severe sanctions aimed at further isolating Moscow's financial system from the global economy...</p>
-                  <button className="text-[11px] font-black uppercase tracking-[2.5px] border-2 border-gray-100 px-6 py-2.5 hover:bg-black hover:text-white transition-all font-sans">READ MORE</button>
-               </div>
-
-               {/* Below Big Article: 2 Columns of Smaller Articles */}
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-16 border-t border-gray-100">
-                  <div className="space-y-10">
-                     {[
-                        { title: "Oil Rises as Investors Look Past Possible Reserve Releases", img: "https://images.unsplash.com/photo-1611974714851-48210433d711?q=80&w=800" },
-                        { title: "Kevin Durant Pulled from Game Due to H&S Protocols", img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800" }
-                     ].map((post, i) => (
-                        <div key={i} className="group cursor-pointer space-y-6">
-                           <div className="aspect-[16/10] overflow-hidden rounded-[1px]">
-                              <img src={post.img} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
-                           </div>
-                           <h3 className="text-2xl font-black leading-tight group-hover:text-red-700 transition-colors tracking-tight italic">{post.title}</h3>
-                           <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement...</p>
-                        </div>
-                     ))}
-                  </div>
-                  <div className="space-y-10">
-                     {[
-                        { title: "U.S. Senate Passes $1.5 Trillion Gov't Funding Bill with Ukraine", img: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=800" },
-                        { title: "Oxford University Launches Covid-19 Vaccine Study on Children", img: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?q=80&w=800", isVideo: true }
-                     ].map((post, i) => (
-                        <div key={i} className="group cursor-pointer space-y-6">
-                           <div className="aspect-[16/10] overflow-hidden rounded-[1px] relative">
-                              <img src={post.img} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
-                              {post.isVideo && <div className="absolute inset-0 flex items-center justify-center"><div className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white"><Play size={16} fill="white" className="ml-0.5" /></div></div>}
-                           </div>
-                           <h3 className="text-2xl font-black leading-tight group-hover:text-red-700 transition-colors tracking-tight italic">{post.title}</h3>
-                           <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement...</p>
-                        </div>
-                     ))}
-                  </div>
-               </div>
-            </div>
-
-            {/* Right Column: Sidebar (Just In + Opinion) */}
-            <div className="lg:col-span-4 space-y-16">
-               <div className="space-y-8">
-                  <div className="flex items-center gap-4">
-                     <h3 className="text-[15px] font-black uppercase tracking-[3px] font-sans">JUST IN</h3>
-                     <div className="flex-1 h-[2px] bg-black"></div>
-               </div>
-               <div className="space-y-8">
-                  {[
-                     { title: "A New Asset Class? Bitcoin's Bid to Go Mainstream", date: "JAN 3, 2021", img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=400" },
-                     { title: "Review: How Hard will it be to Defend Ukraine from Russia?", date: "JAN 4, 2021", img: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=400", review: "8.5" },
-                     { title: "Europeans are Rushing to Distance Themselves from Putin", date: "JAN 13, 2021", img: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=400" },
-                     { title: "German Pharmacies Will Start to Get a Big Infusion of Vaccines", date: "JAN 3, 2021", img: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?q=80&w=400" },
-                     { title: "President Presses for $1.9 Trillion COVID Relief Plan 2023", date: "JAN 3, 2021", img: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=400" }
-                  ].map((post, i) => (
-                     <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                        <div className="flex-1 space-y-2">
-                           <h4 className="text-[15px] font-black leading-tight group-hover:text-red-600 transition-colors line-clamp-3">{post.title}</h4>
-                           <div className="text-[10px] font-bold text-gray-400 font-sans tracking-widest">{post.date}</div>
-                        </div>
-                        <div className="w-[85px] h-[75px] shrink-0 relative rounded-[1px] overflow-hidden">
-                           <img src={post.img} className="w-full h-full object-cover" />
-                           {post.review && <div className="absolute bottom-1 right-1 bg-red-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded-sm">{post.review}</div>}
-                        </div>
-                     </div>
-                  ))}
-               </div>
-               </div>
-
-               <div className="space-y-8">
-                  <div className="flex items-center gap-4">
-                     <h3 className="text-[15px] font-black uppercase tracking-[3px] font-sans">OPINION</h3>
-                     <div className="flex-1 h-[2px] bg-black"></div>
-                  </div>
-                  <div className="relative group overflow-hidden cursor-pointer h-[420px] rounded-[1px]">
-                     <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?q=80&w=600" className="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-110" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-                     <div className="absolute bottom-8 left-8 right-8 space-y-4">
-                        <span className="text-[10px] font-black text-white bg-red-600 px-2 py-1 uppercase font-sans tracking-widest">EUROPE — JAN 4, 2021</span>
-                        <h4 className="text-white text-2xl font-black leading-tight italic group-hover:text-red-400 transition-colors">France's Largest Business Summit to Conclude on Mar 22</h4>
-                     </div>
-                  </div>
-                  <div className="space-y-6 pt-4">
-                     {[
-                        "AI in Basketball: Could an Algorithm Really Predict Injuries?",
-                        "Can Cash Strapped Barcelona Afford to Keep Messi?",
-                        "Ricardo Ferreira Switches Soccer Allegiance to Canada"
-                     ].map((title, i) => (
-                        <div key={i} className="group cursor-pointer border-b border-gray-50 pb-4 last:border-0 grow">
-                           <h5 className="text-[16px] font-black leading-tight group-hover:text-red-600 transition-colors">{title}</h5>
-                           <div className="text-[10px] text-gray-400 mt-2 uppercase font-bold font-sans tracking-widest">JAN 4, 2021</div>
-                        </div>
-                     ))}
-                  </div>
-               </div>
-            </div>
-         </section>
-
-         {/* 3. Banner Ad (Screenshot 3 Style) */}
-         <section className="container mx-auto px-4 mb-20">
-            <div className="bg-[#fcfcfc] border border-gray-100 p-16 text-center group cursor-pointer relative overflow-hidden">
-               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1200')] opacity-[0.03]"></div>
-               <div className="relative z-10 flex flex-col items-center">
-                  <span className="text-[10px] font-black text-gray-300 uppercase tracking-[6px] mb-4">THE NEW SMARTMAG</span>
-                  <h2 className="text-4xl font-black text-black mb-4 tracking-tighter italic">Trusted by Over 14000 Users Worldwide</h2>
-                  <p className="text-gray-400 text-sm font-bold uppercase tracking-[4px] mb-8">BLOG, MAGAZINE, NEWS WORDPRESS THEME</p>
-                  <button className="bg-black text-white px-12 py-4 text-[11px] font-black uppercase tracking-[4px] hover:bg-red-600 transition-all rounded-[1px]">GET STARTED</button>
-               </div>
-            </div>
-         </section>
-
-         {/* 4. Sports Section */}
-         <section className="container mx-auto px-4 py-20 border-t-4 border-black">
-            <div className="flex items-center justify-between mb-12">
-               <h3 className="text-[22px] font-black uppercase tracking-tighter">SPORTS</h3>
-               <span className="text-[12px] font-black uppercase tracking-widest text-gray-400 hover:text-red-600 cursor-pointer transition-colors font-sans">View All Posts</span>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-               <div className="lg:col-span-8 group cursor-pointer space-y-8">
-                  <div className="relative aspect-[16/9.5] overflow-hidden rounded-[1px]">
-                     <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200" className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105" />
-                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 rounded-full bg-black/30 backdrop-blur-sm border-2 border-white/40 flex items-center justify-center group-hover:bg-red-600 group-hover:border-red-600 transition-all scale-90 group-hover:scale-100">
-                           <Play size={32} fill="white" className="text-white ml-2" />
-                        </div>
-                     </div>
-                  </div>
-                  <h2 className="text-4xl font-black leading-tight group-hover:text-red-700 transition-colors tracking-tight italic">Marquez Explains Lack of Confidence During Qatar GP Race</h2>
-                  <div className="flex items-center gap-3 text-[10px] font-bold text-gray-400 uppercase font-sans tracking-widest">
-                     <span className="text-[#e21c23] font-black">SPORTS</span>
-                     <span>—</span>
-                     <span>JAN 13, 2021</span>
-                  </div>
-                  <p className="text-[#333] text-[17px] leading-relaxed">To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified movement...</p>
-               </div>
-               <div className="lg:col-span-4 grid grid-cols-1 gap-10">
-                  {[
-                     { title: "It's Time for Basketball: Spurs at Timberwolves", img: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=400" },
-                     { title: "Can Wisconsin Clinch the Big Ten West this Weekend", img: "https://images.unsplash.com/photo-1521404121619-79ad05ae39d7?q=80&w=400" },
-                     { title: "Olympic Great Todd Loses Training License for Hittin...", img: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=400" },
-                     { title: "Royal Challengers Bangalore Announce Faf d...", img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=400" },
-                     { title: "Women's Tennis Association Could Pull Out...", img: "https://images.unsplash.com/photo-1622279457486-62dcc4a4bd13?q=80&w=400" }
-                  ].map((post, i) => (
-                     <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                        <div className="w-[100px] h-[75px] shrink-0 overflow-hidden rounded-[1px]">
-                           <img src={post.img} className="w-full h-full object-cover" />
-                        </div>
-                        <div className="space-y-1 pt-0.5">
-                           <h4 className="text-[15px] font-black leading-tight group-hover:text-red-600 transition-colors line-clamp-3 italic tracking-tight">{post.title}</h4>
-                           <div className="text-[10px] text-gray-400 font-sans tracking-widest">JAN 14, 2021</div>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-            </div>
-         </section>
-
-         {/* 5. Bottom Multi-Column Section */}
-         <section className="container mx-auto px-4 py-20 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      {/* ══ 1. TOP 4-COLUMN SNIPPET BAR ══ */}
+      <section className="border-b border-t border-gray-200 bg-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200">
             {[
-               { title: "TRAVEL", color: "bg-blue-400", posts: ["Dubai Live Entertainment Ban Extends to Yachts", "Museum to Display More New Artists in 2021", "Dubai Tourism Song Celebrating Festival"] },
-               { title: "UK NEWS", color: "bg-red-400", posts: ["London Market Stalls Facing New Regulations", "Historic Pub in Chelsea Reopens After 2 Years", "UK High Street Seeing Unexpected Growth"] },
-               { title: "SCIENCE", color: "bg-green-400", posts: ["New Study on Sleep Patterns and Productivity", "NASA's Latest Mars Images Reveal New Data", "Breakthrough in Fusion Energy Research"] },
-               { title: "ECONOMY", color: "bg-yellow-400", posts: ["Global Markets React to New Interest Rates", "Rising Energy Costs Impacting Small Businesses", "Consumer Spending Hits Record High in Q1"] }
-            ].map((col, i) => (
-               <div key={i} className="space-y-8">
-                  <div className="flex items-center gap-4">
-                     <h3 className="text-[14px] font-black uppercase tracking-[3px] font-sans">{col.title}</h3>
-                     <div className="flex-1 h-[2px] bg-black"></div>
-                  </div>
-                  <div className="space-y-8">
-                     {col.posts.map((post, j) => (
-                        <div key={j} className="group cursor-pointer border-b border-gray-50 pb-6 last:border-0 grow">
-                           <h4 className="text-[15px] font-black leading-tight group-hover:text-red-600 transition-colors italic tracking-tight">{post}</h4>
-                           <div className="text-[10px] text-gray-400 mt-2 font-sans tracking-widest uppercase font-black">JAN 14, 2021 — BY SHANE DOE</div>
-                        </div>
-                     ))}
-                  </div>
-               </div>
+              { cat: "Science",  title: "SpaceX Launches Starlink Satellites on 'American Broomstick' and Lands Rocket at Sea", img: IMG.spacex },
+              { cat: "Politics", title: "The China-Built Ship that Pulled a US Navy Jet Wreck from the South China Sea", img: IMG.china },
+              { cat: "Europe",   title: "Anti-War Protests Intensify in World Along with Crackdown", img: IMG.antiwar },
+              { cat: "World",    title: "US Nod to Nato for Sending Fighter Jets to Ukraine Finds no Takers", img: IMG.nato },
+            ].map((p, i) => (
+              <div key={i} className={`flex gap-4 group cursor-pointer items-center py-3 ${i > 0 ? 'pl-7' : ''} ${i < 3 ? 'pr-7' : ''}`}>
+                <div className="flex-1 space-y-1">
+                  <span className="text-[10px] font-black text-[#e21c23] uppercase tracking-widest font-sans">{p.cat}</span>
+                  <h4 className="text-[13px] font-bold leading-snug group-hover:text-red-700 transition-colors line-clamp-3">{p.title}</h4>
+                </div>
+                <div className="w-[100px] h-[75px] shrink-0 overflow-hidden">
+                  <img src={p.img} className="w-full h-full object-cover" alt={p.title} />
+                </div>
+              </div>
             ))}
-         </section>
+          </div>
+        </div>
+      </section>
 
-         <TechBlogFooter />
-      </main>
-   );
+      {/* ══ 2. MAIN 3-COLUMN CONTENT AREA ══ */}
+      <section className="container mx-auto px-4 pt-14 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+
+          {/* ─ LEFT: large hero + 4 list posts (col-span-6) ─ */}
+          <div className="lg:col-span-6 space-y-8 border-r border-gray-200 pr-10">
+            {/* Hero article */}
+            <div className="group cursor-pointer space-y-6">
+              <div className="space-y-3">
+                <h2 className="text-[38px] font-black leading-[1.05] group-hover:text-red-700 transition-colors tracking-tight">
+                  EU&apos;s New Sanctions Aim to Cut Russia Off From World Bank, IMF
+                </h2>
+                <div className="flex items-center gap-2 text-[11px] font-bold text-gray-400 font-sans uppercase tracking-widest">
+                  <span className="text-[#e21c23] font-black">Europe</span>
+                  <span>·</span>
+                  <span>By <strong className="text-black">John Doe</strong></span>
+                  <span>· Jan 4, 2021</span>
+                </div>
+              </div>
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={IMG.hero} className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105" alt="hero" />
+              </div>
+              <p className="text-[16px] leading-relaxed text-gray-700">
+                To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation. In the high-profile case of US-based journalist Peter Wilson…
+              </p>
+              <button className="text-[11px] font-black uppercase tracking-[2px] border border-gray-300 px-6 py-2.5 hover:bg-black hover:text-white transition-all font-sans">
+                Read More
+              </button>
+            </div>
+
+            <div className="border-t border-gray-200 pt-10 space-y-0">
+              {[
+                { img: IMG.oil,    title: "Oil Rises as Investors Look Past Possible Reserve Releases",                 excerpt: true },
+                { img: IMG.durant, title: "Kevin Durant Pulled from Game Due to H&S Protocols",                         excerpt: true },
+                { img: IMG.senate, title: "U.S. Senate Passes $1.5 Trillion Gov't Funding Bill with Ukraine",           excerpt: true },
+                { img: IMG.oxford, title: "Oxford University Launches Covid-19 Vaccine Study on Children",              excerpt: true, audio: true },
+              ].map((p, i) => (
+                <div key={i} className="flex gap-5 group cursor-pointer items-start border-b border-gray-100 py-7 last:border-0 last:pb-0">
+                  <div className="relative w-[140px] h-[95px] shrink-0 overflow-hidden">
+                    <img src={p.img} className="w-full h-full object-cover" alt={p.title} />
+                    {p.audio && (
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="w-7 h-7 rounded-full bg-white/90 flex items-center justify-center">
+                          <Play size={11} fill="black" className="text-black" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    <h3 className="text-[16px] font-black leading-tight group-hover:text-red-600 transition-colors">{p.title}</h3>
+                    <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-2">
+                      To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley…
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ─ CENTRE: grid card + opinion (col-span-3) ─ */}
+          <div className="lg:col-span-3 space-y-8 border-r border-gray-200 px-8">
+            {/* Featured card */}
+            <div className="group cursor-pointer space-y-4">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={IMG.tank} className="w-full h-full object-cover transition-transform group-hover:scale-105" alt="tank" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="text-[18px] font-black leading-tight group-hover:text-red-600 transition-colors">
+                  Battle Analysis: Russian Tank Armada vs Ukraine
+                </h3>
+                <div className="flex items-center gap-2 text-[10px] font-bold font-sans uppercase tracking-widest text-gray-400">
+                  <span className="text-[#e21c23]">World</span><span>· Jan 4, 2021</span>
+                </div>
+              </div>
+              <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
+                To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation…
+              </p>
+            </div>
+
+            <div className="border-t border-gray-200 pt-6 space-y-0">
+              <TextPost title="US HY Defaults Return as Rate Inches Up to 0.5%; Forecasts" date="Jan 3, 2021" />
+              <TextPost title="E.U. Leaders Consider Faster Vaccine Funds Rollouts" date="Jan 3, 2021" />
+            </div>
+
+            {/* Opinion */}
+            <div className="border-t border-gray-200 pt-8 space-y-6">
+              <SectionHead title="Opinion" />
+              <div className="group cursor-pointer space-y-4">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={IMG.opinion} className="w-full h-full object-cover transition-transform group-hover:scale-105" alt="opinion" />
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-[17px] font-black leading-tight group-hover:text-red-600 transition-colors">
+                    France&apos;s Largest Business Summit to Conclude on Mar 22
+                  </h3>
+                  <div className="flex items-center gap-2 text-[10px] font-bold font-sans uppercase tracking-widest text-gray-400">
+                    <span className="text-[#e21c23]">Europe</span><span>· Jan 4, 2021</span>
+                  </div>
+                </div>
+                <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
+                  To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley…
+                </p>
+              </div>
+              <div className="space-y-0 border-t border-gray-200 pt-4">
+                <TextPost title="AI in Basketball: Could an Algorithm Really Predict Injuries?" date="Jan 4, 2021" />
+                <TextPost title="Can Cash-Strapped Barcelona Afford to Keep Messi?" date="Jan 4, 2021" />
+                <TextPost title="Ricardo Ferreira Switches Soccer Allegiance to Canada" date="Jan 4, 2021" />
+              </div>
+            </div>
+          </div>
+
+          {/* ─ RIGHT: Just In + another card (col-span-3) ─ */}
+          <div className="lg:col-span-3 space-y-0 pl-8">
+            <SectionHead title="Just In" />
+            <div className="space-y-0">
+              {[
+                { img: IMG.bitcoin,   title: "A New Asset Class? Bitcoin's Bid to Go Mainstream" },
+                { img: IMG.ukraine,   title: "Review: How Hard will it be to Defend Ukraine from Russia?", review: "8.5" },
+                { img: IMG.europeans, title: "Europeans are Rushing to Distance Themselves from Putin" },
+                { img: IMG.pharma,    title: "German Pharmacies Will Start to Get a Big Infusion of Vaccines" },
+                { img: IMG.covid,     title: "President Presses for $1.9 Trillion COVID Relief Plan 2023" },
+              ].map((p, i) => (
+                <div key={i} className="flex gap-3 group cursor-pointer items-start border-b border-gray-100 py-5 last:border-0 last:pb-0">
+                  <div className="relative w-[80px] h-[60px] shrink-0 overflow-hidden">
+                    <img src={p.img} className="w-full h-full object-cover" alt={p.title} />
+                    {p.review && (
+                      <div className="absolute bottom-1 right-1 bg-[#e21c23] text-white text-[9px] font-black px-1 py-0.5 font-sans">
+                        {p.review}
+                      </div>
+                    )}
+                  </div>
+                  <h4 className="flex-1 text-[13px] font-black leading-tight group-hover:text-red-600 transition-colors">{p.title}</h4>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t border-gray-200 pt-8 space-y-6">
+              {/* Second card */}
+              <div className="group cursor-pointer space-y-3">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={IMG.bush} className="w-full h-full object-cover transition-transform group-hover:scale-105" alt="bush" />
+                </div>
+                <h3 className="text-[16px] font-black leading-tight group-hover:text-red-600 transition-colors">
+                  Statement by President Bush on Ukraine | Bush Center
+                </h3>
+                <div className="flex items-center gap-2 text-[10px] font-bold font-sans uppercase tracking-widest text-gray-400">
+                  <span className="text-[#e21c23]">Money</span><span>· Jan 8, 2021</span>
+                </div>
+                <p className="text-[13px] text-gray-500 line-clamp-3">To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley…</p>
+              </div>
+              <div className="space-y-0 border-t border-gray-200 pt-4">
+                <TextPost title="SEC Sets Clock for Delisting Chinese Companies Over US Audit" date="Jan 8, 2021" />
+                <TextPost title="Europe's Central Bank Speeding Up End to Economic Stimulus" date="Jan 7, 2021" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ══ 3. WIDE BANNER AD ══ */}
+      <section className="container mx-auto px-4 py-10">
+        <Link href="#">
+          <img src={IMG.banner} className="w-full h-auto" alt="SmartMag Banner" />
+        </Link>
+      </section>
+
+      {/* ══ 4. SPORTS SECTION ══ */}
+      <section className="container mx-auto px-4 pt-10 pb-12 border-t-[3px] border-black">
+        <SectionHead title="Sports" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left: featured sports - text left, image right */}
+          <div className="space-y-8">
+            <div className="group cursor-pointer">
+              <div className="grid grid-cols-2 gap-5 mb-6">
+                <div className="space-y-3">
+                  <h2 className="text-[24px] font-black leading-tight group-hover:text-red-700 transition-colors">
+                    Marquez Explains Lack of Confidence During Qatar GP Race
+                  </h2>
+                  <div className="flex items-center gap-2 text-[11px] font-bold font-sans uppercase tracking-widest text-gray-400">
+                    <span className="text-[#e21c23] font-black">Sports</span><span>· Jan 15, 2021</span>
+                  </div>
+                  <p className="text-[13px] text-gray-600 leading-relaxed">
+                    To understand the new smart watches and other pro devices of recent focus, we should look to Silicon Valley and the quantified movement. Apple&apos;s Watch…
+                  </p>
+                  <button className="text-[11px] font-black uppercase tracking-[2px] border border-gray-300 px-5 py-2 hover:bg-black hover:text-white transition-all font-sans">Read More</button>
+                </div>
+                <div className="overflow-hidden">
+                  <img src={IMG.moto} className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105" alt="sports" />
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-8 border-t border-gray-200 pt-8">
+              {[
+                { title: "Young Teen Sucker-punches Opponent During Basketball Game", date: "Jan 15, 2021" },
+                { title: "China May Start Reopening After Winter Olympics: Top Adviser", date: "Jan 15, 2021" },
+                { title: "2022 NCAA Women's Hockey Tournament: Schedule & Scores", date: "Jan 14, 2021" },
+              ].map((p, i) => (
+                <div key={i} className="group cursor-pointer space-y-2">
+                  <h4 className="text-[14px] font-bold leading-tight group-hover:text-red-600 transition-colors mb-2">{p.title}</h4>
+                  <div className="text-[10px] text-gray-400 font-bold font-sans uppercase tracking-widest">{p.date}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Right: small sports posts */}
+          <div className="space-y-0 border-l border-gray-200 pl-10 pt-0">
+            {[
+              { img: IMG.bball, title: "It's Time for Basketball: Spurs at Timberwolves", date: "Jan 14, 2021" },
+              { img: IMG.wisc,  title: "Can Wisconsin Clinch the Big Ten West this Weekend", date: "Jan 14, 2021" },
+              { img: IMG.horse, title: "Olympic Great Todd Loses Training License for Hitting Horse", date: "Jan 13, 2021" },
+              { img: IMG.rcb,   title: "Royal Challengers Bangalore Announce Faf du Plessis as New Captain", date: "Jan 13, 2021" },
+            ].map((p, i) => (
+              <SmallPost key={i} img={p.img} title={p.title} date={p.date} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 5. BOTTOM 4-COLUMN CATEGORY SECTION ══ */}
+      <section className="container mx-auto px-4 pt-16 pb-20 border-t-[3px] border-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200">
+          {[
+            {
+              title: "Travel",
+              posts: [
+                { title: "Dubai Live Entertainment Ban Extends to Yachts", date: "Jan 14, 2021" },
+                { title: "Museum to Display More New Artists in 2021",     date: "Jan 13, 2021" },
+                { title: "Dubai Tourism Song Celebrating the Festival",    date: "Jan 12, 2021" },
+              ],
+            },
+            {
+              title: "UK News",
+              posts: [
+                { title: "London Market Stalls Facing New Regulations",     date: "Jan 11, 2021" },
+                { title: "Historic Pub in Chelsea Reopens After 2 Years",   date: "Jan 10, 2021" },
+                { title: "UK High Street Seeing Unexpected Growth",         date: "Jan 9, 2021"  },
+              ],
+            },
+            {
+              title: "Science",
+              posts: [
+                { title: "New Study on Sleep Patterns and Productivity",    date: "Jan 8, 2021" },
+                { title: "NASA's Latest Mars Images Reveal New Data",       date: "Jan 7, 2021" },
+                { title: "Breakthrough in Fusion Energy Research Promises", date: "Jan 6, 2021" },
+              ],
+            },
+            {
+              title: "Economy",
+              posts: [
+                { title: "Global Markets React to New Interest Rates",        date: "Jan 5, 2021" },
+                { title: "Rising Energy Costs Impacting Small Businesses",    date: "Jan 4, 2021" },
+                { title: "Consumer Spending Hits Record High in Q1 2021",     date: "Jan 3, 2021" },
+              ],
+            },
+          ].map((col, i) => (
+            <div key={i} className={`${i > 0 ? 'pl-8' : ''}`}>
+              <SectionHead title={col.title} />
+              <div className="space-y-0">
+                {col.posts.map((p, j) => (
+                  <TextPost key={j} title={p.title} date={p.date} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <SmartTimesFooter />
+    </main>
+  );
 }

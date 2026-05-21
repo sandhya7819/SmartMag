@@ -6,6 +6,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'smartmag.theme-sphere.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'contentberg.theme-sphere.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cheerup.theme-sphere.com',
+      },
     ],
   },
   eslint: {

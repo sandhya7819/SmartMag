@@ -1,65 +1,60 @@
-import { Facebook, Twitter, Instagram, Search, Menu, ChevronDown } from "lucide-react";
+"use client";
 import Link from "next/link";
+import { Facebook, Twitter, Instagram, Search } from "lucide-react";
 
 export default function PoliticalHeader() {
+  const topNav = ["Start Here", "Demos", "Our Authors", "Contact", "Buy Now!"];
+  const mainNav = ["Home", "Features", "Politics", "Economy", "Science & Tech", "Sports"];
+
   return (
-    <header className="w-full bg-white font-serif">
-      {/* Top Utility Bar */}
-      <div className="border-b border-gray-100 py-1.5 hidden lg:block">
-        <div className="container mx-auto max-w-[1200px] px-4 flex justify-between items-center text-[11px] text-gray-500 font-bold uppercase tracking-wider">
-          <div className="flex gap-6">
-            <Link href="#" className="hover:text-[#e01111] transition-colors">Start Here</Link>
-            <Link href="#" className="hover:text-[#e01111] transition-colors">Demos</Link>
-            <Link href="#" className="hover:text-[#e01111] transition-colors">Our Authors</Link>
-          </div>
-          <div>
-            <Link href="#" className="hover:text-[#e01111] transition-colors">Buy Now</Link>
-          </div>
-        </div>
+    <header className="w-full sticky top-0 z-50">
+      {/* Row 1: Dark top bar – centered small nav */}
+      <div className="bg-[#1c1c1c] py-2 text-center">
+        <nav className="flex items-center justify-center gap-6">
+          {topNav.map((item, i) => (
+            <Link key={i} href="#" className="text-[11px] text-gray-300 hover:text-white font-medium transition-colors tracking-wide">
+              {item}
+            </Link>
+          ))}
+        </nav>
       </div>
 
-      {/* Middle Brand Bar */}
-      <div className="py-8">
-        <div className="container mx-auto max-w-[1200px] px-4 flex justify-between items-center">
-          <div className="flex gap-4 text-gray-800">
-            <Facebook size={16} className="hover:text-[#e01111] cursor-pointer transition-colors" />
-            <Twitter size={16} className="hover:text-[#e01111] cursor-pointer transition-colors" />
-            <Instagram size={16} className="hover:text-[#e01111] cursor-pointer transition-colors" />
+      {/* Row 2: White mid – Socials | Logo | Subscribe */}
+      <div className="bg-white border-b border-gray-200 py-4">
+        <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <a href="#"><Facebook size={15} className="text-gray-500 hover:text-gray-900" /></a>
+            <a href="#"><Twitter size={15} className="text-gray-500 hover:text-gray-900" /></a>
+            <a href="#"><Instagram size={15} className="text-gray-500 hover:text-gray-900" /></a>
           </div>
-          
-          <Link href="/political" className="text-center group">
-            <h1 className="text-5xl font-black tracking-tight text-[#111] group-hover:text-[#e01111] transition-colors uppercase">
-              POLITICAL
-            </h1>
+          <Link href="/political" className="absolute left-1/2 -translate-x-1/2">
+            <img
+              src="https://smartmag.theme-sphere.com/political/wp-content/uploads/sites/54/2024/09/Logo-Political-01-1.png"
+              alt="SmartMag Political"
+              className="h-11 object-contain"
+            />
           </Link>
-
-          <button className="bg-[#e01111] text-white text-[11px] font-bold uppercase tracking-widest px-6 py-2 rounded-full hover:bg-black transition-colors">
+          <a href="#" className="bg-[#1c1c1c] text-white text-[11px] font-bold uppercase tracking-widest px-5 py-2 hover:bg-black transition-colors">
             Subscribe
-          </button>
+          </a>
         </div>
       </div>
 
-      {/* Sticky Navigation Bar */}
-      <div className="border-y border-gray-100 bg-white sticky top-0 z-50">
-        <div className="container mx-auto max-w-[1200px] px-4 flex justify-between items-center h-14">
-          <div className="text-[12px] text-gray-500 font-bold uppercase tracking-wider hidden lg:block">
-            {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' })}
-          </div>
-          
-          <nav className="hidden lg:flex gap-8 text-[14px] font-bold text-[#111] uppercase">
-             <Link href="#" className="text-[#e01111] transition-colors border-b-2 border-[#e01111] pb-[17px] mt-[19px]">Home</Link>
-             <Link href="#" className="hover:text-[#e01111] transition-colors flex items-center gap-1 group">Politics <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform opacity-50" /></Link>
-             <Link href="#" className="hover:text-[#e01111] transition-colors flex items-center gap-1 group">Economy <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform opacity-50" /></Link>
-             <Link href="#" className="hover:text-[#e01111] transition-colors">Science & Tech</Link>
-             <Link href="#" className="hover:text-[#e01111] transition-colors flex items-center gap-1 group">Sports <ChevronDown size={14} className="group-hover:translate-y-0.5 transition-transform opacity-50" /></Link>
-             <Link href="#" className="hover:text-[#e01111] transition-colors">World</Link>
+      {/* Row 3: White bottom – Date | Center Main Nav | Search */}
+      <div className="bg-white border-b border-gray-200 py-2">
+        <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-between">
+          <span className="text-[12px] text-gray-500 font-medium w-32">Wednesday, May 20</span>
+          <nav className="flex items-center gap-7">
+            {mainNav.map((item, i) => (
+              <Link key={i} href={i === 0 ? "/political" : "#"}
+                className={`text-[13px] font-bold transition-colors ${i === 0 ? "text-gray-900 border-b-2 border-gray-900 pb-0.5" : "text-gray-600 hover:text-gray-900"}`}>
+                {item}
+              </Link>
+            ))}
           </nav>
-
-          <div className="flex items-center gap-5">
-            <Search size={20} className="text-[#111] hover:text-[#e01111] cursor-pointer transition-colors" />
-            <div className="h-6 w-[1px] bg-gray-200 hidden lg:block"></div>
-            <Menu className="cursor-pointer text-[#111] hover:text-[#e01111] transition-colors" size={24} />
-          </div>
+          <button aria-label="Search" className="w-32 flex justify-end">
+            <Search size={15} className="text-gray-500 hover:text-black" />
+          </button>
         </div>
       </div>
     </header>

@@ -3,68 +3,69 @@ import Link from "next/link";
 import Image from "next/image";
 
 const demos = [
-  { name: "GoodNews", image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Tech 1: iGadgets", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Tech 2: TheWire", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "TechBlog", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "News: SmartTimes", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News: NationalPress", image: "https://images.unsplash.com/photo-1557992260-ec58e38d363c?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "Tech: GadgetsMe", image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "Financial", image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News: NewsVerified", image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "News: Political", image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "CoinBase / Crypto", image: "https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News: TheVoiceDaily", image: "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "DigitalHub", image: "https://images.unsplash.com/photo-1480506132288-68f7705954bd?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News: NewsOne24", image: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News: TribunePost", image: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "CuratedMag", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "EverydayNews", image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "FridayMag", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "MorningPost News", image: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "Health", image: "https://images.unsplash.com/photo-1505751172107-59c359f6b677?q=80&w=800&auto=format&fit=crop", tag: "NEW" },
-  { name: "Cup Of Coffee", image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Spotlight Fashion", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "SmartLife", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "CityToday", image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "WorldMag", image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "MagazineCo", image: "https://images.unsplash.com/photo-1497005367839-6e852de72767?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "SmartPost", image: "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "NewsTime", image: "https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "DailyScoop", image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "FamilyMag", image: "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Discover!", image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Al Arabiya", image: "https://images.unsplash.com/photo-1542401886-65d6c7304f47?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News & Mag", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Be The Change", image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "LazyBusy", image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Insights Only", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "GeeksEmpire", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Blogger", image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "DigiTech", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "TechDrop", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "GossipMag", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Muscle + Fitness", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "PrimeMag", image: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "NewsBoard", image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "News Observer", image: "https://images.unsplash.com/photo-1557992260-ec58e38d363c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "MagStudio", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "GameZone", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "ProMag", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Social Life", image: "https://images.unsplash.com/photo-1528605105345-5344ea20e269?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "TheZine", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "NewsBulletin", image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "CityBuzz", image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Informed", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Gaming", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Sports", image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Trendy/Lifestyle", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop", tag: null },
-  { name: "Classic/Legacy", image: "https://images.unsplash.com/photo-1478641300939-01366286484c?q=80&w=800&auto=format&fit=crop", tag: null }
+  { name: "GoodNews", id: "good-news", tag: null },
+  { name: "Tech 1: iGadgets", id: "tech-1", tag: null },
+  { name: "Tech 2: TheWire", id: "tech-2", tag: null },
+  { name: "TechBlog", id: "tech-blog", tag: null },
+  { name: "News: SmartTimes", id: "smart-times", tag: null },
+  { name: "News: NationalPress", id: "national-press", tag: "NEW" },
+  { name: "Tech: GadgetsMe", id: "gadgets-me", tag: "NEW" },
+  { name: "Financial", id: "financial", tag: null },
+  { name: "News: NewsVerified", id: "news-verified", tag: "NEW" },
+  { name: "News: Political", id: "political", tag: null },
+  { name: "CoinBase / Crypto", id: "coinbase", tag: null },
+  { name: "News: TheVoiceDaily", id: "thevoice-daily", tag: "NEW" },
+  { name: "DigitalHub", id: "digital-hub", tag: null },
+  { name: "News: NewsOne24", id: "new-one24", tag: null },
+  { name: "News: TribunePost", id: "tribune-post", tag: null },
+  { name: "CuratedMag", id: "curated-mag", tag: null },
+  { name: "EverydayNews", id: "everyday-news", tag: null },
+  { name: "FridayMag", id: "friday-mag", tag: null },
+  { name: "MorningPost News", id: "morning-post", tag: null },
+  { name: "Health", id: "health", tag: null },
+  { name: "Cup Of Coffee", id: "cup-of-coffee", tag: null },
+  { name: "Spotlight Fashion", id: "spotlight", tag: null },
+  { name: "SmartLife", id: "smart-life", tag: null },
+  { name: "CityToday", id: "city-today", tag: null },
+  { name: "WorldMag", id: "world-mag", tag: null },
+  { name: "MagazineCo", id: "magazine-co", tag: null },
+  { name: "SmartPost", id: "smart-post", tag: null },
+  { name: "NewsTime", id: "news-time", tag: null },
+  { name: "DailyScoop", id: "daily-scoop", tag: null },
+  { name: "FamilyMag", id: "family-mag", tag: null },
+  { name: "Discover", id: "discover", tag: null },
+  { name: "RTL/Arabic", id: "rtl", tag: null },
+  { name: "NewsMag", id: "news-mag", tag: null },
+  { name: "Be The Change", id: "be-the-change", tag: null },
+  { name: "LazyBusy", id: "lazy-busy", tag: null },
+  { name: "Insights Only", id: "insights-only", tag: null },
+  { name: "GeeksEmpire / Entertainment", id: "geeks-empire", tag: null },
+  { name: "Blogger", id: "blogger", tag: null },
+  { name: "DigiTech", id: "digi-tech", tag: null },
+  { name: "TechDrop", id: "tech-drop", tag: null },
+  { name: "GossipMag / Celebrity", id: "gossip-mag", tag: null },
+  { name: "Muscle + Fitness", id: "fitness", tag: null },
+  { name: "PrimeMag", id: "prime-mag", tag: null },
+  { name: "NewsBoard", id: "news-board", tag: null },
+  { name: "News Observer", id: "news", tag: null },
+  { name: "MagStudio", id: "mag-studio", tag: null },
+  { name: "GameZone", id: "game-zone", tag: null },
+  { name: "ProMag", id: "pro-mag", tag: null },
+  { name: "Social Life", id: "social-life", tag: null },
+  { name: "TheZine", id: "zine", tag: null },
+  { name: "NewsBulletin", id: "news-bulletin", tag: null },
+  { name: "CityBuzz", id: "citybuzz", tag: null },
+  { name: "Informed News", id: "informed", tag: null },
+  { name: "Gaming", id: "gaming", tag: null },
+  { name: "Sports", id: "sports", tag: null },
+  { name: "Trendy/Lifestyle", id: "trendy", tag: null },
+  { name: "Classic/Legacy", id: "classic", tag: null },
+  { name: "Dark Demo", id: "gaming-dark", tag: null }
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans overflow-x-hidden selection:bg-red-500 selection:text-white">
+    <main className="min-h-screen bg-white font-sans overflow-x-hidden selection:bg-[#b3d4fc] selection:text-[#16171f] text-[#16171f]" style={{ fontFamily: '"proxima-nova", system-ui, sans-serif', fontSize: '18px', lineHeight: '1.62', letterSpacing: '-.01em' }}>
       
       {/* Envato Top Bar */}
       <div className="bg-[#262626] h-[54px] w-full flex items-center justify-between px-4 md:px-8">
@@ -113,90 +114,79 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="py-24 text-center bg-gray-50 border-b border-gray-100">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-black text-[#111] mb-6 tracking-tight leading-[1.1]">
-            <span className="text-[#E54E53]">58+</span> Unique Designs, <span className="font-light">Unlimited</span> <br className="hidden md:block" /> Layout Variations
-          </h1>
-          <div className="w-20 h-1 bg-[#111] mx-auto mb-10"></div>
-          <p className="text-gray-500 text-sm md:text-base font-bold uppercase tracking-widest max-w-2xl mx-auto leading-relaxed mb-4">
-            All demos below are <span className="text-[#111] border-b-2 border-[#111]">included</span> in the theme. Get future demos & updates for free.
-          </p>
-          <p className="text-gray-400 text-xs md:text-sm font-medium tracking-tight">
-            Import with one click. Combine elements for unlimited unique layouts.
-          </p>
-        </div>
-      </section>
+      {/* Hero Section / Demos Grid */}
+      <section className="section section-center clearfix demos bg-[#f8f8f8]" id="demos" style={{ padding: '95px 0', borderBottom: '1px solid #e6e8ec' }}>
+        <div className="container mx-auto px-4 md:px-8 max-w-[1240px]">
 
-      {/* Demos Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-12 lg:px-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+          <div className="text-center mb-[65px]">
+            <h2 className="text-[44px] font-black text-[#111] mb-5 tracking-[-.02em] leading-[1.1] relative inline-block pb-6 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-[60px] after:h-[3px] after:bg-[#111]">
+              <strong className="text-[#ef2c32]">58+</strong> Unique Designs, <strong>Unlimited</strong><br /> Layout Variations
+            </h2>
+            <p className="text-[19px] text-[#555] font-normal leading-[1.7] mt-2">
+              All demos below are <strong className="font-bold text-[#111]">included</strong> in the theme. Get future demos &amp; updates for <em className="italic">free</em>.
+              <br />Import with one click. Combine elements for unlimited unique layouts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[50px]">
             {demos.map((demo, index) => {
-              // Creating routing logic dynamically for matching specific demo names
-              let href = "#";
-              if (demo.name === "GoodNews") href = "/good-news";
-              else if (demo.name.includes("iGadgets") || demo.name === "Tech 1: iGadgets") href = "/tech-1";
-              else if (demo.name.includes("TheWire") || demo.name === "Tech 2: TheWire") href = "/tech-2";
-              else if (demo.name === "TechBlog") href = "/tech-blog";
-              else if (demo.name.includes("SmartTimes")) href = "/smart-times";
-              else if (demo.name.includes("NationalPress")) href = "/national-press";
-              else if (demo.name.includes("GadgetsMe")) href = "/gadgets-me";
-              else if (demo.name === "Financial") href = "/financial";
-              else if (demo.name.includes("NewsVerified")) href = "/news-verified";
-              else if (demo.name.includes("Political")) href = "/political";
-              else if (demo.name.includes("CoinBase") || demo.name.includes("Crypto")) href = "/coinbase";
-              else if (demo.name.includes("TheVoiceDaily")) href = "/the-voice-daily";
-              else if (demo.name === "DigitalHub") href = "/digital-hub";
-              else if (demo.name.includes("NewsOne24")) href = "/news-one24";
-              else if (demo.name.includes("TribunePost")) href = "/tribune-post";
-              else if (demo.name === "CuratedMag") href = "/curated-mag";
-              else if (demo.name === "EverydayNews") href = "/everyday-news";
-              else if (demo.name === "FridayMag") href = "/friday-mag";
-              else if (demo.name.includes("MorningPost")) href = "/morning-post";
-              else if (demo.name === "Health") href = "/health";
-              else if (demo.name === "Cup Of Coffee") href = "/cup-of-coffee";
-              else if (demo.name === "Spotlight Fashion") href = "/spotlight";
+              const demoUrl = `/${demo.id}`;
+              const demoImg = `https://theme-sphere.com/demo/smartmag-landing/img/demos/${demo.id}.jpg`;
+              const demoImg2x = `https://theme-sphere.com/demo/smartmag-landing/img/demos/${demo.id}@2x.jpg`;
               
               return (
-                <div key={index} className="group flex flex-col items-center">
-                  <Link 
-                    href={href} 
-                    className="relative w-full aspect-[4/5] bg-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] rounded-md overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] cursor-pointer border border-gray-100 block"
-                  >
-                    <div className="absolute top-0 left-0 w-full h-[30px] bg-gray-100 border-b border-gray-200 flex items-center px-3 space-x-1.5 z-10">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                    </div>
-                    <img 
-                      src={demo.image} 
-                      alt={demo.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 mt-[30px]"
-                    />
-                    
-                    {/* Tag */}
-                    {demo.tag && (
-                      <div className="absolute top-10 right-4 bg-[#E54E53] text-white text-[10px] font-black px-2 py-1 rounded-sm shadow-md z-20">
-                        {demo.tag}
-                      </div>
-                    )}
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30">
-                      <div className="bg-[#E54E53] text-white text-[11px] font-black uppercase tracking-widest px-8 py-4 flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 rounded-sm">
-                        Live Preview <Monitor size={14} className="ml-1" />
-                      </div>
-                    </div>
-                  </Link>
+                <div key={index} className="column text-center relative group">
+                  {demo.tag && (
+                    <span className="absolute top-[25px] right-[-15px] z-20 bg-[#ef2c32] text-white text-[11px] font-bold uppercase tracking-[1px] px-[12px] py-[6px] rounded-[3px] shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+                      {demo.tag}
+                    </span>
+                  )}
                   
-                  <h3 className="mt-8 text-[15px] font-black text-[#111] group-hover:text-[#E54E53] transition-colors tracking-wide text-center">
-                    {demo.name}
+                  <div className="relative mb-[20px] bg-white rounded-t-[5px] rounded-b-[4px] shadow-[0_5px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.12)] transition-shadow duration-300 transform group-hover:-translate-y-1">
+                    <img 
+                      src="https://theme-sphere.com/demo/smartmag-landing/img/prev-frame.png" 
+                      className="w-full h-auto block rounded-t-[5px]" 
+                      alt="Browser Frame" 
+                    />
+
+                    <div className="relative overflow-hidden group/thumb cursor-pointer">
+                      <a href={demoUrl} target="_blank" title={`Click to See This Demo: ${demo.name}`}>
+                        <img 
+                          src={demoImg} 
+                          srcSet={`${demoImg} 1x, ${demoImg2x} 2x`} 
+                          alt={demo.name} 
+                          className="w-full h-auto block transform group-hover/thumb:scale-105 transition-transform duration-500 rounded-b-[4px]"
+                        />
+                      </a>
+
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none rounded-b-[4px]">
+                        <span className="bg-[#ef2c32] text-white text-[13px] font-bold uppercase tracking-[1px] px-[22px] py-[12px] rounded-[3px] transform translate-y-4 group-hover/thumb:translate-y-0 transition-transform duration-300">
+                          View Now
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-[20px] font-bold m-0 leading-[1.3] text-[#16171f]">
+                    <a href={demoUrl} target="_blank" className="hover:text-[#ef2c32] transition-colors duration-200">
+                      {demo.name}
+                    </a>
                   </h3>
                 </div>
               )
             })}
+
+            <div className="column text-center relative flex flex-col items-center justify-center min-h-[300px]">
+              <div className="w-full h-full min-h-[350px] border-2 border-dashed border-[#d1d5db] rounded-[5px] flex items-center justify-center bg-[#f9fafb]">
+                <span className="text-[20px] font-bold text-[#9ca3af] uppercase tracking-wider">Coming Soon</span>
+              </div>
+            </div>
+            <div className="column text-center relative flex flex-col items-center justify-center min-h-[300px]">
+              <div className="w-full h-full min-h-[350px] border-2 border-dashed border-[#d1d5db] rounded-[5px] flex items-center justify-center bg-[#f9fafb]">
+                <span className="text-[20px] font-bold text-[#9ca3af] uppercase tracking-wider">Coming Soon</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -204,13 +194,13 @@ export default function Home() {
       {/* ThemeSphere Footer CTA */}
       <section className="py-24 bg-[#0a0b16] text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-[54px] font-black mb-6 tracking-tight leading-none">
+          <h2 className="text-4xl md:text-[54px] font-black mb-6 tracking-tight leading-none text-white">
             Get the Perfect Theme for Your Site.
           </h2>
           <p className="text-gray-400 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
             Free lifetime updates and 6 months of support included. Start your site now!
           </p>
-          <button className="bg-[#E54E53] text-white text-sm font-black uppercase tracking-widest px-12 py-5 hover:bg-white hover:text-[#0a0b16] transition-all flex items-center gap-3 mx-auto rounded-sm shadow-xl">
+          <button className="bg-[#ef2c32] text-white text-sm font-black uppercase tracking-widest px-12 py-5 hover:bg-white hover:text-[#0a0b16] transition-all flex items-center gap-3 mx-auto rounded-sm shadow-xl">
             <ShoppingCart size={18} /> Purchase Now
           </button>
         </div>
@@ -219,3 +209,4 @@ export default function Home() {
     </main>
   );
 }
+

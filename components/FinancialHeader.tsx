@@ -1,56 +1,57 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Search, Menu, ChevronDown } from "lucide-react";
+import { Facebook, Twitter, Instagram, Search, Menu } from "lucide-react";
 
 export default function FinancialHeader() {
   return (
-    <header className="w-full bg-white font-sans">
-      {/* Top Bar - Dark */}
-      <div className="bg-[#0f1218] text-white py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex gap-5 items-center">
-            <div className="flex gap-4">
-              <Facebook size={16} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter size={16} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram size={16} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
-            <div className="w-[1px] h-4 bg-white/10 hidden md:block"></div>
+    <header className="w-full sticky top-0 z-50 shadow-md">
+      {/* Row 1: Dark – Socials | Logo | Subscribe */}
+      <div className="bg-[#181818] text-white py-3 border-b border-gray-800">
+        <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <a href="#" aria-label="Facebook"><Facebook size={14} className="text-gray-400 hover:text-white transition-colors" /></a>
+            <a href="#" aria-label="Twitter"><Twitter size={14} className="text-gray-400 hover:text-white transition-colors" /></a>
+            <a href="#" aria-label="Instagram"><Instagram size={14} className="text-gray-400 hover:text-white transition-colors" /></a>
           </div>
-
-          <Link href="/financial" className="flex items-center gap-3 group">
-            <div className="flex items-center">
-               <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-blue-500 transform rotate-45 mr-2"></div>
-               <div className="flex flex-col">
-                  <span className="text-[10px] font-black tracking-[4px] text-gray-500 uppercase leading-none mb-1">News</span>
-                  <span className="text-2xl font-black tracking-tight text-white uppercase leading-none">Financial</span>
-               </div>
-            </div>
+          <Link href="/financial" className="flex items-center gap-2">
+            <img
+              src="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/06/FINANCIAL-LOGO.png"
+              alt="Financial"
+              className="h-9 object-contain"
+            />
           </Link>
-
-          <button className="border border-white/20 text-white text-[11px] font-black uppercase tracking-[2px] px-6 py-2 hover:bg-white hover:text-black transition-all rounded-sm">
-            SUBSCRIBE
-          </button>
+          <a
+            href="http://eepurl.com/hq-3Xb"
+            target="_blank"
+            rel="noopener"
+            className="border border-gray-500 text-white text-[11px] font-bold uppercase tracking-widest px-5 py-1.5 hover:bg-white hover:text-black transition-colors"
+          >
+            Subscribe
+          </a>
         </div>
       </div>
 
-      {/* Nav Menu - White */}
-      <nav className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 flex justify-between items-center h-[60px]">
-          <div className="flex items-center gap-8">
-            <Menu size={20} className="cursor-pointer text-gray-400 lg:hidden" />
-            <div className="hidden lg:flex gap-10 text-[13px] font-black uppercase tracking-widest text-[#111]">
-              <Link href="#" className="text-green-500">Home</Link>
-              <Link href="#" className="hover:text-green-500 transition-colors flex items-center gap-1 group">Features <ChevronDown size={14} className="opacity-40" /></Link>
-              <Link href="#" className="hover:text-green-500 transition-colors flex items-center gap-1 group">Funds <ChevronDown size={14} className="opacity-40" /></Link>
-              <Link href="#" className="hover:text-green-500 transition-colors">Investments</Link>
-              <Link href="#" className="hover:text-green-500 transition-colors flex items-center gap-1 group">Markets <ChevronDown size={14} className="opacity-40" /></Link>
-              <Link href="#" className="hover:text-green-500 transition-colors">Buy Theme</Link>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <Search size={20} className="text-gray-400 cursor-pointer hover:text-black" />
-          </div>
+      {/* Row 2: White – Hamburger | Centered Nav | Search */}
+      <div className="bg-white border-b border-gray-200 py-2.5">
+        <div className="max-w-[1200px] mx-auto px-4 flex items-center">
+          {/* Hamburger */}
+          <button aria-label="Menu" className="mr-auto">
+            <Menu size={18} className="text-gray-600" />
+          </button>
+          {/* Centered nav */}
+          <nav className="hidden lg:flex items-center gap-7 text-[12px] font-bold uppercase tracking-wide">
+            <Link href="/financial" className="text-[#c49a1a] border-b-2 border-[#c49a1a] pb-0.5">Home</Link>
+            <Link href="#" className="text-gray-700 hover:text-[#1a6aa8] transition-colors">Features</Link>
+            <Link href="#" className="text-gray-700 hover:text-[#1a6aa8] transition-colors">Funds</Link>
+            <Link href="#" className="text-gray-700 hover:text-[#1a6aa8] transition-colors">Investments</Link>
+            <Link href="#" className="text-gray-700 hover:text-[#1a6aa8] transition-colors">Markets</Link>
+            <Link href="#" className="text-gray-700 hover:text-[#1a6aa8] transition-colors">Buy Theme</Link>
+          </nav>
+          {/* Search */}
+          <button className="ml-auto" aria-label="Search">
+            <Search size={15} className="text-gray-500 hover:text-black transition-colors" />
+          </button>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

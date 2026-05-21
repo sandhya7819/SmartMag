@@ -35,9 +35,10 @@ export default function TechBlogPage() {
   return (
     <main className="min-h-screen bg-white font-inter selection:bg-[#ab07ab] selection:text-white pb-0">
       <TechBlogHeader />
+      <div className="flex flex-col gap-28">
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Main Hero Column */}
@@ -80,7 +81,7 @@ export default function TechBlogPage() {
           </div>
 
           {/* People's Favorite Sidebar */}
-          <aside className="lg:col-span-4 self-start">
+          <aside className="lg:col-span-4 self-start sticky top-24">
              <div className="flex items-center gap-3 mb-8">
                 <h3 className="text-[18px] font-black text-black uppercase tracking-tight">People's <span className="text-[#ab07ab]">Favorite</span></h3>
                 <div className="flex-1 h-[1px] bg-gray-100"></div>
@@ -108,7 +109,7 @@ export default function TechBlogPage() {
       </section>
 
       {/* Ad Banner Section */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 py-4">
          <div className="bg-black py-12 px-12 rounded-lg flex flex-col md:flex-row items-center justify-between relative overflow-hidden group cursor-pointer">
             <div className="absolute inset-0 bg-[#111] transition-colors group-hover:bg-[#1a1a1a]"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
@@ -126,7 +127,7 @@ export default function TechBlogPage() {
       </section>
 
       {/* Editor's Picks Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-8">
          <div className="flex items-center gap-6 mb-16">
             <div className="flex-1 h-[1px] bg-gray-100"></div>
             <h3 className="text-2xl font-black text-black uppercase tracking-tight">Editor's Picks</h3>
@@ -154,7 +155,7 @@ export default function TechBlogPage() {
       </section>
 
       {/* Trending Videos Section */}
-      <section className="bg-[#111425] py-24 text-white">
+      <section className="bg-[#111425] py-20 text-white">
          <div className="container mx-auto px-4">
             <div className="flex items-center gap-6 mb-16">
                <h3 className="text-2xl font-black uppercase tracking-tight">Trending Videos</h3>
@@ -221,7 +222,7 @@ export default function TechBlogPage() {
       </section>
 
       {/* New Gadgets Section + Sidebar */}
-      <section className="container mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <section className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
          <div className="lg:col-span-8 flex flex-col gap-12">
             <div>
                <div className="flex items-center gap-4 mb-10">
@@ -326,6 +327,7 @@ export default function TechBlogPage() {
          </aside>
       </section>
 
+      </div>
       <TechBlogFooter />
     </main>
   );
