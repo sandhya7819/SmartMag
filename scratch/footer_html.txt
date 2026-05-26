@@ -1,0 +1,223 @@
+<footer class="main-footer cols-gap-lg footer-classic s-dark">
+
+						<div class="upper-footer classic-footer-upper">
+			<div class="ts-contain wrap">
+		
+							<div class="widgets row cf">
+					
+		<div class="widget col-4 widget-about">		
+			
+		<div class="inner ">
+		
+							<div class="image-logo">
+					<img src="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/06/lofo-financial-small.png" width="235" height="54" alt srcset="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/06/lofo-financial-small.png ,https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/06/lofo-financial-small@2x.png 2x" />
+				</div>
+						
+						
+			<div class="base-text about-text"><p>Your source for the serious news. This demo is crafted specifically to exhibit the use of the theme as a news site. Visit our main page for more demos.</p>
+<p>We're social. Connect with us:</p>
+</div>
+
+							
+		<div class="spc-social-block spc-social spc-social-b ">
+		
+			
+				<a href="#" class="link service s-facebook" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-facebook"></i>					<span class="visuallyhidden">Facebook</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-twitter" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-twitter"></i>					<span class="visuallyhidden">X (Twitter)</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-instagram" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-instagram"></i>					<span class="visuallyhidden">Instagram</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-pinterest" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-pinterest-p"></i>					<span class="visuallyhidden">Pinterest</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-youtube" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-youtube-play"></i>					<span class="visuallyhidden">YouTube</span>
+				</a>
+									
+			
+		</div>
+
+					
+		</div>
+
+		</div>		
+		
+		<div class="widget col-4 ts-block-widget smartmag-widget-posts-small">		
+		<div class="block">
+					<section class="block-wrap block-posts-small block-sc mb-none" data-id="17">
+
+			<div class="widget-title block-head block-head-ac block-head block-head-ac block-head-b is-left has-style"><h5 class="heading">Top Insights</h5></div>	
+			<div class="block-content">
+				
+	<div class="loop loop-small loop-small-a loop-sep loop-small-sep grid grid-1 md:grid-1 sm:grid-1 xs:grid-1">
+
+					
+<article class="l-post small-post small-a-post m-pos-left">
+
+	
+			<div class="media">
+
+		
+			<a href="https://smartmag.theme-sphere.com/financial/top-uk-stocks-to-watch-capita-shares-rise-as-it-unveils/" class="image-link media-ratio ar-bunyad-thumb" title="Top UK Stocks to Watch: Capita Shares Rise as it Unveils"><span data-bgsrc="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-300x183.jpg" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-300x183.jpg 300w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-1024x625.jpg 1024w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-768x469.jpg 768w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-1536x938.jpg 1536w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-2048x1251.jpg 2048w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-150x92.jpg 150w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-450x275.jpg 450w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/03/Depositphotos_234586970_xl-2015-1-1200x733.jpg 1200w" data-sizes="(max-width: 110px) 100vw, 110px"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a post-meta-left has-below"><h4 class="is-title post-title"><a href="https://smartmag.theme-sphere.com/financial/top-uk-stocks-to-watch-capita-shares-rise-as-it-unveils/">Top UK Stocks to Watch: Capita Shares Rise as it Unveils</a></h4><div class="post-meta-items meta-below"><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2021-01-15T16:18:21+00:00">Jan  15, 2021</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>	
+					
+<article class="l-post small-post small-a-post m-pos-left">
+
+	
+			<div class="media">
+
+		
+			<a href="https://smartmag.theme-sphere.com/financial/review-post-stars/" class="image-link media-ratio ar-bunyad-thumb" title="Digital Euro Might Suck Away 8% of Banks&#8217; Deposits"><span data-bgsrc="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-300x200.jpg" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-300x200.jpg 300w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-1024x682.jpg 1024w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-768x512.jpg 768w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-1536x1024.jpg 1536w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-2048x1365.jpg 2048w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-150x100.jpg 150w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-450x300.jpg 450w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_61584077_xl-2015-1-1200x800.jpg 1200w" data-sizes="(max-width: 110px) 100vw, 110px"></span></a>			
+			
+			<div class="review review-number c-overlay">
+						<span class="progress"></span><span>8.5</span>
+					</div>
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a post-meta-left has-below"><h4 class="is-title post-title"><a href="https://smartmag.theme-sphere.com/financial/review-post-stars/">Digital Euro Might Suck Away 8% of Banks&#8217; Deposits</a></h4><div class="post-meta-items meta-below"><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2021-01-12T17:32:49+00:00">Jan  12, 2021</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>	
+					
+<article class="l-post small-post small-a-post m-pos-left">
+
+	
+			<div class="media">
+
+		
+			<a href="https://smartmag.theme-sphere.com/financial/oil-gains-on-opec-outlook-that-u-s-growth-will-slow/" class="image-link media-ratio ar-bunyad-thumb" title="Oil Gains on OPEC Outlook That U.S. Growth Will Slow"><span data-bgsrc="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-300x197.jpg" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-300x197.jpg 300w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-1024x671.jpg 1024w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-768x503.jpg 768w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-1536x1007.jpg 1536w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-2048x1342.jpg 2048w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-150x98.jpg 150w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-450x295.jpg 450w, https://smartmag.theme-sphere.com/financial/wp-content/uploads/sites/16/2021/01/Depositphotos_13662166_xl-2015-3-1200x786.jpg 1200w" data-sizes="(max-width: 110px) 100vw, 110px"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a post-meta-left has-below"><h4 class="is-title post-title"><a href="https://smartmag.theme-sphere.com/financial/oil-gains-on-opec-outlook-that-u-s-growth-will-slow/">Oil Gains on OPEC Outlook That U.S. Growth Will Slow</a></h4><div class="post-meta-items meta-below"><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2021-01-11T15:55:08+00:00">Jan  11, 2021</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>	
+		
+	</div>
+
+					</div>
+
+		</section>
+				</div>
+
+		</div>
+		<div class="widget col-4 ts-block-widget smartmag-widget-newsletter"><div class="widget-title block-head block-head-ac block-head block-head-ac block-head-b is-left has-style"><h5 class="heading">Get Informed</h5></div>		
+		<div class="block">
+			<div class="block-newsletter ">
+	<div class="spc-newsletter spc-newsletter-c spc-newsletter-center spc-newsletter-xs">
+
+		<div class="bg-wrap"></div>
+
+		
+		<div class="inner">
+
+							<div class="mail-bg-icon">
+					<i class="tsi tsi-envelope-o"></i>
+				</div>
+			
+			
+			<h3 class="heading">
+				Subscribe to Updates			</h3>
+
+							<div class="base-text message">
+					<p>Get the latest creative news from FooBar about art, design and business.</p>
+</div>
+			
+							<form method="post" action="https://exocrew.us2.list-manage.com/subscribe/post?u=80cb35f637e636563aeaa0499&#038;id=77f92c609a" class="form fields-style fields-full" target="_blank" rel="noopener">
+					<div class="main-fields">
+						<p class="field-email">
+							<input type="email" name="EMAIL" placeholder="Your email address.." required />
+						</p>
+						
+						<p class="field-submit">
+							<input type="submit" value="Subscribe" />
+						</p>
+					</div>
+
+											<p class="disclaimer">
+							<label>
+																	<input type="checkbox" name="privacy" required />
+								
+								Agree to the our terms and <a href="#">policy</a> agreement.							</label>
+						</p>
+									</form>
+			
+			
+		</div>
+	</div>
+</div>		</div>
+
+		</div>				</div>
+					
+			</div>
+		</div>
+		
+	
+			<div class="lower-footer classic-footer-lower">
+			<div class="ts-contain wrap">
+				<div class="inner">
+
+					<div class="copyright">
+						&copy; 2026 ThemeSphere. Designed by <a href="https://theme-sphere.com">ThemeSphere</a>.					</div>
+					
+												
+						<div class="links">
+							<div class="menu-footer-links-container"><ul id="menu-footer-links" class="menu"><li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-352"><a href="https://smartmag.theme-sphere.com/financial/" aria-current="page">Home</a></li>
+<li id="menu-item-353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-353"><a href="#">About Us</a></li>
+<li id="menu-item-1054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1054"><a href="#">Privacy</a></li>
+<li id="menu-item-1055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1055"><a href="#">Advertise</a></li>
+<li id="menu-item-356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356"><a href="#">Get In Touch</a></li>
+</ul></div>						</div>
+						
+									</div>
+			</div>
+		</div>		
+			</footer>

@@ -1,225 +1,431 @@
+"use client";
+
+import Link from "next/link";
+import { Play, MessageSquare, Clock, Zap, BookOpen, User, Flame } from "lucide-react";
 import TribunePostHeader from "@/components/TribunePostHeader";
 import TribunePostFooter from "@/components/TribunePostFooter";
-import Link from "next/link";
-import { ChevronRight, Play, Zap, MessageSquare, Clock, Mail as MailIcon } from "lucide-react";
+import {
+  heroMain,
+  newsJustIn,
+  heroMiddle,
+  heroRightMain,
+  heroRightList,
+  russiaUkraineMain,
+  russiaUkraineList,
+  politicsMain,
+  politicsList,
+  moreNewsMain,
+  moreNewsList,
+  moreNewsBottom,
+  columnsSidebar,
+  opinionSidebar,
+  marketsMain,
+  marketsList,
+  marketsBottom,
+  lifestyleTechLeft,
+  lifestyleTechPoster,
+  lifestyleTechGrid5,
+  sportsMain,
+  sportsList,
+  cricketMain,
+  moreSportsMain,
+  moreSportsList,
+  exclusiveNews,
+  editorsPicks,
+  currenciesCryptoMain,
+  currenciesCryptoList,
+  educationMain,
+  educationList,
+  schoolsMain,
+  schoolsList,
+  youMayHaveMissedMain,
+  youMayHaveMissedList,
+  topTrending
+} from "@/lib/tribunePostData";
 
 export default function TribunePostPage() {
   return (
-    <main className="min-h-screen bg-white font-sans selection:bg-[#0369d1] selection:text-white">
+    <main className="min-h-screen bg-[#fafafa] selection:bg-[#0086F9] selection:text-white text-[#222]">
+      {/* Premium Header */}
       <TribunePostHeader />
 
-      <div className="container mx-auto max-w-[1200px] px-4 py-10">
+      {/* Main Home Container */}
+      <div className="container mx-auto max-w-[1200px] px-4 py-8 bg-white shadow-sm border-x border-gray-100">
         
-        {/* 3-Column Hero Grid */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+        {/* ================= HERO GRID SECTION ================= */}
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10 border-b border-gray-100">
           
-          {/* Left Column (6 cols) */}
-          <div className="lg:col-span-6 space-y-6">
+          {/* Hero Left Column: Live Updates & News Just In (6 cols) */}
+          <div className="lg:col-span-6 space-y-6 lg:border-r lg:border-gray-100 lg:pr-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-4 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                <div className="bg-[#0369d1] text-white px-2 py-0.5 text-[9px] font-black flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
-                  LIVE UPDATES
-                </div>
-                <span>Updated: Mar 8, 2025</span>
+              <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-[#0086F9]">
+                <span className="flex items-center gap-1.5 bg-[#0086F9] text-white px-2 py-0.5 text-[9px]">
+                  <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></span>
+                  {heroMain.category}
+                </span>
+                <span className="text-gray-400 font-bold">{heroMain.date}</span>
               </div>
-              <h2 className="text-[32px] md:text-[38px] font-black text-[#111] leading-[1.1] font-bitter group cursor-pointer hover:text-[#0369d1] transition-colors">
-                Ballistic Missiles and Drones Damage Diplomatic Missions in Attack in One of The Largest Air Attacks
-              </h2>
-              <div className="aspect-[16/10] overflow-hidden bg-gray-100 rounded-sm">
-                <img 
-                  src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=1200&auto=format&fit=crop" 
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 cursor-pointer" 
-                  alt="Main story"
+
+              <Link href={heroMain.url} className="block group">
+                <h1 className="text-2xl md:text-[34px] font-serif font-black leading-tight text-gray-900 group-hover:text-[#0086F9] transition-colors duration-300">
+                  {heroMain.title}
+                </h1>
+              </Link>
+
+              <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100 relative group cursor-pointer">
+                <img
+                  src={heroMain.image}
+                  alt={heroMain.title}
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <p className="text-[#444] text-[15px] leading-relaxed">
-                To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation. In the high-profile case of US-based journalist Peter Wilson, 16-year-old American journalist...
+
+              <p className="text-gray-600 text-sm leading-relaxed font-sans">
+                {heroMain.excerpt}
               </p>
-              
-              {/* News Just In Widget */}
-              <div className="bg-white border-t border-gray-100 pt-6 mt-8">
-                <h4 className="text-[11px] font-black text-[#b30000] uppercase tracking-widest mb-4">NEWS JUST IN</h4>
-                <ul className="space-y-4">
-                  {[
-                    "Trump Response to Biden Dropping Out: President 'Not Fit to Run'",
-                    "Papua New Guinea Is In a State of Emergency As Riots Kill 16",
-                    "High-Profile Chinese Business Delegation Meets Planning Minister to Attract Chinese..."
-                  ].map((text, i) => (
-                    <li key={i} className="flex items-start gap-3 group cursor-pointer">
-                      <span className="w-1.5 h-1.5 bg-[#0369d1] rounded-full mt-1.5 shrink-0"></span>
-                      <span className="text-[14px] font-bold text-gray-800 group-hover:text-[#0369d1] transition-colors leading-tight">{text}</span>
-                    </li>
-                  ))}
-                </ul>
+            </div>
+
+            {/* News Just In ticker block */}
+            <div className="bg-gray-50/50 border-t-2 border-red-600 p-5 mt-6">
+              <div className="flex items-center gap-2 mb-4 text-[#d92121] font-black uppercase text-[11px] tracking-widest">
+                <Flame size={14} fill="currentColor" />
+                <span>News Just In</span>
               </div>
+              <ul className="space-y-3.5">
+                {newsJustIn.map((item, i) => (
+                  <li key={i} className="flex gap-3 items-start group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 shrink-0"></span>
+                    <Link
+                      href={item.url}
+                      className="text-gray-800 font-bold text-sm leading-snug group-hover:text-[#0086F9] transition-colors"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Middle Column (3 cols) */}
-          <div className="lg:col-span-3 space-y-10 border-x border-gray-50 px-6">
-            {[
-              { title: "Former President Poroshenko Donates $1 Million in Military Aid to Ukraine", excerpt: "To understand the new politics stance and other pro nationals of recent times, we should look to Silicon...", img: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=600&auto=format&fit=crop" },
-              { title: "Protests Across Europe Show Solidarity with Ukraine, Demand End to Invasion", excerpt: "To understand the new politics stance and other pro nationals of recent times, we should look to Silicon...", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop" }
-            ].map((post, i) => (
-              <div key={i} className="group cursor-pointer space-y-4 pb-10 border-b border-gray-50 last:border-0">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100 rounded-sm">
-                  <img src={post.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <h3 className="text-[18px] font-bold text-[#111] leading-snug group-hover:text-[#0369d1] transition-colors font-bitter">{post.title}</h3>
-                <p className="text-gray-500 text-[13px] leading-relaxed line-clamp-3">{post.excerpt}</p>
+          {/* Hero Middle Column: 2 Main Cards & Excerpts (3 cols) */}
+          <div className="lg:col-span-3 space-y-8 lg:border-r lg:border-gray-100 lg:px-4">
+            {heroMiddle.map((item, i) => (
+              <div key={i} className="group flex flex-col gap-3 pb-8 border-b border-gray-100 last:border-none last:pb-0">
+                {item.image && (
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <Link href={item.url}>
+                  <h3 className="text-[17px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                    {item.title}
+                  </h3>
+                </Link>
+                {item.excerpt && (
+                  <p className="text-xs text-gray-500 leading-relaxed font-sans line-clamp-3">
+                    {item.excerpt}
+                  </p>
+                )}
               </div>
             ))}
           </div>
 
-          {/* Right Column (3 cols) */}
-          <div className="lg:col-span-3 space-y-10">
-            {/* Top Featured with Large Image */}
-            <div className="group cursor-pointer space-y-4">
-              <div className="aspect-[3/2] overflow-hidden bg-gray-100 rounded-sm relative">
-                <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-3 left-3 bg-[#0369d1] text-white px-1.5 py-0.5 text-[8px] font-black uppercase tracking-widest">WORLD</div>
+          {/* Hero Right Column: 1 Poster Card & Thumbnail List (3 cols) */}
+          <div className="lg:col-span-3 space-y-6">
+            <div className="group space-y-3 pb-6 border-b border-gray-100">
+              <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                <img
+                  src={heroRightMain.image}
+                  alt={heroRightMain.title}
+                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <h3 className="text-[17px] font-bold text-[#111] leading-tight group-hover:text-[#0369d1] transition-colors font-bitter">
-                Sarah Palin Defends Trump, Criticizes Kamala Harris for 'Lies' & Media Bias
-              </h3>
-              <div className="flex items-center gap-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-                <span>John Doe</span>
+              <Link href={heroRightMain.url}>
+                <h3 className="text-base font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                  {heroRightMain.title}
+                </h3>
+              </Link>
+              <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                <span>Shane Doe</span>
                 <span>•</span>
-                <span>Feb 11, 2021</span>
-                <span>•</span>
-                <span className="flex items-center gap-1"><MessageSquare size={10} /> 3</span>
+                <span>Jan 30, 2025</span>
               </div>
             </div>
 
-            {/* List with Thumbnails on Right */}
-            <div className="space-y-6 pt-6 border-t border-gray-100">
-              {[
-                { title: "Scientists Track Sea Level Rise from Glaciers in Greenland & Antarctica", img: "https://images.unsplash.com/photo-1471970333252-70802777b1e4?q=80&w=100&auto=format&fit=crop" },
-                { title: "OpenAI Working on New Reasoning Tech Under Code Name 'Strawberry'", img: "https://images.unsplash.com/photo-1620712943543-bcc4628c9757?q=80&w=100&auto=format&fit=crop" },
-                { title: "Supersonic Planes will Replace Jets Sooner, Says Aviation CEO", img: "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=100&auto=format&fit=crop" },
-                { title: "Chasing History – Laureus World Sportsman of the Year Nominees", img: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?q=80&w=100&auto=format&fit=crop" },
-                { title: "People visit City Walk Amid High Ticket Citations", img: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=100&auto=format&fit=crop" },
-                { title: "A Huge Imbalance of Energy Has Been Detected on Saturn Just Recently", img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=100&auto=format&fit=crop" }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 group cursor-pointer items-start justify-between">
-                  <h5 className="text-[13px] font-bold text-[#111] leading-snug group-hover:text-[#0369d1] transition-colors flex-1">{item.title}</h5>
-                  <div className="w-[60px] h-[45px] shrink-0 overflow-hidden bg-gray-100 rounded-sm">
-                    <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div>
+            {/* Thumbnail post list */}
+            <div className="space-y-4">
+              {heroRightList.map((item, i) => (
+                <div key={i} className="flex gap-3 justify-between items-start group">
+                  <Link href={item.url} className="flex-1">
+                    <h4 className="text-[13px] font-bold text-gray-800 leading-tight group-hover:text-[#0086F9] transition-colors">
+                      {item.title}
+                    </h4>
+                  </Link>
+                  {item.image && (
+                    <div className="w-16 h-11 shrink-0 overflow-hidden bg-gray-50 border border-gray-100">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
           </div>
+
         </section>
 
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Main Content Area */}
-          <div className="lg:w-2/3 space-y-20">
+        {/* Banner Ad Row */}
+        <div className="my-8 py-2 flex justify-center border-b border-gray-100">
+          <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer" className="block max-w-full">
+            <img
+              src="https://smartmag.theme-sphere.com/curated-mag/wp-content/uploads/sites/59/2025/01/DigitalHub-Top.jpg"
+              alt="ThemeSphere Ad"
+              className="w-full max-w-[970px] h-auto object-contain"
+            />
+          </a>
+        </div>
+
+        {/* ================= MIDDLE MAIN + SIDEBAR LAYOUT ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10 border-b border-gray-100">
+          
+          {/* LEFT MAIN AREA (8 cols) */}
+          <div className="lg:col-span-8 space-y-12 lg:border-r lg:border-gray-100 lg:pr-8">
             
-            {/* 2. World Politics & Crisis */}
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#111]">World Politics & Crisis</h3>
-                <div className="flex-1 h-[1px] bg-gray-50"></div>
+            {/* Section: Russia/Ukraine Conflict */}
+            <section className="space-y-6">
+              <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+                  Russia/Ukraine Conflict
+                </h2>
+                <Link href="#" className="text-xs text-[#0086F9] hover:underline font-bold">See All</Link>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-4 group cursor-pointer">
-                  <div className="aspect-[16/10] overflow-hidden bg-gray-100 rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <div className="text-[10px] font-black text-[#0369d1] uppercase tracking-widest">DIPLOMACY</div>
-                  <h4 className="text-[22px] font-black leading-tight group-hover:text-[#0369d1] transition-colors font-bitter">International Summit Fails to Reach Consensus on Trade Tariffs</h4>
-                  <p className="text-gray-500 text-[14px] leading-relaxed">Global leaders gathered in Brussels this week for a high-stakes summit that many hoped would resolve long-standing trade disputes...</p>
-                </div>
-                <div className="space-y-6">
-                  {[
-                    { title: "New Peace Treaty Negotiated in Eastern Europe After Months of Tension", cat: "Treaty" },
-                    { title: "Election Results Spark Protests in Central Asian Republics", cat: "Elections" },
-                    { title: "Humanitarian Aid Convoys Reach Besieged Cities in Conflict Zones", cat: "Humanitarian" },
-                    { title: "Cyber Warfare Becomes Primary Tool in Modern Geopolitical Rivalries", cat: "Security" }
-                  ].map((post, i) => (
-                    <div key={i} className="group cursor-pointer border-b border-gray-50 pb-4 last:border-0 last:pb-0">
-                      <div className="text-[9px] font-black text-[#0369d1] uppercase tracking-widest mb-1">{post.cat}</div>
-                      <h5 className="text-[15px] font-bold text-gray-800 leading-snug group-hover:text-[#0369d1] transition-colors font-bitter">{post.title}</h5>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
 
-            {/* 3. Market & Economy Grid */}
-            <section className="space-y-8 pt-8">
-              <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#111]">Market & Economy</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[
-                  { title: "Global Stock Markets Slide Amidst Rising Inflation Concerns", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=600&auto=format&fit=crop" },
-                  { title: "The Rise of Decentralized Finance: A New Era for Banking?", img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Real Estate Markets Face Cooling Period as Interest Rates Climb", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Cryptocurrency Regulations: What Investors Need to Know Now", img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=600&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer">
-                    <div className="w-[120px] h-[90px] shrink-0 overflow-hidden rounded-sm bg-gray-100">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="text-[15px] font-bold text-gray-800 leading-snug group-hover:text-[#0369d1] transition-colors font-bitter line-clamp-3">{post.title}</h4>
-                      <div className="text-[10px] text-gray-400 font-bold uppercase mt-2 block">Mar 5, 2025</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Large Video Post */}
+                <div className="space-y-4 group">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100 relative cursor-pointer">
+                    <img
+                      src={russiaUkraineMain.image}
+                      alt={russiaUkraineMain.title}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-all duration-300">
+                      <div className="w-12 h-12 bg-[#0086F9] text-white rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                        <Play size={18} fill="currentColor" className="ml-1" />
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-
-            {/* 4. Video Highlights (Dark Section) */}
-            <section className="bg-[#0b0c10] text-white p-12 -mx-4 md:-mx-12 rounded-sm relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:scale-105 transition-transform duration-1000"></div>
-              <div className="relative z-10 space-y-8">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <h3 className="text-xl font-black uppercase tracking-widest">Video Highlights</h3>
-                  <Link href="#" className="text-[11px] font-black uppercase tracking-widest hover:text-[#0369d1] transition-colors">View All Videos</Link>
+                  <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase">
+                    <span>{russiaUkraineMain.author}</span>
+                    <span>•</span>
+                    <span>{russiaUkraineMain.date}</span>
+                  </div>
+                  <Link href={russiaUkraineMain.url}>
+                    <h3 className="text-[20px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {russiaUkraineMain.title}
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    {russiaUkraineMain.excerpt}
+                  </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    { title: "Documentary: The Silent War in the Arctic", img: "https://images.unsplash.com/photo-1471970333252-70802777b1e4?q=80&w=400&auto=format&fit=crop" },
-                    { title: "Interview: The Future of AI with Industry Leaders", img: "https://images.unsplash.com/photo-1620712943543-bcc4628c9757?q=80&w=400&auto=format&fit=crop" },
-                    { title: "Special Report: Climate Change on the Front Lines", img: "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=400&auto=format&fit=crop" }
-                  ].map((vid, i) => (
-                    <div key={i} className="space-y-3 group cursor-pointer">
-                      <div className="aspect-video overflow-hidden bg-gray-800 rounded-sm relative">
-                        <img src={vid.img} className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-10 h-10 bg-[#0369d1] rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
-                            <Play size={16} fill="currentColor" />
-                          </div>
+
+                {/* Sublist of headlines */}
+                <div className="space-y-4 flex flex-col justify-between">
+                  <div className="space-y-4 divide-y divide-gray-100">
+                    {russiaUkraineList.map((item, i) => (
+                      <div key={i} className="pt-4 first:pt-0 group">
+                        <Link href={item.url}>
+                          <h4 className="text-[14px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                            {item.title}
+                          </h4>
+                        </Link>
+                        <div className="flex items-center gap-2 text-[9px] text-gray-400 font-bold mt-2 uppercase">
+                          <span>Jan 30, 2025</span>
                         </div>
                       </div>
-                      <h4 className="text-[14px] font-bold text-center group-hover:text-[#0369d1] transition-colors font-bitter">{vid.title}</h4>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section: Politics & More News */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-gray-100">
+              
+              {/* Politics Column */}
+              <div className="space-y-6">
+                <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                  <h2 className="text-[15px] font-black uppercase tracking-wider text-gray-900">
+                    Politics
+                  </h2>
+                </div>
+                <div className="group space-y-3">
+                  <Link href={politicsMain.url}>
+                    <h3 className="text-[17px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {politicsMain.title}
+                    </h3>
+                  </Link>
+                  <div className="text-[10px] text-gray-400 font-bold">Jan 30, 2025</div>
+                </div>
+
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {politicsList.slice(0, 4).map((item, i) => (
+                    <div key={i} className="pt-4 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* More News Column */}
+              <div className="space-y-6 md:border-l md:border-gray-100 md:pl-6">
+                <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                  <h2 className="text-[15px] font-black uppercase tracking-wider text-gray-900">
+                    More News
+                  </h2>
+                </div>
+                <div className="group space-y-3">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={moreNewsMain.image}
+                      alt={moreNewsMain.title}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <Link href={moreNewsMain.url}>
+                    <h3 className="text-[17px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {moreNewsMain.title}
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-gray-500 leading-relaxed font-sans line-clamp-3">
+                    {moreNewsMain.excerpt}
+                  </p>
+                </div>
+
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {moreNewsList.slice(0, 3).map((item, i) => (
+                    <div key={i} className="pt-4 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
-            {/* 5. Lifestyle & Tech */}
-            <section className="space-y-8 pt-8">
-              <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
-                <h3 className="text-xl font-black uppercase tracking-widest text-[#111]">Lifestyle & Tech</h3>
+            {/* Bottom list for Left content */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-gray-100">
+              {moreNewsBottom.map((item, i) => (
+                <div key={i} className="group space-y-2">
+                  <div className="text-[9px] text-[#0086F9] font-black uppercase tracking-wider">Geopolitics</div>
+                  <Link href={item.url}>
+                    <h4 className="text-[13px] font-serif font-bold text-gray-900 leading-snug group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                      {item.title}
+                    </h4>
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Section: Markets */}
+            <section className="space-y-6 pt-8 border-t border-gray-100">
+              <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+                  Markets &amp; Economy
+                </h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                {[
-                  { title: "The Best High-End Audio Gear for 2025", cat: "Audio", img: "https://images.unsplash.com/photo-1508685096489-7aac241bd9b2?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Why Mindful Living is More Than Just a Trend", cat: "Health", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop" },
-                  { title: "Top Destinations for Sustainable Travel in Europe", cat: "Travel", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="space-y-4 group cursor-pointer">
-                    <div className="aspect-square overflow-hidden bg-gray-100 rounded-sm">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4 group">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={marketsMain.image}
+                      className="w-full h-full object-cover transform transition-transform duration-750 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase">
+                    <span>{marketsMain.author}</span>
+                    <span>•</span>
+                    <span>{marketsMain.date}</span>
+                  </div>
+                  <Link href={marketsMain.url}>
+                    <h3 className="text-[20px] font-serif font-black leading-tight text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {marketsMain.title}
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-gray-500 leading-relaxed">{marketsMain.excerpt}</p>
+                </div>
+
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {marketsList.map((item, i) => (
+                    <div key={i} className="pt-4 first:pt-0 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[14px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                      <span className="text-[9px] text-gray-400 font-bold uppercase mt-2 block">Mar 11, 2022</span>
                     </div>
-                    <div className="text-[10px] font-black text-[#0369d1] uppercase tracking-widest">{post.cat}</div>
-                    <h4 className="text-[16px] font-black leading-tight group-hover:text-[#0369d1] transition-colors font-bitter">{post.title}</h4>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sub-grid with progress score dials */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-gray-100">
+                {marketsBottom.map((item, i) => (
+                  <div key={i} className="space-y-3 group">
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-50 border border-gray-100 relative">
+                      <img
+                        src={item.image}
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                        alt=""
+                      />
+                      {item.score && (
+                        /* Circular Score Rating overlay */
+                        <div className="absolute top-2 left-2 w-10 h-10 bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white text-[10px] font-black border border-white/10">
+                          <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 36 36">
+                            <path
+                              className="text-white/20"
+                              strokeWidth="2"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path
+                              className="text-[#0086F9]"
+                              strokeWidth="2.5"
+                              strokeDasharray={`${item.score}, 100`}
+                              strokeLinecap="round"
+                              stroke="currentColor"
+                              fill="none"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                          </svg>
+                          <span className="relative">{item.score}</span>
+                        </div>
+                      )}
+                    </div>
+                    <Link href={item.url}>
+                      <h4 className="text-[13px] font-bold text-gray-800 leading-tight group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                        {item.title}
+                      </h4>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -227,83 +433,588 @@ export default function TribunePostPage() {
 
           </div>
 
-          {/* Sidebar Area */}
-          <aside className="lg:w-1/3 space-y-16">
+          {/* RIGHT SIDEBAR AREA (4 cols) */}
+          <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-6 self-start">
             
-            {/* Editor's Choice Sidebar (Small Thumbnails) */}
-            <div className="bg-white p-8 border border-gray-100 rounded-sm shadow-sm">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-l-[4px] border-[#0369d1] pl-3 mb-8">Editor's Choice</h3>
-              <div className="space-y-6">
-                {[
-                  { title: "The Future of Space Exploration: What to Expect Next", img: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=200&auto=format&fit=crop" },
-                  { title: "How Urban Planning is Adapting to Climate Change", img: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=200&auto=format&fit=crop" },
-                  { title: "The Global Impact of New Semiconductor Policies", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200&auto=format&fit=crop" },
-                  { title: "Analysis: Why Regional Conflicts Are Becoming Global", img: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=200&auto=format&fit=crop" }
-                ].map((post, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-center">
-                    <div className="w-[65px] h-[65px] shrink-0 overflow-hidden rounded-sm bg-gray-100">
-                      <img src={post.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            {/* Columns Widget */}
+            <div className="bg-gray-50/50 border border-gray-100 p-6">
+              <h3 className="text-xs font-black uppercase tracking-widest text-gray-900 border-l-[3px] border-[#0086F9] pl-3 mb-6">
+                Columns
+              </h3>
+              <div className="space-y-5">
+                {columnsSidebar.map((item, i) => (
+                  <div key={i} className="flex gap-4 items-center group">
+                    <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                      />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-[14px] font-bold text-gray-800 leading-snug group-hover:text-[#0369d1] transition-colors font-bitter">{post.title}</h4>
+                    <div className="space-y-1 flex-1">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors line-clamp-2">
+                          {item.title}
+                        </h4>
+                      </Link>
+                      <div className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
+                        By {item.author}
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Newsletter Big Widget */}
-            <div className="bg-[#0369d1] p-10 text-center text-white relative overflow-hidden group rounded-sm shadow-xl">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform"></div>
-              <MailIcon size={48} className="mx-auto mb-6 opacity-30" />
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-3">Join Our Insight List</h3>
-              <p className="text-white/70 text-[14px] mb-8 leading-relaxed">Deep analysis and morning briefings delivered to your inbox.</p>
-              <form className="space-y-3">
-                <input type="email" placeholder="Email Address" className="w-full bg-white/20 border border-white/30 px-4 py-3.5 text-sm text-white focus:outline-none focus:bg-white focus:text-black transition-all text-center placeholder:text-white/60" />
-                <button className="w-full bg-white text-[#0369d1] font-black uppercase tracking-widest text-[12px] py-4 hover:bg-black hover:text-white transition-colors shadow-2xl">SUBSCRIBE NOW</button>
-              </form>
-            </div>
-
-            {/* Numbered Trending */}
-            <div className="space-y-8">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b-2 border-black inline-block pb-1">Most Read Stories</h3>
-              <div className="space-y-6 pt-2">
-                {[
-                  "Report: Global Trade Shifts Expected to Redefine Economy",
-                  "Why Climate Policy is the Primary Challenge of the Decade",
-                  "Deep Dive: The Evolution of Campaign Strategy",
-                  "Interview: New Tech Innovation Set to Disrupt Markets"
-                ].map((title, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer items-start">
-                    <span className="text-[42px] font-black text-gray-100 group-hover:text-[#0369d1] transition-colors leading-none italic">{i + 1}</span>
-                    <h4 className="text-[15px] font-bold text-gray-800 leading-snug group-hover:text-[#0369d1] transition-colors pt-3 font-bitter">{title}</h4>
+            {/* Opinion Widget */}
+            <div className="bg-white border border-gray-100 p-6 shadow-sm">
+              <h3 className="text-xs font-black uppercase tracking-widest text-gray-900 border-l-[3px] border-[#0086F9] pl-3 mb-6">
+                Opinion
+              </h3>
+              <div className="space-y-4 divide-y divide-gray-100">
+                {opinionSidebar.map((item, i) => (
+                  <div key={i} className="pt-4 first:pt-0 group">
+                    <Link href={item.url}>
+                      <h4 className="text-[13px] font-serif font-bold text-gray-800 hover:text-[#0086F9] transition-colors leading-snug">
+                        {item.title}
+                      </h4>
+                    </Link>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Social Connect Columns (2 cols) */}
-            <div className="space-y-6">
-              <h3 className="text-[14px] font-black uppercase tracking-widest border-b border-gray-100 w-full pb-2">Follow Tribune Post</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { name: "Facebook", count: "1.2M", color: "#1877F2" },
-                  { name: "Twitter", count: "850K", color: "#1DA1F2" },
-                  { name: "Instagram", count: "2.4M", color: "#E4405F" },
-                  { name: "Youtube", count: "1.5M", color: "#FF0000" }
-                ].map((social, i) => (
-                  <a key={i} href="#" className="flex flex-col items-center justify-center p-4 bg-gray-50 border border-gray-100 hover:border-[#0369d1] transition-colors group">
-                    <div className="text-[15px] font-black mb-1 group-hover:text-[#0369d1] transition-colors">{social.count}</div>
-                    <div className="text-[9px] text-gray-400 font-black uppercase tracking-widest">{social.name}</div>
-                  </a>
-                ))}
-              </div>
+            {/* Sidebar Ad Placement */}
+            <div className="flex justify-center">
+              <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://smartmag.theme-sphere.com/tribune-post/wp-content/uploads/sites/58/2025/01/Tall-Woman.jpg"
+                  alt="Advertisement Banner"
+                  width={300}
+                  height={600}
+                  className="w-full max-w-[300px] h-auto object-contain border border-gray-100"
+                />
+              </a>
             </div>
 
           </aside>
+
         </div>
+
+        {/* ================= LIFESTYLE TECH SEGMENT (VIBRANT LIGHT BLUE BACKGROUND) ================= */}
+        <section className="bg-[#eef8fc] p-8 md:p-12 -mx-4 md:-mx-8 my-10 border-y border-gray-100">
+          <div className="max-w-[1200px] mx-auto space-y-8">
+            
+            <div className="flex items-center justify-between border-b border-blue-200 pb-3">
+              <div className="flex items-center gap-2">
+                <BookOpen className="text-[#0086F9]" size={20} />
+                <h2 className="text-[18px] font-black uppercase tracking-wider text-gray-900">
+                  Lifestyle Tech
+                </h2>
+              </div>
+              <Link href="#" className="text-xs text-[#0086F9] hover:underline font-bold">View More</Link>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              
+              {/* Left Segment: 2 stacked posts (6 cols) */}
+              <div className="lg:col-span-6 space-y-6">
+                {lifestyleTechLeft.map((item, i) => (
+                  <div key={i} className="bg-white p-5 border border-gray-100 flex flex-col md:flex-row gap-5 group shadow-sm">
+                    <div className="md:w-1/2 aspect-[3/2] overflow-hidden bg-gray-50 shrink-0">
+                      <img
+                        src={item.image}
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex flex-col justify-between space-y-2">
+                      <div className="space-y-2">
+                        <Link href={item.url}>
+                          <h3 className="text-base font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                            {item.title}
+                          </h3>
+                        </Link>
+                      </div>
+                      <div className="flex items-center gap-2 text-[10px] text-gray-400 font-bold uppercase mt-auto">
+                        <span>{item.author}</span>
+                        <span>•</span>
+                        <span>{item.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right Segment: Poster Overlay (6 cols) */}
+              <div className="lg:col-span-6">
+                <div className="relative h-full min-h-[300px] overflow-hidden group border border-gray-100 shadow-sm">
+                  <img
+                    src={lifestyleTechPoster.image}
+                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                  
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 space-y-3 text-white">
+                    <span className="bg-[#0086F9] text-white px-2 py-0.5 text-[9px] font-black uppercase tracking-widest">
+                      {lifestyleTechPoster.category}
+                    </span>
+                    <Link href={lifestyleTechPoster.url}>
+                      <h3 className="text-xl md:text-2xl font-serif font-black leading-snug hover:text-blue-300 transition-colors">
+                        {lifestyleTechPoster.title}
+                      </h3>
+                    </Link>
+                    <div className="flex items-center gap-2 text-[10px] text-white/60 font-bold uppercase">
+                      <span>{lifestyleTechPoster.author}</span>
+                      <span>•</span>
+                      <span>{lifestyleTechPoster.date}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom 5-column grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pt-6 border-t border-blue-200">
+              {lifestyleTechGrid5.map((item, i) => (
+                <div key={i} className="bg-white p-4 border border-gray-100 space-y-3 group shadow-sm flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-50 border border-gray-100">
+                      <img
+                        src={item.image}
+                        className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                        alt=""
+                      />
+                    </div>
+                    <Link href={item.url}>
+                      <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                        {item.title}
+                      </h4>
+                    </Link>
+                  </div>
+                  <span className="text-[9px] text-gray-400 font-bold uppercase mt-auto block">{item.date}</span>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* ================= SPORTS + EXCLUSIVE SIDEBAR SECTION ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10 border-b border-gray-100">
+          
+          {/* Left Area (8 cols) */}
+          <div className="lg:col-span-8 space-y-10 lg:border-r lg:border-gray-100 lg:pr-8">
+            
+            {/* Sports Widget */}
+            <section className="space-y-6">
+              <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+                  Sports
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4 group">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={sportsMain.image}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <Link href={sportsMain.url}>
+                    <h3 className="text-lg font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {sportsMain.title}
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-gray-500 leading-relaxed font-sans">{sportsMain.excerpt}</p>
+                </div>
+
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {sportsList.map((item, i) => (
+                    <div key={i} className="pt-4 first:pt-0 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                      <span className="text-[9px] text-gray-400 font-bold uppercase mt-2 block">Mar 11, 2022</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Cricket / More Sports subcolumns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-100">
+              
+              {/* Cricket Column */}
+              <div className="space-y-5">
+                <h3 className="text-[14px] font-black uppercase tracking-wider text-gray-900 border-b-2 border-gray-900 pb-1.5">
+                  Cricket
+                </h3>
+                <div className="group space-y-3">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={cricketMain.image}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <Link href={cricketMain.url}>
+                    <h4 className="text-[15px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {cricketMain.title}
+                    </h4>
+                  </Link>
+                </div>
+              </div>
+
+              {/* More Sports Column */}
+              <div className="space-y-5 md:border-l md:border-gray-100 md:pl-6">
+                <h3 className="text-[14px] font-black uppercase tracking-wider text-gray-900 border-b-2 border-gray-900 pb-1.5">
+                  More Sports
+                </h3>
+                <div className="group">
+                  <Link href={moreSportsMain.url}>
+                    <h4 className="text-[15px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {moreSportsMain.title}
+                    </h4>
+                  </Link>
+                </div>
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {moreSportsList.map((item, i) => (
+                    <div key={i} className="pt-4 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Right Sidebar (4 cols) */}
+          <aside className="lg:col-span-4 space-y-10 lg:sticky lg:top-6 self-start">
+            
+            {/* Exclusive News */}
+            <div className="bg-white border border-gray-100 p-6 shadow-sm">
+              <h3 className="text-xs font-black uppercase tracking-widest text-gray-900 border-l-[3px] border-[#0086F9] pl-3 mb-6">
+                Exclusive News
+              </h3>
+              <div className="grid grid-cols-1 gap-5">
+                {exclusiveNews.map((item, i) => (
+                  <div key={i} className="flex gap-3 justify-between items-start group border-b border-gray-50 pb-4 last:border-none last:pb-0">
+                    <div className="space-y-1 flex-1">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-tight group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                    {item.image && (
+                      <div className="w-20 h-14 shrink-0 overflow-hidden bg-gray-50 border border-gray-100">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Sidebar Square Banner Ad */}
+            <div className="bg-gray-50 border border-gray-100 p-4 flex justify-center">
+              <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://smartmag.theme-sphere.com/tribune-post/wp-content/uploads/sites/58/2025/01/Newsboard-Sidebar.jpg"
+                  alt="Sidebar Advertisement"
+                  width={300}
+                  height={250}
+                  className="w-full max-w-[300px] h-auto object-contain border border-gray-200"
+                />
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+
+        {/* ================= EDITOR'S PICKS GRID (FULL WIDTH 5 COLUMNS OVERLAY) ================= */}
+        <section className="py-10 border-b border-gray-100">
+          <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2 mb-8">
+            <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+              Editor's Picks
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {editorsPicks.map((item, i) => (
+              <div key={i} className="relative aspect-[3/4] overflow-hidden group shadow-md border border-gray-100">
+                <img
+                  src={item.image}
+                  className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  alt=""
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2 text-white">
+                  <span className="text-[9px] text-[#0086F9] font-black uppercase tracking-widest">
+                    {item.category}
+                  </span>
+                  <Link href={item.url || "#"}>
+                    <h3 className="text-[13px] font-serif font-black leading-snug hover:text-blue-300 transition-colors line-clamp-3">
+                      {item.title}
+                    </h3>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ================= CURRENCIES, SCHOOLS + TOP TRENDING SEGMENT ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+          
+          {/* Left content: 8 cols */}
+          <div className="lg:col-span-8 space-y-12 lg:border-r lg:border-gray-100 lg:pr-8">
+            
+            {/* Currencies & Crypto Widget */}
+            <section className="space-y-6">
+              <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+                  Currencies &amp; Crypto
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4 group">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={currenciesCryptoMain.image}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div className="text-[10px] text-gray-400 font-bold uppercase">{currenciesCryptoMain.date}</div>
+                  <Link href={currenciesCryptoMain.url}>
+                    <h3 className="text-lg font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {currenciesCryptoMain.title}
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-gray-500 leading-relaxed font-sans">{currenciesCryptoMain.excerpt}</p>
+                </div>
+
+                <div className="space-y-4 divide-y divide-gray-100">
+                  {currenciesCryptoList.map((item, i) => (
+                    <div key={i} className="pt-4 first:pt-0 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                      <span className="text-[9px] text-gray-400 font-bold uppercase mt-2 block">Jan 30, 2025</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Education & Schools subcolumns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-gray-100">
+              
+              {/* Higher Education */}
+              <div className="space-y-5">
+                <h3 className="text-[14px] font-black uppercase tracking-wider text-gray-900 border-b-2 border-gray-900 pb-1.5">
+                  Education
+                </h3>
+                <div className="group space-y-3">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                    <img
+                      src={educationMain.image}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <Link href={educationMain.url}>
+                    <h4 className="text-[15px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {educationMain.title}
+                    </h4>
+                  </Link>
+                </div>
+                <div className="space-y-3.5 divide-y divide-gray-100">
+                  {educationList.map((item, i) => (
+                    <div key={i} className="pt-3 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Schools */}
+              <div className="space-y-5 md:border-l md:border-gray-100 md:pl-6">
+                <h3 className="text-[14px] font-black uppercase tracking-wider text-gray-900 border-b-2 border-gray-900 pb-1.5">
+                  Schools
+                </h3>
+                <div className="group">
+                  <Link href={schoolsMain.url}>
+                    <h4 className="text-[15px] font-serif font-black leading-snug text-gray-900 group-hover:text-[#0086F9] transition-colors">
+                      {schoolsMain.title}
+                    </h4>
+                  </Link>
+                </div>
+                <div className="space-y-3.5 divide-y divide-gray-100">
+                  {schoolsList.map((item, i) => (
+                    <div key={i} className="pt-3 group">
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 group-hover:text-[#0086F9] transition-colors">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Section: You May Have Missed */}
+            <section className="space-y-6 pt-10 border-t border-gray-100">
+              <div className="flex items-center justify-between border-b-2 border-gray-900 pb-2">
+                <h2 className="text-[16px] font-black uppercase tracking-wider text-gray-900">
+                  You May Have Missed
+                </h2>
+              </div>
+
+              <div className="bg-gray-50/50 p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-6 group">
+                <div className="md:col-span-5 aspect-[3/2] overflow-hidden bg-white border border-gray-100 shrink-0">
+                  <img
+                    src={youMayHaveMissedMain.image}
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    alt=""
+                  />
+                </div>
+                <div className="md:col-span-7 flex flex-col justify-between space-y-2">
+                  <div className="space-y-2">
+                    <div className="text-[9px] text-[#0086F9] font-black uppercase tracking-widest">Financials</div>
+                    <Link href={youMayHaveMissedMain.url}>
+                      <h3 className="text-[20px] font-serif font-black leading-tight text-gray-900 hover:text-[#0086F9] transition-colors">
+                        {youMayHaveMissedMain.title}
+                      </h3>
+                    </Link>
+                    <p className="text-xs text-gray-500 leading-relaxed font-sans line-clamp-3">
+                      {youMayHaveMissedMain.excerpt}
+                    </p>
+                  </div>
+                  <div className="text-[10px] text-gray-400 font-bold uppercase mt-auto">{youMayHaveMissedMain.date}</div>
+                </div>
+              </div>
+
+              {/* Grid of bottom items with thumbnails */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+                {youMayHaveMissedList.map((item, i) => (
+                  <div key={i} className="flex gap-3 justify-between items-start group">
+                    <Link href={item.url} className="flex-1">
+                      <h4 className="text-[13px] font-bold text-gray-800 leading-tight group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                        {item.title}
+                      </h4>
+                    </Link>
+                    {item.image && (
+                      <div className="w-16 h-11 shrink-0 overflow-hidden bg-gray-50 border border-gray-100">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+          </div>
+
+          {/* Right sidebar: 4 cols */}
+          <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-6 self-start">
+            
+            {/* Top Trending Widget */}
+            <div className="bg-white border border-gray-100 p-6 shadow-sm">
+              <h3 className="text-xs font-black uppercase tracking-widest text-gray-900 border-l-[3px] border-[#0086F9] pl-3 mb-6">
+                Top Trending
+              </h3>
+
+              <div className="space-y-6">
+                {topTrending.map((item, i) => (
+                  <div key={i} className="flex gap-4 items-start group">
+                    <span className="text-4xl font-serif font-black text-gray-200 group-hover:text-[#0086F9] transition-colors leading-none italic">
+                      {i + 1}
+                    </span>
+                    <div className="space-y-2 flex-1">
+                      {item.image && (
+                        <div className="aspect-[16/10] overflow-hidden bg-gray-50 border border-gray-100">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+                      <Link href={item.url}>
+                        <h4 className="text-[13px] font-bold text-gray-800 leading-snug group-hover:text-[#0086F9] transition-colors line-clamp-3">
+                          {item.title}
+                        </h4>
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Newsletter widget */}
+            <div className="bg-[#0086F9] p-8 text-center text-white relative overflow-hidden group shadow-md">
+              <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform"></div>
+              <h3 className="text-xl font-black uppercase tracking-tight mb-2">Join Our Insight List</h3>
+              <p className="text-white/80 text-xs mb-6 leading-relaxed">
+                Deep analysis and morning briefings delivered to your inbox daily.
+              </p>
+              <form onSubmit={(e) => e.preventDefault()} className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full bg-white/15 border border-white/20 px-4 py-3 text-xs text-white focus:outline-none focus:bg-white focus:text-black transition-all text-center placeholder:text-white/60"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white font-black uppercase tracking-widest text-[11px] py-3.5 hover:bg-white hover:text-black transition-colors"
+                >
+                  SUBSCRIBE NOW
+                </button>
+              </form>
+            </div>
+
+          </aside>
+
+        </div>
+
       </div>
 
+      {/* Premium Footer */}
       <TribunePostFooter />
     </main>
   );

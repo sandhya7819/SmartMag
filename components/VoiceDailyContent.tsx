@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   VD_BASE,
@@ -21,7 +22,7 @@ import {
   type VdPost,
 } from "@/lib/voiceDailyData";
 
-const STICKY_TOP = "lg:top-[162px] md:top-[114px]";
+const STICKY_TOP = "lg:top-[88px]";
 
 function SectionTitle({ title, accent = "default" }: { title: string; accent?: "default" | "red" }) {
   const parts = title.split(".");
@@ -29,10 +30,10 @@ function SectionTitle({ title, accent = "default" }: { title: string; accent?: "
   const dot = parts.length > 1 ? "." : "";
   const borderColor = accent === "red" ? "border-[#e53935]" : "border-[#161616]";
   return (
-    <div className={`flex items-center border-b-[3px] ${borderColor} pb-2 mb-5`}>
-      <h4 className="text-[15px] font-black uppercase tracking-[1px] text-[#161616]">
+    <div className={`flex items-center border-b-[3px] ${borderColor} pb-2 mb-5 font-['Inter',sans-serif]`}>
+      <h4 className="text-[14px] font-extrabold uppercase tracking-[1.5px] text-[#161616]">
         {main}
-        {dot && <span className="text-[#0c77e2]">.</span>}
+        {dot && <span className="text-[#0c77e2]">{dot}</span>}
       </h4>
     </div>
   );
@@ -41,39 +42,39 @@ function SectionTitle({ title, accent = "default" }: { title: string; accent?: "
 function RightSidebar() {
   return (
     <aside className={`lg:sticky ${STICKY_TOP} lg:self-start space-y-6`}>
-      <article className="relative overflow-hidden group">
-        <div className="aspect-[2/3] overflow-hidden">
-          <img src={overlayHero.img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      <article className="relative overflow-hidden group rounded-[1px] shadow-sm">
+        <div className="aspect-[2/3] overflow-hidden bg-neutral-100">
+          <img src={overlayHero.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5">
-          <h2 className="text-white text-[18px] font-bold leading-snug mb-2">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5">
+          <h2 className="text-white text-[18px] font-bold leading-snug mb-2 font-['Faustina',serif] hover:text-[#0c77e2] transition-colors duration-200">
             <Link href="#">{overlayHero.title}</Link>
           </h2>
-          <div className="text-white/80 text-[11px] font-bold">
+          <div className="text-white/80 text-[11px] font-bold tracking-wider uppercase font-['Inter',sans-serif]">
             {overlayHero.author} — {overlayHero.date}
           </div>
         </div>
       </article>
 
-      <article className="py-3 border-b border-[#efefef]">
+      <article className="py-4 border-b border-[#efefef] group">
         <CatMeta cat="US & Canada" />
-        <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
+        <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
           <Link href="#">US Nod to Nato for Sending Fighter Jets to Ukraine Finds no Takers</Link>
         </h2>
-        <p className="text-[13px] text-[#4f4f4f] mt-2 line-clamp-2">{EXCERPT}</p>
+        <p className="text-[13px] text-[#4f4f4f] leading-relaxed mt-2 line-clamp-2 font-['Inter',sans-serif]">{EXCERPT}</p>
       </article>
 
       {sidebarSmall.map((p) => (
         <article key={p.title} className="flex gap-3 py-3 border-b border-[#efefef] group">
-          <div className="relative w-[72px] h-[72px] shrink-0 overflow-hidden">
-            <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+          <div className="relative w-[72px] h-[72px] shrink-0 overflow-hidden bg-neutral-100 rounded-[1px]">
+            <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
             {p.score && (
-              <span className="absolute bottom-0 left-0 right-0 bg-[#0c77e2] text-white text-[10px] font-black text-center py-0.5">
+              <span className="absolute bottom-0 left-0 right-0 bg-[#0c77e2] text-white text-[10px] font-bold text-center py-0.5 font-['Inter',sans-serif]">
                 {p.score}
               </span>
             )}
           </div>
-          <h4 className="text-[13px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] line-clamp-3">
+          <h4 className="text-[13px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 line-clamp-3 font-['Faustina',serif]">
             <Link href="#">{p.title}</Link>
           </h4>
         </article>
@@ -83,7 +84,7 @@ function RightSidebar() {
 
       <div>
         <SectionTitle title="Climate." />
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3.5">
           {climatePosts.map((p) => (
             <GridThumb key={p.title} post={p} tall />
           ))}
@@ -95,16 +96,16 @@ function RightSidebar() {
 
 function CatMeta({ cat, date, updated }: { cat?: string; date?: string; updated?: string }) {
   return (
-    <div className="flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-wide mb-1">
+    <div className="flex flex-wrap items-center gap-2 text-[10.5px] font-extrabold uppercase tracking-widest mb-1.5 font-['Inter',sans-serif]">
       {cat && (
-        <Link href="#" className="text-[#0c77e2] hover:underline">
+        <Link href="#" className="text-[#0c77e2] hover:text-[#0960b8] transition-colors">
           {cat}
         </Link>
       )}
       {date && <span className="text-[#9b9b9b]">{date}</span>}
       {updated && (
         <span className="text-[#9b9b9b]">
-          <span className="font-black">Updated:</span> {updated}
+          <span className="font-extrabold text-[#9b9b9b]">Updated:</span> {updated}
         </span>
       )}
     </div>
@@ -113,9 +114,9 @@ function CatMeta({ cat, date, updated }: { cat?: string; date?: string; updated?
 
 function SmallPost({ post }: { post: VdPost }) {
   return (
-    <article className="py-4 border-b border-[#efefef] last:border-0">
+    <article className="py-4 border-b border-[#efefef] last:border-0 group">
       <CatMeta cat={post.cat} date={post.date} />
-      <h4 className="text-[15px] font-bold leading-snug text-[#161616] hover:text-[#0c77e2]">
+      <h4 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
         <Link href="#">{post.title}</Link>
       </h4>
     </article>
@@ -126,15 +127,15 @@ function GridThumb({ post, tall }: { post: VdPost; tall?: boolean }) {
   return (
     <article className="group cursor-pointer">
       {post.img && (
-        <div className={`overflow-hidden mb-3 ${tall ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
+        <div className={`overflow-hidden mb-3 relative rounded-[1px] bg-neutral-100 ${tall ? "aspect-[3/4]" : "aspect-[3/2]"}`}>
           <img
             src={post.img}
             alt=""
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
           />
         </div>
       )}
-      <h2 className="text-[14px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] line-clamp-3">
+      <h2 className="text-[14.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 line-clamp-3 font-['Faustina',serif]">
         <Link href="#">{post.title}</Link>
       </h2>
       {(post.cat || post.date) && (
@@ -142,37 +143,37 @@ function GridThumb({ post, tall }: { post: VdPost; tall?: boolean }) {
           <CatMeta cat={post.cat} date={post.date} />
         </div>
       )}
-      {post.excerpt && <p className="text-[13px] text-[#4f4f4f] mt-2 line-clamp-2">{post.excerpt}</p>}
+      {post.excerpt && <p className="text-[13px] text-[#4f4f4f] leading-relaxed mt-2 line-clamp-2 font-['Inter',sans-serif]">{post.excerpt}</p>}
     </article>
   );
 }
 
 function Newsletter({ dark }: { dark?: boolean }) {
   return (
-    <div className={`p-6 ${dark ? "bg-[#161616] text-white" : "bg-[#f7f7f7]"}`}>
-      <h3 className={`text-[16px] font-black mb-2 ${dark ? "text-white" : "text-[#161616]"}`}>Subscribe to Updates</h3>
+    <div className={`p-6 rounded-[2px] ${dark ? "bg-[#161616] text-white" : "bg-[#f7f7f7]"} font-['Inter',sans-serif]`}>
+      <h3 className={`text-[15px] font-extrabold uppercase tracking-[0.5px] mb-2 ${dark ? "text-white" : "text-[#161616]"}`}>Subscribe to Updates</h3>
       <p className={`text-[13px] mb-4 leading-relaxed ${dark ? "text-gray-400" : "text-[#666]"}`}>
         Get the latest creative news from FooBar about art, design and business.
       </p>
-      <form className="flex gap-0">
+      <form onSubmit={(e) => e.preventDefault()} className="flex gap-0">
         <input
           type="email"
           placeholder="Your email address.."
           required
-          className={`flex-1 px-3 py-2.5 text-[13px] border ${dark ? "bg-white/10 border-white/20 text-white placeholder:text-gray-500" : "bg-white border-[#ddd] text-[#333]"}`}
+          className={`flex-1 px-3.5 py-2.5 text-[13px] border focus:outline-none ${dark ? "bg-white/10 border-white/20 text-white placeholder:text-gray-500 focus:border-white/40" : "bg-white border-[#ddd] text-[#333] focus:border-neutral-400"}`}
         />
         <button
           type="submit"
-          className="bg-[#0c77e2] text-white text-[12px] font-bold px-4 hover:bg-[#0960b8] transition-colors"
+          className="bg-[#0c77e2] text-white text-[11px] font-extrabold uppercase tracking-wider px-5 hover:bg-[#0960b8] transition-colors rounded-r-[1px]"
         >
           Subscribe
         </button>
       </form>
-      <label className={`flex items-start gap-2 mt-3 text-[11px] ${dark ? "text-gray-500" : "text-[#777]"}`}>
-        <input type="checkbox" required className="mt-0.5" />
+      <label className={`flex items-start gap-2.5 mt-3 text-[11px] leading-relaxed ${dark ? "text-gray-500" : "text-[#777]"}`}>
+        <input type="checkbox" required className="mt-0.5 cursor-pointer" />
         <span>
           By signing up, you agree to our terms and our{" "}
-          <Link href="#" className="underline">
+          <Link href="#" className="underline hover:text-black">
             Privacy Policy
           </Link>{" "}
           agreement.
@@ -184,28 +185,28 @@ function Newsletter({ dark }: { dark?: boolean }) {
 
 export default function VoiceDailyContent() {
   return (
-    <div className="bg-[#eceff1] py-0">
+    <div className="bg-[#eceff1] py-0 font-['Inter',sans-serif]">
       <div className="max-w-[1200px] mx-auto bg-white shadow-sm">
-        {/* Main area + sticky right sidebar (matches SmartMag ts-sticky-native) */}
+        {/* Main area + sticky right sidebar */}
         <div className="lg:flex lg:items-start border-b border-[#efefef]">
           <div className="flex-1 min-w-0">
             {/* Hero row */}
-            <section className="grid lg:grid-cols-2 gap-0">
-              <div className="p-5 lg:p-6 lg:pr-4 border-b lg:border-b-0 lg:border-r border-[#efefef]">
+            <section className="grid lg:grid-cols-2 gap-0 border-b border-[#efefef]">
+              <div className="p-5 lg:p-6 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#efefef] group cursor-pointer">
                 <CatMeta cat={featuredMain.cat} updated={featuredMain.updated} />
-                <h2 className="text-[22px] font-bold leading-tight text-[#161616] mb-4 hover:text-[#0c77e2]">
+                <h2 className="text-[24px] font-bold leading-tight text-[#161616] mb-4 hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                   <Link href="#">{featuredMain.title}</Link>
                 </h2>
-                <div className="aspect-[16/10] overflow-hidden mb-4">
+                <div className="aspect-[16/10] overflow-hidden mb-4 rounded-[1px] bg-neutral-100">
                   <img
                     src={featuredMain.img}
                     alt=""
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-[14px] text-[#4f4f4f] leading-relaxed line-clamp-3">{featuredMain.excerpt}</p>
+                <p className="text-[14px] text-[#4f4f4f] leading-relaxed line-clamp-3 font-['Inter',sans-serif]">{featuredMain.excerpt}</p>
               </div>
-              <div className="p-5 lg:p-6 lg:pl-4 border-b lg:border-b-0 border-[#efefef]">
+              <div className="p-5 lg:p-6 lg:pl-6 bg-white">
                 {featuredSide.map((p) => (
                   <SmallPost key={p.title} post={p} />
                 ))}
@@ -223,99 +224,99 @@ export default function VoiceDailyContent() {
 
             {/* Two columns: left list + middle articles */}
             <section className="grid lg:grid-cols-2 gap-0">
-          <div className={`p-5 lg:p-6 lg:pr-4 border-b lg:border-b-0 lg:border-r border-[#efefef] lg:sticky ${STICKY_TOP} lg:self-start`}>
-            {leftColumnPosts.map((p) => (
-              <SmallPost key={p.title} post={p} />
-            ))}
-            <article className="py-5 border-b border-[#efefef]">
-              <div className="aspect-[3/2] overflow-hidden mb-3">
-                <img src={blueMountains.img} alt="" className="w-full h-full object-cover" />
-              </div>
-              <h2 className="text-[17px] font-bold leading-snug mb-2 hover:text-[#0c77e2]">
-                <Link href="#">{blueMountains.title}</Link>
-              </h2>
-              <div className="text-[11px] text-[#9b9b9b] font-bold uppercase">
-                By {blueMountains.author} — <span className="text-[#9b9b9b]">Updated: {blueMountains.updated}</span>
-              </div>
-            </article>
-            {leftListPosts.map((p) => (
-              <SmallPost key={p.title} post={p} />
-            ))}
-          </div>
-
-          <div className="p-5 lg:p-6 lg:pl-4 space-y-6">
-            {rightListFeatured.map((p) => (
-              <article key={p.title} className="flex gap-4 pb-5 border-b border-[#efefef] group">
-                <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden">
-                  <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-                </div>
-                <div>
-                  <CatMeta cat={p.cat} date={p.date} />
-                  <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
-                    <Link href="#">{p.title}</Link>
+              <div className={`p-5 lg:p-6 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#efefef] lg:sticky ${STICKY_TOP} lg:self-start bg-white z-10`}>
+                {leftColumnPosts.map((p) => (
+                  <SmallPost key={p.title} post={p} />
+                ))}
+                <article className="py-5 border-b border-[#efefef] group">
+                  <div className="aspect-[3/2] overflow-hidden mb-4 rounded-[1px] bg-neutral-100">
+                    <img src={blueMountains.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
+                  </div>
+                  <h2 className="text-[18px] font-bold leading-snug mb-2 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                    <Link href="#">{blueMountains.title}</Link>
                   </h2>
-                  {p.excerpt && <p className="text-[12px] text-[#4f4f4f] mt-2 line-clamp-2">{p.excerpt}</p>}
-                </div>
-              </article>
-            ))}
-
-            <article className="pb-4 border-b border-[#efefef]">
-              <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
-                <Link href="#">Market Trading Guide: Jyothy Labs, Safari Industries Among 4 Stock Recommendations for Now – Latest Stock Ideas</Link>
-              </h2>
-              <div className="text-[11px] text-[#9b9b9b] mt-2 font-bold">John Doe</div>
-            </article>
-
-            <article className="flex gap-4 pb-5 border-b border-[#efefef] group">
-              <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden">
-                <img src={`${VD_BASE}b2e0080127a231950f524d74dbd561b9-300x199.jpeg`} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  <div className="text-[11px] text-[#9b9b9b] font-bold uppercase tracking-wider font-['Inter',sans-serif]">
+                    By {blueMountains.author} — <span className="text-[#9b9b9b]">Updated: {blueMountains.updated}</span>
+                  </div>
+                </article>
+                {leftListPosts.map((p) => (
+                  <SmallPost key={p.title} post={p} />
+                ))}
               </div>
-              <div>
-                <CatMeta cat="US & Canada" date="Jan 4, 2021" />
-                <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
-                  <Link href="#">Arizona Anti-Abortion Activists aren’t Letting Up After Supreme Court Victory?</Link>
-                </h2>
-                <p className="text-[12px] text-[#4f4f4f] mt-2 line-clamp-2">{EXCERPT}</p>
-              </div>
-            </article>
 
-            <div className="grid grid-cols-2 gap-4">
-              <GridThumb post={{ title: "Mask Bans Grow, Threatening Public Health And Immunocompromised People", cat: "Face Masks", date: "Jan 4, 2021", img: `${VD_BASE}e349d70df4d6621f01f289a3c22fe9a0-450x300.jpeg` }} />
-              <GridThumb post={{ title: "Live on This Day: Students Protest Gun Violence in March for Our Lives", cat: "Health", date: "Jan 4, 2021", img: `${VD_BASE}e59331553987345341707d58fec0e0df-450x300.jpeg` }} />
-            </div>
+              <div className="p-5 lg:p-6 lg:pl-6 space-y-6">
+                {rightListFeatured.map((p) => (
+                  <article key={p.title} className="flex gap-4 pb-5 border-b border-[#efefef] last:border-0 group">
+                    <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden rounded-[1px] bg-neutral-100">
+                      <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
+                    </div>
+                    <div className="flex-1">
+                      <CatMeta cat={p.cat} date={p.date} />
+                      <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                        <Link href="#">{p.title}</Link>
+                      </h2>
+                      {p.excerpt && <p className="text-[12.5px] text-[#4f4f4f] leading-relaxed mt-2 line-clamp-2 font-['Inter',sans-serif]">{p.excerpt}</p>}
+                    </div>
+                  </article>
+                ))}
 
-            <article className="py-4 border-b border-[#efefef]">
-              <CatMeta cat="Ukraine Conflict" date="Jan 4, 2021" />
-              <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
-                <Link href="#">One Year On From Unprecedented Wagner Rebellion and Still Russian President Vladimir Putin’s Position is as Strong as Ever: Expert Analysis</Link>
-              </h2>
-            </article>
-
-            {[1, 2, 3].map((i) => (
-              <article key={i} className="flex gap-4 pb-5 border-b border-[#efefef] group">
-                <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden">
-                  <img
-                    src={`${VD_BASE}${i === 1 ? "695c2029874aad0c91f42f22790c3e76" : i === 2 ? "01e570a920b5b49c473cd7dc16b9022b" : "e707291e2183a1d2949c82ec95e4ced6"}-300x200.jpeg`}
-                    alt=""
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                  />
-                </div>
-                <div>
-                  <CatMeta cat={i === 1 ? "Politics" : i === 2 ? "Cameras" : "Celebrities"} date="Jan 4, 2021" />
-                  <h2 className="text-[15px] font-bold leading-snug hover:text-[#0c77e2]">
-                    <Link href="#">
-                      {i === 1
-                        ? "John Doe Campaign Has Long Fed Softball Questions to Friendly Interviewers"
-                        : i === 2
-                          ? "Sony Leads Mirrorless Camera Sales While Canon Dominates DSLRs"
-                          : "Met Gala 2024: Some Stars Miss the Mark on the Red Carpet"}
-                    </Link>
+                <article className="pb-4 border-b border-[#efefef] group">
+                  <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                    <Link href="#">Market Trading Guide: Jyothy Labs, Safari Industries Among 4 Stock Recommendations for Now – Latest Stock Ideas</Link>
                   </h2>
-                  <p className="text-[12px] text-[#4f4f4f] mt-2 line-clamp-2">{EXCERPT}</p>
+                  <div className="text-[11px] text-[#9b9b9b] font-bold uppercase mt-2 font-['Inter',sans-serif]">John Doe</div>
+                </article>
+
+                <article className="flex gap-4 pb-5 border-b border-[#efefef] group">
+                  <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden rounded-[1px] bg-neutral-100">
+                    <img src={`${VD_BASE}b2e0080127a231950f524d74dbd561b9-300x199.jpeg`} alt="" className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
+                  </div>
+                  <div className="flex-1">
+                    <CatMeta cat="US & Canada" date="Jan 4, 2021" />
+                    <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                      <Link href="#">Arizona Anti-Abortion Activists aren’t Letting Up After Supreme Court Victory?</Link>
+                    </h2>
+                    <p className="text-[12.5px] text-[#4f4f4f] leading-relaxed mt-2 line-clamp-2 font-['Inter',sans-serif]">{EXCERPT}</p>
+                  </div>
+                </article>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <GridThumb post={{ title: "Mask Bans Grow, Threatening Public Health And Immunocompromised People", cat: "Face Masks", date: "Jan 4, 2021", img: `${VD_BASE}e349d70df4d6621f01f289a3c22fe9a0-450x300.jpeg` }} />
+                  <GridThumb post={{ title: "Live on This Day: Students Protest Gun Violence in March for Our Lives", cat: "Health", date: "Jan 4, 2021", img: `${VD_BASE}e59331553987345341707d58fec0e0df-450x300.jpeg` }} />
                 </div>
-              </article>
-            ))}
-          </div>
+
+                <article className="py-4 border-b border-[#efefef] group">
+                  <CatMeta cat="Ukraine Conflict" date="Jan 4, 2021" />
+                  <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                    <Link href="#">One Year On From Unprecedented Wagner Rebellion and Still Russian President Vladimir Putin’s Position is as Strong as Ever: Expert Analysis</Link>
+                  </h2>
+                </article>
+
+                {[1, 2, 3].map((i) => (
+                  <article key={i} className="flex gap-4 pb-5 border-b border-[#efefef] group">
+                    <div className="w-[120px] shrink-0 aspect-[4/3] overflow-hidden rounded-[1px] bg-neutral-100">
+                      <img
+                        src={`${VD_BASE}${i === 1 ? "695c2029874aad0c91f42f22790c3e76" : i === 2 ? "01e570a920b5b49c473cd7dc16b9022b" : "e707291e2183a1d2949c82ec95e4ced6"}-300x200.jpeg`}
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <CatMeta cat={i === 1 ? "Politics" : i === 2 ? "Cameras" : "Celebrities"} date="Jan 4, 2021" />
+                      <h2 className="text-[15.5px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
+                        <Link href="#">
+                          {i === 1
+                            ? "John Doe Campaign Has Long Fed Softball Questions to Friendly Interviewers"
+                            : i === 2
+                              ? "Sony Leads Mirrorless Camera Sales While Canon Dominates DSLRs"
+                              : "Met Gala 2024: Some Stars Miss the Mark on the Red Carpet"}
+                        </Link>
+                      </h2>
+                      <p className="text-[12.5px] text-[#4f4f4f] leading-relaxed mt-2 line-clamp-2 font-['Inter',sans-serif]">{EXCERPT}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </section>
           </div>
 
@@ -325,9 +326,9 @@ export default function VoiceDailyContent() {
         </div>
 
         {/* Mid ad */}
-        <div className="hidden md:block p-4 border-b border-[#efefef]">
-          <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer">
-            <img src={VD_MID_AD} alt="Advertisement" width={970} height={250} className="w-full h-auto" />
+        <div className="hidden md:block p-5 border-b border-[#efefef]">
+          <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer" className="block hover:opacity-95 transition-opacity">
+            <img src={VD_MID_AD} alt="Advertisement" width={970} height={250} className="w-full h-auto mx-auto" />
           </a>
         </div>
 
@@ -335,15 +336,15 @@ export default function VoiceDailyContent() {
         <section className="p-5 lg:p-6 bg-[#f7f7f7] border-b border-[#efefef]">
           <SectionTitle title="Money & Business." />
           <div className="grid lg:grid-cols-2 gap-6">
-            <article>
-              <div className="aspect-[3/2] overflow-hidden mb-4">
-                <img src={moneyBusiness.img} alt="" className="w-full h-full object-cover" />
+            <article className="group">
+              <div className="aspect-[3/2] overflow-hidden mb-4 rounded-[1px] bg-neutral-100">
+                <img src={moneyBusiness.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <CatMeta cat={moneyBusiness.cat} date={moneyBusiness.date} />
-              <h2 className="text-[20px] font-bold leading-snug mb-3 hover:text-[#0c77e2]">
+              <h2 className="text-[21px] font-bold leading-snug mb-3 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                 <Link href="#">{moneyBusiness.title}</Link>
               </h2>
-              <p className="text-[14px] text-[#4f4f4f] leading-relaxed">{moneyBusiness.excerpt}</p>
+              <p className="text-[14px] text-[#4f4f4f] leading-relaxed font-['Inter',sans-serif]">{moneyBusiness.excerpt}</p>
             </article>
             <div className="grid grid-cols-2 gap-4 content-start">
               <GridThumb post={{ title: "New Cryptocurrency Projects to Invest in – Newest Crypto of July, 2024", cat: "Investments", date: "Mar 11, 2022", img: `${VD_BASE}007c01e30c48375464bbc648921ef52c-450x300.jpeg` }} />
@@ -352,13 +353,13 @@ export default function VoiceDailyContent() {
                 { title: "Silicon Valley Bank Moves to New Office in Downtown San Francisco", cat: "Banking", date: "Mar 11, 2022", img: `${VD_BASE}d3bb8a1429a2f42060c0b8c77fe352ec-200x300.jpeg` },
                 { title: "European Central Bankers Warn of Risks to Region’s Economy", cat: "Economy", date: "Mar 11, 2022", img: `${VD_BASE}57ee4be32598decee5fd8cccbfe417e8-300x200.jpeg` },
               ].map((p) => (
-                <article key={p.title} className="flex gap-3 group">
-                  <div className="w-[90px] shrink-0 aspect-[3/2] overflow-hidden">
-                    <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <article key={p.title} className="flex gap-3 group cursor-pointer">
+                  <div className="w-[90px] shrink-0 aspect-[3/2] overflow-hidden rounded-[1px] bg-neutral-100">
+                    <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
                   </div>
                   <div>
                     <CatMeta cat={p.cat} date={p.date} />
-                    <h2 className="text-[13px] font-bold leading-snug hover:text-[#0c77e2]">
+                    <h2 className="text-[13px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                       <Link href="#">{p.title}</Link>
                     </h2>
                   </div>
@@ -373,16 +374,16 @@ export default function VoiceDailyContent() {
           <div className="grid lg:grid-cols-[1fr_280px] gap-8">
             <div>
               <SectionTitle title="Sports Roundup." accent="red" />
-              <article className="flex flex-col md:flex-row gap-5 mb-6 pb-6 border-b border-[#efefef] bg-[#f9f9f9] p-4 md:p-5">
+              <article className="flex flex-col md:flex-row gap-5 mb-6 pb-6 border-b border-[#efefef] bg-[#f9f9f9] p-4 md:p-5 group">
                 <div className="md:w-1/2 order-2 md:order-1">
                   <CatMeta cat={sportsMain.cat} date={sportsMain.date} updated={sportsMain.updated} />
-                  <h2 className="text-[20px] font-bold leading-snug mb-3 hover:text-[#0c77e2]">
+                  <h2 className="text-[21px] font-bold leading-snug mb-3 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                     <Link href="#">{sportsMain.title}</Link>
                   </h2>
-                  <p className="text-[14px] text-[#4f4f4f]">{sportsMain.excerpt}</p>
+                  <p className="text-[14px] text-[#4f4f4f] leading-relaxed font-['Inter',sans-serif]">{sportsMain.excerpt}</p>
                 </div>
-                <div className="md:w-1/2 aspect-[3/2] overflow-hidden shrink-0 order-1 md:order-2">
-                  <img src={sportsMain.img} alt="" className="w-full h-full object-cover" />
+                <div className="md:w-1/2 aspect-[3/2] overflow-hidden shrink-0 order-1 md:order-2 rounded-[1px] bg-neutral-100">
+                  <img src={sportsMain.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
                 </div>
               </article>
               <div className="grid md:grid-cols-3 gap-4 mb-6">
@@ -400,11 +401,11 @@ export default function VoiceDailyContent() {
                   { title: "Women’s Hockey Fans and Players Deserve Better from the NWHL", img: `${VD_BASE}176c8ae8f368e5c274395d4f16570fb9-450x169.jpeg` },
                   { title: "Paris Olympics 2024: Six Swimming Races to Watch at the Games", img: `${VD_BASE}7e44ef929f90b611116e6c62bc5a4c90-450x200.jpeg` },
                 ].map((p) => (
-                  <article key={p.title} className="flex gap-3 group">
-                    <div className="w-[90px] h-[90px] shrink-0 overflow-hidden">
-                      <img src={p.img} alt="" className="w-full h-full object-cover" />
+                  <article key={p.title} className="flex gap-3 group cursor-pointer">
+                    <div className="w-[90px] h-[90px] shrink-0 overflow-hidden rounded-[1px] bg-neutral-100">
+                      <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
                     </div>
-                    <h4 className="text-[13px] font-bold leading-snug group-hover:text-[#0c77e2]">
+                    <h4 className="text-[13px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                       <Link href="#">{p.title}</Link>
                     </h4>
                   </article>
@@ -413,39 +414,41 @@ export default function VoiceDailyContent() {
             </div>
             <div className="border-t-[3px] border-[#e53935] pt-4">
               <SectionTitle title="More Sports." accent="red" />
-              {[
-                "Women`s World Boxing Championships: 4 Women Boxers Reached Finals",
-                "Ice skating to Return at William O. Smith Rec. Center in Olean",
-                "How to Watch Euro 2024 Qualifier Soccer From Anywhere FREE",
-                "Stefano D., New Formula 1 Chief Urges Drivers to Lead by Example",
-                "Son’s Soccer Academy in South Korea Denies Bullying Allegations Involving Coaches",
-                "Ricardo Ferreira Switches Soccer Allegiance to Canada",
-              ].map((title) => (
-                <article key={title} className="py-3 border-b border-[#efefef]">
-                  <h2 className="text-[14px] font-bold leading-snug hover:text-[#0c77e2] line-clamp-3">
-                    <Link href="#">{title}</Link>
-                  </h2>
-                </article>
-              ))}
+              <div className="space-y-1">
+                {[
+                  "Women`s World Boxing Championships: 4 Women Boxers Reached Finals",
+                  "Ice skating to Return at William O. Smith Rec. Center in Olean",
+                  "How to Watch Euro 2024 Qualifier Soccer From Anywhere FREE",
+                  "Stefano D., New Formula 1 Chief Urges Drivers to Lead by Example",
+                  "Son’s Soccer Academy in South Korea Denies Bullying Allegations Involving Coaches",
+                  "Ricardo Ferreira Switches Soccer Allegiance to Canada",
+                ].map((title) => (
+                  <article key={title} className="py-3 border-b border-[#efefef] group">
+                    <h2 className="text-[14px] font-bold leading-snug text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 line-clamp-3 font-['Faustina',serif]">
+                      <Link href="#">{title}</Link>
+                    </h2>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Crypto */}
         <section className="border-b border-[#efefef]">
-          <div className="bg-[#0c77e2] px-5 lg:px-6 py-3">
-            <h4 className="text-white text-[14px] font-black uppercase tracking-[1px]">Crypto Currencies</h4>
+          <div className="bg-[#0c77e2] px-5 lg:px-6 py-3.5">
+            <h4 className="text-white text-[13px] font-extrabold uppercase tracking-[1.5px] font-['Inter',sans-serif]">Crypto Currencies</h4>
           </div>
           <div className="p-5 lg:p-6 bg-[#f0f4f8] grid lg:grid-cols-2 gap-6">
-            <article>
-              <div className="aspect-[16/9] overflow-hidden mb-4">
-                <img src={`${VD_BASE}3b80d2929a83187e4648fd8379ee6e08-768x432.jpeg`} alt="" className="w-full h-full object-cover" />
+            <article className="group">
+              <div className="aspect-[16/9] overflow-hidden mb-4 rounded-[1px] bg-neutral-100">
+                <img src={`${VD_BASE}3b80d2929a83187e4648fd8379ee6e08-768x432.jpeg`} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <CatMeta cat="NFTs" date="Jul 18, 2024" />
-              <h2 className="text-[18px] font-bold mb-2 hover:text-[#0c77e2]">
+              <h2 className="text-[19px] font-bold mb-2 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                 <Link href="#">Trump Reaffirms Support for Crypto, Plans to Launch 4th NFT Collection</Link>
               </h2>
-              <p className="text-[14px] text-[#4f4f4f]">{EXCERPT}</p>
+              <p className="text-[14px] text-[#4f4f4f] leading-relaxed font-['Inter',sans-serif]">{EXCERPT}</p>
             </article>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -456,13 +459,13 @@ export default function VoiceDailyContent() {
                 { title: "EU Releases Crypto-Asset Classification Tools to Help Firms Comply with MiCA", cat: "Technology", date: "Jul 18, 2024", img: `${VD_BASE}eca2ac09acc0355fe3be86943738cf21-1-300x150.jpg` },
                 { title: "Bitcoin Security: Here’s What Makes The OG Blockchain Safer Than Fort Knox", cat: "Bitcoin", date: "Jul 18, 2024", img: `${VD_BASE}64de9faa1e45f5ee58bd86877d68e4f4-300x200.jpeg` },
               ].map((p) => (
-                <article key={p.title} className="flex gap-3 group">
-                  <div className="w-[100px] aspect-[3/2] overflow-hidden shrink-0">
-                    <img src={p.img} alt="" className="w-full h-full object-cover" />
+                <article key={p.title} className="flex gap-3 group cursor-pointer">
+                  <div className="w-[100px] aspect-[3/2] overflow-hidden shrink-0 rounded-[1px] bg-neutral-100">
+                    <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
                   </div>
                   <div>
                     <CatMeta cat={p.cat} date={p.date} />
-                    <h2 className="text-[14px] font-bold hover:text-[#0c77e2]">
+                    <h2 className="text-[14px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                       <Link href="#">{p.title}</Link>
                     </h2>
                   </div>
@@ -474,30 +477,30 @@ export default function VoiceDailyContent() {
 
         {/* Technology + Tourism row */}
         <section className="grid lg:grid-cols-2 gap-0 border-b border-[#efefef]">
-          <div className="p-5 lg:p-6 lg:pr-4 border-b lg:border-b-0 lg:border-r border-[#efefef]">
+          <div className="p-5 lg:p-6 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#efefef]">
             <SectionTitle title="Technology." />
-            <article className="mb-5">
-              <div className="aspect-[21/9] overflow-hidden mb-3">
-                <img src={`${VD_BASE}c925205784e6fb2aed675f1893f989ed-1-450x212.jpg`} alt="" className="w-full h-full object-cover" />
+            <article className="mb-5 group">
+              <div className="aspect-[21/9] overflow-hidden mb-3 rounded-[1px] bg-neutral-100">
+                <img src={`${VD_BASE}c925205784e6fb2aed675f1893f989ed-1-450x212.jpg`} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <CatMeta cat="Gaming" />
-              <h2 className="text-[17px] font-bold hover:text-[#0c77e2]">
+              <h2 className="text-[17px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                 <Link href="#">Tips To Get The Most Out Of Your New Nvidia RTX 2060</Link>
               </h2>
-              <p className="text-[13px] text-[#4f4f4f] mt-2">{EXCERPT}</p>
+              <p className="text-[13px] text-[#4f4f4f] leading-relaxed mt-2 font-['Inter',sans-serif]">{EXCERPT}</p>
             </article>
             {[1, 2, 3].map((i) => (
-              <article key={i} className="flex gap-4 py-4 border-b border-[#efefef] group">
-                <div className="w-[110px] aspect-[4/3] overflow-hidden shrink-0">
+              <article key={i} className="flex gap-4 py-4 border-b border-[#efefef] group cursor-pointer">
+                <div className="w-[110px] aspect-[4/3] overflow-hidden shrink-0 rounded-[1px] bg-neutral-100">
                   <img
                     src={`${VD_BASE}${i === 1 ? "e7ce131632d204e132a0168b35e017ca" : i === 2 ? "fcfe676ecc985608bdf247fc6dee1911" : "ab952f418421b5cdd0ada561ecddb854"}-300x200.jpeg`}
                     alt=""
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500"
                   />
                 </div>
                 <div>
                   <CatMeta cat={i === 1 ? "Mobile Phones" : i === 2 ? "NFTs" : "Technology"} date="Jul 18, 2024" />
-                  <h2 className="text-[14px] font-bold hover:text-[#0c77e2]">
+                  <h2 className="text-[14px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                     <Link href="#">
                       {i === 1
                         ? "T-Mobile US Faces Class-Action Suit From AT&T and Verizon Subscribers"
@@ -509,7 +512,7 @@ export default function VoiceDailyContent() {
                 </div>
               </article>
             ))}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
               {["OnePlus Will Focus on a Premium Build Over Performance", "Apple Watch’s ECG Can Help Diagnose Heart Problem: Research", "AMD Ryzen 9 7900X Review: Zen 4 Has a Pricing Problem", "New Oculus VR Kills IRL If Your Game Character Dies"].map((title, i) => (
                 <GridThumb
                   key={title}
@@ -521,14 +524,14 @@ export default function VoiceDailyContent() {
               ))}
             </div>
           </div>
-          <div className="p-5 lg:p-6 lg:pl-4">
+          <div className="p-5 lg:p-6 lg:pl-6 bg-white">
             <SectionTitle title="Tourism." />
-            <article className="mb-4">
-              <div className="aspect-[16/10] overflow-hidden mb-3">
-                <img src={`${VD_BASE}5fc94eea87310e602e52ff81136e18a4-768x509.jpeg`} alt="" className="w-full h-full object-cover" />
+            <article className="mb-5 group">
+              <div className="aspect-[16/10] overflow-hidden mb-3 rounded-[1px] bg-neutral-100">
+                <img src={`${VD_BASE}5fc94eea87310e602e52ff81136e18a4-768x509.jpeg`} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <CatMeta cat="Travel & Tourism" />
-              <h2 className="text-[15px] font-bold hover:text-[#0c77e2] line-clamp-3">
+              <h2 className="text-[16px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif] line-clamp-3">
                 <Link href="#">SpaceX Launches Starlink Satellites on ‘American Broomstick’ and Lands Rocket at Sea</Link>
               </h2>
             </article>
@@ -539,9 +542,9 @@ export default function VoiceDailyContent() {
         </section>
 
         {/* Top ad */}
-        <div className="p-4 border-b border-[#efefef]">
-          <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer">
-            <img src={VD_TOP_AD} alt="Advertisement" width={970} height={250} className="w-full h-auto" />
+        <div className="p-5 border-b border-[#efefef]">
+          <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer" className="block hover:opacity-95 transition-opacity">
+            <img src={VD_TOP_AD} alt="Advertisement" width={970} height={250} className="w-full h-auto mx-auto" />
           </a>
         </div>
 
@@ -549,19 +552,19 @@ export default function VoiceDailyContent() {
         <section className="p-5 lg:p-6 border-b border-[#efefef]">
           <SectionTitle title="Health & Fitness." />
           <div className="grid lg:grid-cols-2 gap-6">
-            <article>
-              <div className="aspect-[3/2] overflow-hidden mb-4">
-                <img src={`${VD_BASE}c073ec333584e21bcb433b4ad483c29f-768x512.jpeg`} alt="" className="w-full h-full object-cover" />
+            <article className="group">
+              <div className="aspect-[3/2] overflow-hidden mb-4 rounded-[1px] bg-neutral-100">
+                <img src={`${VD_BASE}c073ec333584e21bcb433b4ad483c29f-768x512.jpeg`} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
               <CatMeta cat="Vaccines" date="Jul 18, 2024" />
-              <h2 className="text-[20px] font-bold mb-3 hover:text-[#0c77e2]">
+              <h2 className="text-[21px] font-bold mb-3 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                 <Link href="#">Measles and Rubella Vaccine Delivered via Microarray Shows Promising Results</Link>
               </h2>
-              <p className="text-[14px] text-[#4f4f4f] leading-relaxed">
+              <p className="text-[14px] text-[#4f4f4f] leading-relaxed font-['Inter',sans-serif]">
                 To understand the new politics stance and other pro nationals of recent times, we should look to Silicon Valley and the quantified movement of the latest generation…
               </p>
             </article>
-            <div className="space-y-0">
+            <div className="space-y-1">
               {[
                 { title: "How to Make Fitness Part of Your Daily Lifestyle", cat: "Fitness", img: `${VD_BASE}816656d0987de6fbc4d194ab5663ce31-300x206.jpeg` },
                 { title: "13 Ways Running Can Make You Healthier and Happier", cat: "Fitness", img: `${VD_BASE}d01cbcffe7151b9690a60ff450665d2e-300x200.jpeg` },
@@ -569,13 +572,13 @@ export default function VoiceDailyContent() {
                 { title: "Pfizer Files for US Authorization of Promising Covid-19 Pill", cat: "Vaccines", img: `${VD_BASE}ae612aa99ad9fbc6366981ebfba036d9-300x192.jpeg` },
                 { title: "Experts Unveil First Comprehensive Guidelines for Precision Medicine Research", cat: "Research", img: `${VD_BASE}45e2966e9afec9b2402a24d2eda5d86d-300x200.jpeg` },
               ].map((p) => (
-                <article key={p.title} className="flex gap-4 py-4 border-b border-[#efefef] group">
-                  <div className="w-[100px] aspect-[3/2] overflow-hidden shrink-0">
-                    <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <article key={p.title} className="flex gap-4 py-4 border-b border-[#efefef] last:border-0 group cursor-pointer">
+                  <div className="w-[100px] aspect-[3/2] overflow-hidden shrink-0 rounded-[1px] bg-neutral-100">
+                    <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
                   </div>
                   <div>
                     <CatMeta cat={p.cat} date="Jul 18, 2024" />
-                    <h2 className="text-[14px] font-bold hover:text-[#0c77e2]">
+                    <h2 className="text-[14px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                       <Link href="#">{p.title}</Link>
                     </h2>
                   </div>
@@ -606,18 +609,18 @@ export default function VoiceDailyContent() {
 
         {/* From around the world + sidebar ad */}
         <section className="grid lg:grid-cols-[1fr_300px] gap-0">
-          <div className="p-5 lg:p-6 lg:pr-4 border-b lg:border-b-0 lg:border-r border-[#efefef]">
+          <div className="p-5 lg:p-6 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#efefef]">
             <SectionTitle title="From around the world." />
-            <article className="flex flex-col md:flex-row gap-5 mb-6 pb-6 border-b border-[#efefef]">
-              <div className="md:w-[55%] aspect-[16/10] overflow-hidden">
-                <img src={worldFeatured.img} alt="" className="w-full h-full object-cover" />
+            <article className="flex flex-col md:flex-row gap-5 mb-6 pb-6 border-b border-[#efefef] group">
+              <div className="md:w-[55%] aspect-[16/10] overflow-hidden rounded-[1px] bg-neutral-100">
+                <img src={worldFeatured.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
               </div>
-              <div>
+              <div className="flex-1">
                 <CatMeta cat={worldFeatured.cat} date={worldFeatured.date} updated={worldFeatured.updated} />
-                <h2 className="text-[22px] font-bold leading-tight mb-3 hover:text-[#0c77e2]">
+                <h2 className="text-[22px] font-bold leading-tight mb-3 text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                   <Link href="#">{worldFeatured.title}</Link>
                 </h2>
-                <p className="text-[14px] text-[#4f4f4f]">{worldFeatured.excerpt}</p>
+                <p className="text-[14px] text-[#4f4f4f] leading-relaxed font-['Inter',sans-serif]">{worldFeatured.excerpt}</p>
               </div>
             </article>
             <div className="grid md:grid-cols-2 gap-6">
@@ -639,24 +642,24 @@ export default function VoiceDailyContent() {
                   { title: "‘Freedom to Learn’ Protests have a Clear Message: ‘We Will be Woke’", cat: "US & Canada", img: `${VD_BASE}4bfc3008c4b2b05e4ba0c20bac2ed861-300x200.jpeg` },
                   { title: "Microsoft Sees Slowing in Russian and Chinese Efforts to Sway U.S. Vote", cat: "Politics", img: `${VD_BASE}bf240241b47162fde1f22070c5e66f9f-300x200.jpeg` },
                 ].map((p) => (
-                  <article key={p.title} className="flex gap-4 group">
-                    <div className="w-[110px] aspect-[4/3] overflow-hidden shrink-0">
-                      <img src={p.img} alt="" className="w-full h-full object-cover" />
+                  <article key={p.title} className="flex gap-4 group cursor-pointer">
+                    <div className="w-[110px] aspect-[4/3] overflow-hidden shrink-0 rounded-[1px] bg-neutral-100">
+                      <img src={p.img} alt="" className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <CatMeta cat={p.cat} date="Jul 18, 2024" />
-                      <h2 className="text-[14px] font-bold hover:text-[#0c77e2]">
+                      <h2 className="text-[14px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                         <Link href="#">{p.title}</Link>
                       </h2>
-                      <p className="text-[12px] text-[#4f4f4f] mt-1 line-clamp-2">{EXCERPT}</p>
+                      <p className="text-[12.5px] text-[#4f4f4f] leading-relaxed mt-1 line-clamp-2 font-['Inter',sans-serif]">{EXCERPT}</p>
                     </div>
                   </article>
                 ))}
-                <article className="py-3 border-t border-[#efefef]">
-                  <h2 className="text-[14px] font-bold hover:text-[#0c77e2]">
+                <article className="py-3 border-t border-[#efefef] group">
+                  <h2 className="text-[14px] font-bold text-[#161616] group-hover:text-[#0c77e2] transition-colors duration-200 font-['Faustina',serif]">
                     <Link href="#">Melbourne: All Refugees Held in Hotel Detention to be Released</Link>
                   </h2>
-                  <span className="text-[11px] text-[#9b9b9b] font-bold">Shane Doe</span>
+                  <span className="text-[11px] text-[#9b9b9b] font-bold uppercase mt-1 block font-['Inter',sans-serif]">Shane Doe</span>
                 </article>
               </div>
             </div>
@@ -671,12 +674,12 @@ export default function VoiceDailyContent() {
             </div>
           </div>
           <div className="p-5 lg:p-6 flex flex-col gap-6">
-            <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer" className="block">
-              <img src={VD_SIDEBAR_AD} alt="Advertisement" width={300} height={600} className="w-full h-auto" />
+            <a href="https://theme-sphere.com/buy/go.php?theme=smartmag" target="_blank" rel="noopener noreferrer" className="block hover:opacity-95 transition-opacity">
+              <img src={VD_SIDEBAR_AD} alt="Advertisement" width={300} height={600} className="w-full h-auto mx-auto rounded-[1px]" />
             </a>
             <div>
               <SectionTitle title="Celebrities." />
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3.5">
                 {[
                   { title: "Hollywood Actress Hits 4 Million Followers on Instagram", img: `${VD_BASE}516d93a7ca3a5a4ce8315b3bca82e7ef-450x360.jpeg` },
                   { title: "Marvel Movies in Order: How to Watch Chronologically", img: `${VD_BASE}c45af34034b208f045fa583318e2ce3e-450x331.jpeg` },

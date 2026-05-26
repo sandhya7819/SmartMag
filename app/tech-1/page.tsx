@@ -28,7 +28,11 @@ const featuredGrid = [
   }
 ];
 
-const categorySections = [
+const categorySections: Array<{
+  name: string;
+  main: { title: string; img: string; hasVideo?: boolean };
+  small: Array<{ title: string; date: string; img: string; rating?: string }>;
+}> = [
   {
     name: "Apps",
     main: { title: "How Tinder Became the App That Defines Online Dating", img: "https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/mika-baumeister-4xChyRlbyWM-unsplash-1-450x555.jpg" },

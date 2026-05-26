@@ -1,6 +1,7 @@
 "use client";
 import GadgetsMeHeader from "@/components/GadgetsMeHeader";
 import Link from "next/link";
+import { Facebook, Twitter, Instagram, Flame } from "lucide-react";
 
 const B = "https://smartmag.theme-sphere.com/gadgets-me/wp-content/uploads/sites/60/2025/01/";
 
@@ -248,10 +249,156 @@ export default function GadgetsMePage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-8">
-        <div className="container mx-auto px-4 text-center">
-          <img src="https://smartmag.theme-sphere.com/gadgets-me/wp-content/uploads/sites/60/2025/02/LOGO-GadgetsMe-01@15x.png" alt="GadgetsMe" className="h-5 mx-auto mb-4 opacity-80" />
-          <p className="text-gray-400 text-[12px]">© 2025 GadgetsMe. All rights reserved. Powered by SmartMag.</p>
+      <footer className="bg-[#0b0c0e] text-white pt-16 pb-12 mt-12 border-t border-white/5 font-sans">
+        <div className="container mx-auto px-4">
+          
+          {/* Main Footer Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+            
+            {/* Column 1: MOST POPULAR (col-span-4) */}
+            <div className="lg:col-span-4 space-y-6">
+              <h4 className="text-[13px] font-black uppercase tracking-wider text-white border-b-2 border-white/10 pb-2 inline-block">
+                Most Popular
+              </h4>
+              <div className="space-y-4">
+                {[
+                  {
+                    img: `${B}21a449971597174ed076f95bb4364488-450x300.jpeg`,
+                    title: "Acer Predator Helios Neo 14 Launched: Powerful Core Ultra 7 Gaming & Creative Laptop",
+                    date: "Jan 14, 2021",
+                    views: "7,784"
+                  },
+                  {
+                    img: `${B}e065564fd6bcc46324f41fd6b03fe5a8-450x300.jpeg`,
+                    title: "DJI Air 3S Now Available For Registration In Japan: Release Imminent",
+                    date: "Jan 14, 2021",
+                    views: "6,895"
+                  },
+                  {
+                    img: `${B}099514691be0cb79bf824544379738cd-450x338.jpeg`,
+                    title: "How Do the New Mobiles Brands Compare with the Equivalent iPhones?",
+                    date: "Jan 14, 2021",
+                    views: "4,395"
+                  }
+                ].map((post, idx) => (
+                  <div key={idx} className="flex gap-4 group cursor-pointer items-start">
+                    <img
+                      src={post.img}
+                      alt={post.title}
+                      className="w-[80px] h-[58px] object-cover rounded-sm shrink-0 bg-gray-900"
+                    />
+                    <div className="space-y-1 min-w-0">
+                      <h5 className="text-[12.5px] font-bold leading-snug group-hover:text-[#0066ff] transition-colors line-clamp-2">
+                        {post.title}
+                      </h5>
+                      <div className="flex items-center gap-2 text-[10px] text-gray-400">
+                        <span>{post.date}</span>
+                        <span className="flex items-center gap-0.5 text-red-500 font-bold">
+                          <Flame size={10} fill="currentColor" /> {post.views} Views
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 2: OUR PICKS (col-span-4) */}
+            <div className="lg:col-span-4 space-y-6">
+              <h4 className="text-[13px] font-black uppercase tracking-wider text-white border-b-2 border-white/10 pb-2 inline-block">
+                Our Picks
+              </h4>
+              <div className="space-y-4">
+                {[
+                  {
+                    img: `${B}0330eaab1b5261c0c2a3843607821efe-300x200.jpeg`,
+                    title: "Top Features of RedMagic Nova Gaming Tablet Review: An Android Gaming Powerhouse",
+                    date: "Mar 12, 2021"
+                  },
+                  {
+                    img: `${B}a83cd8c72961415a5f55eb01b4d5e5b6-200x300.jpeg`,
+                    title: "Why Is Crypto Going Down? Fake DeepSeek Tokens Affect Thousands of Traders",
+                    date: "Jan 16, 2021"
+                  },
+                  {
+                    img: `${B}sahej-brar-6Pg2e3W1KDY-unsplash-300x300.jpg`,
+                    title: "Tech Study Reveals Effects of Mobile Technology on Professionals",
+                    date: "Jan 15, 2021"
+                  }
+                ].map((post, idx) => (
+                  <div key={idx} className="flex gap-4 group cursor-pointer items-start">
+                    <img
+                      src={post.img}
+                      alt={post.title}
+                      className="w-[80px] h-[58px] object-cover rounded-sm shrink-0 bg-gray-900"
+                    />
+                    <div className="space-y-1 min-w-0">
+                      <h5 className="text-[12.5px] font-bold leading-snug group-hover:text-[#0066ff] transition-colors line-clamp-2">
+                        {post.title}
+                      </h5>
+                      <span className="text-[10px] text-gray-400 block">{post.date}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 3: Subscribe to Updates (col-span-4) */}
+            <div className="lg:col-span-4">
+              <div className="bg-[#121315] border border-white/5 p-6 rounded-md shadow-sm space-y-4 max-w-[360px] lg:max-w-none mx-auto lg:mx-0">
+                <h3 className="text-[16px] font-black text-white text-center uppercase tracking-wider">
+                  Subscribe to Updates
+                </h3>
+                <p className="text-gray-400 text-[12.5px] text-center leading-normal">
+                  Get the latest creative news from FooBar about art, design and business.
+                </p>
+                <form className="space-y-4">
+                  <input
+                    type="email"
+                    placeholder="Your email address.."
+                    required
+                    className="w-full bg-[#0a0b0c] border border-white/10 px-4 py-2.5 text-sm focus:outline-none focus:border-[#d10056] text-white placeholder:text-gray-500 rounded-sm text-center"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-[#d10056] text-white font-black tracking-widest text-[11px] py-3 rounded-sm hover:opacity-90 transition-opacity uppercase"
+                  >
+                    Subscribe
+                  </button>
+                  <label className="flex items-start gap-2 cursor-pointer text-gray-500 text-[10px] leading-normal select-none">
+                    <input
+                      type="checkbox"
+                      required
+                      className="mt-0.5 rounded-sm bg-black/40 border border-white/10 checked:bg-[#d10056] checked:border-transparent cursor-pointer"
+                    />
+                    <span className="text-center w-full block">
+                      By signing up, you agree to our terms and our Privacy Policy agreement.
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Social Icons Footer */}
+          <div className="flex gap-3 justify-center items-center py-6 border-t border-white/5">
+            {[Facebook, Twitter, Instagram].map((Icon, idx) => (
+              <Link
+                key={idx}
+                href="#"
+                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:bg-[#d10056] hover:border-transparent hover:text-white transition-all duration-300"
+              >
+                <Icon size={14} />
+              </Link>
+            ))}
+          </div>
+
+          {/* Copyright Area */}
+          <div className="text-center text-gray-500 text-[12px] uppercase tracking-widest font-bold">
+            <p>© 2026 ThemeSphere. Designed by ThemeSphere.</p>
+          </div>
+
         </div>
       </footer>
     </main>
