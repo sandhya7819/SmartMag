@@ -501,7 +501,7 @@ export default function SpotlightPage() {
           </div>
 
           {/* Right Side (33.3%): Life & Style Sidebar Widgets */}
-          <div className="lg:col-span-4 space-y-10">
+          <div className="lg:col-span-4 space-y-10 lg:sticky lg:top-[80px] self-start">
             
             {/* Widget: Must Read */}
             <div className="bg-white border border-gray-100 p-6 md:p-8 rounded-sm shadow-[0_3px_12px_rgba(0,0,0,0.02)] text-left">
@@ -701,7 +701,7 @@ export default function SpotlightPage() {
           </div>
 
           {/* Right Column (33.3%): Don't Miss & Updates */}
-          <div className="lg:col-span-4 space-y-10">
+          <div className="lg:col-span-4 space-y-10 lg:sticky lg:top-[80px] self-start">
             
             {/* Widget: Don't Miss Grid loop */}
             <div className="bg-white border border-gray-100 p-6 md:p-8 rounded-sm shadow-[0_3px_12px_rgba(0,0,0,0.02)]">
