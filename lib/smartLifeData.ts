@@ -1,5 +1,6 @@
 // SmartLife Demo Data
 export interface SmartLifePost {
+  class?: string;
   title: string;
   category?: string;
   date?: string;
