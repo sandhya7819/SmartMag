@@ -110,3 +110,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ibm-plex), sans-serif !important;
 }
 
+/* ── BLOGGER THEME OVERRIDES ── */
+.theme-blogger {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+.theme-blogger h1,
+.theme-blogger h2,
+.theme-blogger h3,
+.theme-blogger h4,
+.theme-blogger h5,
+.theme-blogger h6,
+.theme-blogger .heading,
+.theme-blogger .post-title,
+.theme-blogger .font-title {
+  font-family: var(--font-outfit), sans-serif !important;
+}
+
+
