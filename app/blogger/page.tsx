@@ -415,7 +415,7 @@ export default function BloggerPage() {
           </div>
 
           {/* RIGHT SIDEBAR COLUMN: 33% */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-20 self-start">
             
             {/* 1. Social Follow Count Widget */}
             <div className="bg-white p-5 border border-gray-100 rounded-sm shadow-sm space-y-4">
