@@ -354,16 +354,17 @@ export default function BloggerHeader() {
         </div>
 
         {/* ── BOTTOM STICKY BAR (DARK BACKGROUND) ── */}
-        <div
-          className={`w-full bg-[#101010] text-white transition-all duration-300 ${
-            sticky
-              ? `fixed top-0 left-0 right-0 shadow-lg z-[999] ${
-                  visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-                }`
-              : "relative"
-          }`}
-        >
-          <div className="max-w-[1200px] mx-auto px-4 h-14 flex items-center justify-between">
+        <div className="h-14 relative">
+          <div
+            className={`w-full bg-[#101010] text-white transition-all duration-300 ${
+              sticky
+                ? `fixed top-0 left-0 right-0 shadow-lg z-[999] ${
+                    visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+                  }`
+                : "absolute inset-0"
+            }`}
+          >
+            <div className="max-w-[1200px] mx-auto px-4 h-14 flex items-center justify-between">
             
             {/* Left: Toggle & Navigation Links */}
             <div className="flex items-center gap-4 flex-1">
@@ -503,6 +504,7 @@ export default function BloggerHeader() {
               </button>
             </div>
 
+            </div>
           </div>
         </div>
 
