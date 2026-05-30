@@ -1111,3 +1111,237 @@ export const megaMenuHealthCulture: Post[] = [
     "excerpt": ""
   }
 ];
+
+// Health section - overlay post (left 50%)
+export const healthOverlayPost: Post = {
+  "title": "Will There be a COVID Winter Wave? What Scientists Say",
+  "url": "/blogger",
+  "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/Depositphotos_358396432_xl-2015-1-768x522.jpg",
+  "date": "Mar  15, 2021",
+  "author": "Shane Doe",
+  "cat": "Health",
+  "rating": "",
+  "isVideo": false,
+  "isGallery": false,
+  "isAudio": false,
+  "excerpt": ""
+};
+
+// Health section - small list posts (left side)
+export const healthLeftListPosts: Post[] = [
+  {
+    "title": "Should Older Adults Regularly Check their Blood Pressure?",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/Depositphotos_513688372_XL-1-300x200.jpg",
+    "date": "Jan  22, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "Guide: Nasal Self-Sampling Rapid Antigen COVID-19 Test",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/mika-baumeister-Y1ciG5cVi7M-unsplash-300x200.jpg",
+    "date": "Jan  19, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "Do Covid Vaccines Affect Periods? A new Study Says They Do.",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/medicine-needle-health-vaccination-diversity-medical-doctors-office-saving-lives-medical-care_t20_Llm1Bz-1-300x200.jpg",
+    "date": "Jan  18, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  }
+];
+
+// Health section - small list posts (right side)
+export const healthRightListPosts: Post[] = [
+  {
+    "title": "Top 4 Composition Tips for Better Fashion Photography",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2021/01/screen-post-c7_blgDvOOs-unsplash-300x191.jpg",
+    "date": "Jan  22, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "New Headphones Designs, Firms Team Up to Launch This May",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2021/01/Depositphotos_226923634_xl-2015-300x200.jpg",
+    "date": "Jan  22, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "The Easiest Way for You to Practice Portrait Photography",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/kushagra-kevat-B_P6qfc50c4-unsplash-300x169.jpg",
+    "date": "Jan  22, 2021",
+    "author": "Shane Doe",
+    "cat": "Health",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  }
+];
+
+// Technology section - left large grid post
+export const techLeftGridPost: Post = {
+  "title": "Half-Life 2's Excellent VR Mod Is Almost Too Good To Be True",
+  "url": "/blogger",
+  "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2021/03/Depositphotos_384053792_xl-2015-1-768x512.jpg",
+  "date": "Mar  13, 2021",
+  "author": "Shane Doe",
+  "cat": "Technology",
+  "rating": "",
+  "isVideo": false,
+  "isGallery": false,
+  "isAudio": false,
+  "excerpt": ""
+};
+
+// Technology section - left small list posts
+export const techLeftListPosts: Post[] = [
+  {
+    "title": "Use These Tips to Take an Amazing Science Photograph",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2021/01/Depositphotos_443021182_xl-2015-300x200.jpg",
+    "date": "Jan  22, 2021",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "The 4 Best Electric Toothbrushes Of 2022, Per Dentists",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2021/01/goby-CgY8wincR0U-unsplash-1-300x200.jpg",
+    "date": "Jan  13, 2021",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "Leaked AMD Desktop CPU Roadmap Confirms Ryzen 7000 X3D Series",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/42996726655_0df7830ab6_b-1-300x169.jpg",
+    "date": "Jan  13, 2021",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  }
+];
+
+// Technology section - right large grid post
+export const techRightGridPost: Post = {
+  "title": "5 Marvelous Photography Examples of OnePlus Smartphone",
+  "url": "/blogger",
+  "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/vinit-vispute-enqYaZPSDjQ-unsplash-768x512.jpg",
+  "date": "Mar  12, 2021",
+  "author": "Shane Doe",
+  "cat": "Technology",
+  "rating": "",
+  "isVideo": false,
+  "isGallery": true,
+  "isAudio": false,
+  "excerpt": ""
+};
+
+// Technology section - right small list posts
+export const techRightListPosts: Post[] = [
+  {
+    "title": "T-Mobile Seeks Early Access to 2.5 GHz from Auction 108",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/Depositphotos_430988634_xl-2015-3-300x208.jpg",
+    "date": "Oct  4, 2022",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "Chinese Mobile Phone Industry to Gain New Market Share",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/sahej-brar-6Pg2e3W1KDY-unsplash-450x450.jpg",
+    "date": "",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": true,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  },
+  {
+    "title": "These Latest Demonstrations are Different",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/damien-checoury-F4hO0SEi1h8-unsplash-1-450x221.jpg",
+    "date": "",
+    "author": "Shane Doe",
+    "cat": "Technology",
+    "rating": "",
+    "isVideo": true,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  }
+];
+
+// TV & Drama section - list posts
+export const tvDramaPosts: Post[] = [
+  {
+    "title": "Daring Looks Celebrities Wore to Paris Fashion Week this Year",
+    "url": "/blogger",
+    "img": "https://smartmag.theme-sphere.com/blogger/wp-content/uploads/sites/31/2022/10/Depositphotos_52200639_xl-2015-1-768x505.jpg",
+    "date": "Mar  14, 2021",
+    "author": "Shane Doe",
+    "cat": "TV & Drama",
+    "rating": "",
+    "isVideo": false,
+    "isGallery": false,
+    "isAudio": false,
+    "excerpt": ""
+  }
+];
