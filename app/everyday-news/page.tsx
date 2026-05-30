@@ -332,7 +332,7 @@ export default function EverydayNewsPage() {
             </div>
 
             {/* Right Sidebar Area (33%) */}
-            <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-24">
+            <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-24 lg:self-start">
               
               {/* Widget 1: Interactive Featured Posts Carousel */}
               <div className="bg-gray-50 dark:bg-[#161616] p-6 rounded border border-gray-100 dark:border-white/5 space-y-6">
@@ -711,7 +711,7 @@ export default function EverydayNewsPage() {
             </div>
 
             {/* Right Sidebar Area 2 (33%) */}
-            <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-24">
+            <aside className="lg:col-span-4 space-y-12 lg:sticky lg:top-24 lg:self-start">
               
               {/* Widget 1: Mock Ad Image Banner */}
               <div className="flex justify-center bg-gray-50 dark:bg-[#161616] p-4 rounded border border-gray-100 dark:border-white/5 shadow-sm">

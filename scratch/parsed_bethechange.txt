@@ -1,0 +1,194 @@
+BRAND COLORS: []
+MAIN COLORS: ['#2ab391', '#dd3333']
+FOUND 23 BLOCKS
+
+==========================================
+BLOCK: What's Hot (ID: 1, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] Fun Games: Kill The Boredom And Enjoy Your Family Time | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b49fb6c176b4d7ec4cd12b2bad465588-1-300x185.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] Xbox Game Pass Is Practically Free in End of 2023 Deal | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ef475228391d98c9021847c54e518dee-300x178.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] The Role of Flexible Roofing Membranes in Sustainable Building Design | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8655bd68cc6deefc2da0e20c1271881d-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+
+==========================================
+BLOCK: No Head (ID: 2, Class: block-grid mb-none)
+==========================================
+  - [] Xbox Game Pass Is Practically Free in End of 2023 Deal | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ef475228391d98c9021847c54e518dee-450x267.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Best PS5 Deals This Week: Save On Games, Gear, And More | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a0e44599c3a27097077488d56f90c045-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Top Tried & Tested Ways, You Can Increase Mobile Battery Life by 30% | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/59467acc317229b35f7605257a027fc2-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Review of Oculus Studios: These 9 VR Studios Are Now Owned by Meta | Date: Jan  15, 2021 | Rating: 8.9 | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/e3ac378f7cd6066d4d9ce35a2af14443-450x301.jpeg | Class: l-post grid-post grid-sm-post
+  - [] T-Mobile Commits to Android 13 Updates on These Flagship Mobile Phones | Date: Jan  15, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/37c050137ecef4cdb13f88004de19bb0-450x313.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: No Head (ID: 3, Class: block-grid mb-none)
+==========================================
+  - [] Fun Games: Kill The Boredom And Enjoy Your Family Time | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b49fb6c176b4d7ec4cd12b2bad465588-1-450x278.jpeg | Class: l-post grid-post grid-sm-post
+  - [] The Role of Flexible Roofing Membranes in Sustainable Building Design | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8655bd68cc6deefc2da0e20c1271881d-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Street Style is Back! The 8 Biggest Trends at the Spring 2022 Shows | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/395bb9b447bd421d0623c8f713a6f1e1-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] 85 Surprising Flower Meanings – Flower Language and Symbolism | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/09f3a250afb2cb4ca54b1ad287e3b4ad-450x276.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Life After COVID: How Can People Be So Lonely Yet So Nervous | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/56627ef1b5d830a718df77c61e725c07-450x237.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: No Head (ID: 4, Class: block-feat-grid block-sc mb-none)
+==========================================
+  - [Technology] Most Teens Actually Have Healthy Relationship with Digital Technology: Study | Date: Jan  6, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/bd63b385cd05834dc72f3c4ff6305173-1024x683.jpeg | Class: l-post grid-overlay grid-overlay-a hover-zoom
+  - [Lifestyle] This Is What Your Lifestyle Will Be Like If You Retire at 55 With $5 Million | Date: Jan  5, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/52e8df359def61be6ace266d15fa1767-768x512.jpeg | Class: l-post grid-overlay grid-overlay-a hover-zoom
+  - [Fashion & Celebs] Runway Royalty: World's Top 10 Highest-Paid Models of 2023 | Date: Jan  4, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/be53686c02fc88f4c9efc1b4993b3466-768x1152.jpeg | Class: l-post grid-overlay grid-overlay-a hover-zoom
+
+==========================================
+BLOCK: Featured Now (ID: 5, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [Fashion & Celebs] Are Our TV Dramas Looking for Love in All the Wrong Places? | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/516d93a7ca3a5a4ce8315b3bca82e7ef-450x360.jpeg | Class: l-post grid-post grid-sm-post
+  - [World] Singapore to Triple AI Talent to 15000 Experts, Deputy PM Says | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/1f28f6dccf9e0ef0cbb267d1fea3df0b-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [Lifestyle] Find Smart Home Décor Items and Collections We're Excited About Now | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/cd407154ccadcec3e1a2f83351aeaf7c-450x330.jpeg | Class: l-post grid-post grid-sm-post
+  - [Lifestyle] Coddled Junk-Eating Pets Getting Lifestyle Diseases Like Diabetes, BP | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/0efa8d468b335ca4e9946e2040442dc2-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [Fashion & Celebs] Celebrity Hunted 2023: Who is Taking Part in the Channel 4 Show? | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/85b6705c951b68cf94ec72bda4d435af-450x296.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: The World (ID: 6, Class: block-focus-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [Fashion & Celebs] Behind the Scenes Look at Stacy Martin's Film Festival Stunning Looks | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/42b2b4239b6c9363056004ee5280bdf0-999x1024.jpeg | Class: l-post grid-post grid-base-post
+  - [] 7 Fashion Brands That Are Owned By Bollywood Celebrities | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/07e75b31971e4b15017290ab29fd1135-768x576.jpeg | Class: l-post grid-post grid-sm-post
+  - [] What Color Should I Use for My Living Room Décor? | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/collov-home-design-5HHAP5UWFM-unsplash-768x768.jpg | Class: l-post grid-post grid-sm-post
+  - [] 11 Best Women's Perfumes You Can Get on Nordstrom | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/2384121666d51c7df504941245768833-768x1024.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Proof That the Adidas Samba Sneakers are Celebrity-Approved | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/5887fcf0a48f273675744dcb4295c3de-768x443.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Editor's Picks (ID: 9, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] Greece's Famous Beach May Close Due to Safety Risk | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/3aba9ae044b7304c585ef9897b18c28b-450x253.jpeg | Class: l-post grid-post grid-sm-post
+  - [] How to Integrate Lifestyle Medicine in Primary Care | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/3ebd6a9eb26fbd389a21398463340818-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] 10 Best Foods To Increase Your Physical Fitness as You Age | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/13759863902338e4b1e9f90547842d02-450x674.jpeg | Class: l-post grid-post grid-sm-post
+  - [] How AI in Self-Driving Cars Changing the Automobile Industry | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/49623cd0775addc18ca4ba837e6642c7-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Schools, Parents Disagree over Bans on Student Mobile Phones | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/af8488e1bcf32dfcead42abf2afc7d7a-450x287.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Fashion Brand to Design NASA's New Spacesuits for Astronauts | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/361032d11552b16282e0ffa605ebb18f-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Samsung is Developing Bright MicroLED on Displays for AR Headsets | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/fc28d739e8a36584f2a69ba687bda887-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Non-Tesla EVs to Get Free First Supercharging Session in 18 Countries | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/384770f270b69d29739d1f28ad811eca-450x300.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Trending Now (ID: 10, Class: block-grid block-sc mb-none)
+==========================================
+  - [] Best PS5 Deals This Week: Save On Games, Gear, And More | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a0e44599c3a27097077488d56f90c045-450x300.jpeg | Class: l-post grid-post grid-base-post
+  - [] France to Deploy 90,000 Police Officers to Patrol New Year's Eve Festivities | Date: Jan  22, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/0d297b8ad976e63e64c7cd084c7c7c59-450x269.jpeg | Class: l-post grid-post grid-base-post
+  - [] Hard Rock Steps into Next Era of Lionel Messi Partnership | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/022497246c47d77ffdab651bbfbc8279-450x300.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 11, Class: block-posts-list block-sc mb-none)
+==========================================
+  - [Lifestyle] Women Living In More Walkable Neighborhoods Have Lower Rates of Some Cancers | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/e62def8d8c44e9261b86fe478e57a964.jpeg | Class: l-post list-post list-post-v-center grid-on-sm m-pos-right
+
+==========================================
+BLOCK: No Head (ID: 12, Class: block-grid block-sc cols-gap-sm s-dark mb-none)
+==========================================
+  - [] Boats & Water Sports Items: Most Exported Sporting Goods in 2023 | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a27d1f3a38864526826396d8c1c95977-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] International Companies Eye Singapore as Regional Hub for Tourism | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/fa7d341111b3ae06e0a2859911b74924-450x338.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Greek Islands Fight for Identity Amid Tourism Boom | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/f960496770b716c7d7092b84e2986382-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] How Underwater and Deep-Sea Tourism Became so Popular | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/shutterstock_133697111-450x300.jpg | Class: l-post grid-post grid-sm-post
+  - [] Switzerland Wants to Allow Sunday Work in Urban Tourist Hotspots | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/354e52d5e31c98724ae6b18bacc73fa4-450x300.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Culture (ID: 13, Class: block-focus-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [Culture] Weekly Round Up: Fashion and Culture News That Stole The Spotlight | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ee34b3dc19115ad6f68c552513007886-1024x595.jpeg | Class: l-post grid-post grid-base-post
+  - [] Greece's Famous Cultural Center Close Due to Safety Risk | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ae114a8daf5f4d2b31feebd100e7e828-768x526.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Fun Games: Kill The Boredom And Enjoy Your Family Time | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/1cac8aaa729fbd1dde5e180b681065c1-768x512.jpg | Class: l-post grid-post grid-sm-post
+  - [] The 10 Key Spring 2024 Fashion Trends To Know Now | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/189ceb16574b98b1d5e6bbb34ea79a3b-768x501.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Famous Singers to Host Auditions for Spring Season Jan. 22-23 | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/36b532a3fc152e4c47039700a731186c-768x510.jpg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Don't Miss (ID: 16, Class: block-posts-list block-sc mb-none)
+==========================================
+  - [Lifestyle] Annual Winter Wonderland Returns to Downtown Main Street | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b49fb6c176b4d7ec4cd12b2bad465588-300x185.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Jabra's Elite 4 Earbuds Forgo a Few Niceties for a $20 Price Cut | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8d4256133a3d12605fc72c271295230d-300x200.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [World] The Fight for Abortion Rights: What to Know Going into 2024 | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b50116d056bcc3567112c8355ab8c560-300x200.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [World] Trade Ministers Ready Deal to Lower China Dependence | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/3247a99fa449de9bac6c71f872f55f52-300x200.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+
+==========================================
+BLOCK: Top Rated (ID: 17, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] Check Out the Celebrities From the International Film Festival Awards 2023 | Date: Jan  10, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8f5881950a6d47fe8bdf7b8ef08945c9-450x300.jpeg | Class: l-post grid-post grid-base-post
+  - [] HDR Photography Blew My Mind. It's Complicated | Date: Jan  9, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/shutterstock_299813909-450x300.jpg | Class: l-post grid-post grid-base-post
+  - [] New Design Concept: Falls Hotel & Spa, North England | Date: Jan  8, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/bd096bad122e8f2f982bf880cae03448-450x303.jpeg | Class: l-post grid-post grid-base-post
+  - [] Microwave Your Citrus Fruits For More Productive Juicing | Date: Jan  7, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a0964f7498bc18260f34110bd2866d72-450x300.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: Celebrities (ID: 18, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] 10 Things You Didn't See on TV During the 2021 Latin Grammys | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/f1aa1aa376d50a27b70daec07aaa8ef9-450x376.jpeg | Class: l-post grid-post grid-base-post l-post-center
+  - [] Hollywood Actress Hits 4.5 Million Followers on Instagram | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/Depositphotos_274169818_XL-1-450x300.jpg | Class: l-post grid-post grid-base-post l-post-center
+  - [] Marvel Movies in Order: How to Watch Chronologically | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/Depositphotos_344357462_XL-3-450x377.jpg | Class: l-post grid-post grid-base-post l-post-center
+
+==========================================
+BLOCK: Most Viewed (ID: 19, Class: block-posts-small block-sc mb-md)
+==========================================
+  - [] Which Bridges are Closing for the New Year's Eve Celebrations? | Date: Jan  13, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/1bff89516c96c7b5a3019e964dddfbfe-300x212.jpeg | Class: l-post small-post m-pos-right
+  - [] How Do I Get Better at Money Without Overhauling My Life? | Date: Jan  13, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/32e6c4cc58b14aa398767a73b3f80e7c-300x200.jpeg | Class: l-post small-post m-pos-right
+  - [] AMD's Excellent Ryzen 5 5600X Processor is Currently at Half-Price | Date: Jan  12, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/cf3d2a0d3ad8541f04ff2a03a461c6a3-300x169.jpeg | Class: l-post small-post m-pos-right
+  - [] Daring Looks Celebrities Wore to Paris Fashion Week this Year | Date: Jan  12, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/572e54158c21cfb3d8011b027009e7f0-300x169.jpeg | Class: l-post small-post m-pos-right
+
+==========================================
+BLOCK: No Head (ID: 20, Class: block-feat-grid block-sc mb-none)
+==========================================
+  - [Technology] Rumor Roundup: War Games teams, Randy Orton return, CM Punk Speculation | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/05b2cdbef196ec27b08613f8b72e81a3-768x441.jpeg | Class: l-post grid-overlay grid-overlay-a hover-zoom
+
+==========================================
+BLOCK: No Head (ID: 21, Class: block-posts-small block-sc s-dark mb-none)
+==========================================
+  - [] Top 6 Ideas to Have a Memorable & Entertaining Celebrations at Home with Friends | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2021/01/nominated-woman-champagne-glass-girl-wine-happy-drink-people-person-celebration-pouring-bubbly-bottle_t20_noOmoO-22-300x161.jpg | Class: l-post small-post m-pos-left
+  - [] Travel Demand Fuels a Boom in Asia Pacific — Hotel Rooms | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a38db654b23fc5fa2abcd18be3fb236a-300x200.jpeg | Class: l-post small-post m-pos-left
+  - [] The Best New Year's Eve Movie Scene Has Nothing To Do With Romance | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/9c99b13a05c3baff3439113b203eaf02-300x174.jpg | Class: l-post small-post m-pos-left
+  - [] 45 Easy Baking Recipes – Fun Baking Dessert Ideas | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/888b3af4ee7911744e21da76fc742051-300x200.jpeg | Class: l-post small-post m-pos-left
+  - [] Murray Falls to Dimitrov in His First Match of the Year Despite Strong Start | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/12410f3b8a6cd168d5e485b5464d2bf2-300x200.jpeg | Class: l-post small-post m-pos-left
+
+==========================================
+BLOCK: Technology (ID: 22, Class: block-posts-list block-sc mb-none)
+==========================================
+  - [Technology] Top Tried & Tested Ways, You Can Increase Mobile Battery Life by 30% | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/59467acc317229b35f7605257a027fc2-450x300.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Review of Oculus Studios: These 9 VR Studios Are Now Owned by Meta | Date: Jan  15, 2021 | Rating: 8.9 | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/e3ac378f7cd6066d4d9ce35a2af14443-450x301.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] T-Mobile Commits to Android 13 Updates on These Flagship Mobile Phones | Date: Jan  15, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/37c050137ecef4cdb13f88004de19bb0-450x313.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Review: Keep Mobile Technologies Safe with Adaptive Protection | Date: Jan  15, 2021 | Rating: 7.2 | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ea716788019796a95595b99247743b96-450x450.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Can Earbuds Work Like Over-The-Counter Hearing Aids? | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/bf5614e25959c61aa70b385b4d8baa1e-450x252.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Tech Startup Strategies Now Every Business Can Embrace | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/bb48da7519f3c8999ef6a545d5b30e14-450x300.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Review: Animation Software Business Share, Market Size and Growth | Date: Jan  14, 2021 | Rating: 8.5 | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/5e4158b8b64b811e69339285bd86193c-450x300.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] HP Omen Gaming Laptops and PCs Got Huge Price Cuts This New Year | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/0176627ded2cdab1858fc881c8339a89-450x253.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+
+==========================================
+BLOCK: Top Authors Posts (ID: 23, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] Fun Games: Kill The Boredom And Enjoy Your Family Time | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b49fb6c176b4d7ec4cd12b2bad465588-1-450x278.jpeg | Class: l-post grid-post grid-base-post
+  - [] Xbox Game Pass Is Practically Free in End of 2023 Deal | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ef475228391d98c9021847c54e518dee-450x267.jpeg | Class: l-post grid-post grid-base-post
+  - [] The Role of Flexible Roofing Membranes in Sustainable Building Design | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8655bd68cc6deefc2da0e20c1271881d-450x300.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 24, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] Street Style is Back! The 8 Biggest Trends at the Spring 2022 Shows | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/395bb9b447bd421d0623c8f713a6f1e1-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] 85 Surprising Flower Meanings – Flower Language and Symbolism | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/09f3a250afb2cb4ca54b1ad287e3b4ad-450x276.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Life After COVID: How Can People Be So Lonely Yet So Nervous | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/56627ef1b5d830a718df77c61e725c07-450x237.jpeg | Class: l-post grid-post grid-sm-post
+  - [] How to Get Over a Breakup: 9 Tips to Heal a Broken Heart | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b4d838207b633ec132d0c0adfd028926-450x291.jpg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Trending Trends (ID: 25, Class: block-grid block-sc mb-none)
+==========================================
+  - [] 8 Morning Detox Drinks to Fight Air Pollution | Date: Jan  13, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/a9cf21d689d7ee7cf8bc3027b7b24b3f-450x300.jpeg | Class: l-post grid-post grid-base-post
+  - [] The Five Best Coffee Mugs to Enjoy Your Morning Brew | Date: Jan  13, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/50795e02b4ff79664fab8d26424c187c-450x275.jpeg | Class: l-post grid-post grid-base-post
+  - [] Ways by Which Supplements Impact Your Life: Therapist Explains | Date: Jan  13, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/d462e8b2547bfba22c9d36c77620a00a-450x300.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: Our Picks (ID: 26, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] Fun Games: Kill The Boredom And Enjoy Your Family Time | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/b49fb6c176b4d7ec4cd12b2bad465588-1-300x185.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] Xbox Game Pass Is Practically Free in End of 2023 Deal | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/ef475228391d98c9021847c54e518dee-300x178.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] The Role of Flexible Roofing Membranes in Sustainable Building Design | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/8655bd68cc6deefc2da0e20c1271881d-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+
+==========================================
+BLOCK: Most Popular (ID: 27, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] Top 6 Ideas to Have a Memorable & Entertaining Celebrations at Home with Friends | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2021/01/nominated-woman-champagne-glass-girl-wine-happy-drink-people-person-celebration-pouring-bubbly-bottle_t20_noOmoO-22-300x161.jpg | Class: l-post small-post small-a-post m-pos-left
+  - [] Marvel Movies in Order: How to Watch Chronologically | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/Depositphotos_344357462_XL-3-300x251.jpg | Class: l-post small-post small-a-post m-pos-left
+  - [] Celebrity Hunted 2023: Who is Taking Part in the Channel 4 Show? | Date: Dec  7, 2023 | Rating:  | Img: https://smartmag.theme-sphere.com/be-the-change/wp-content/uploads/sites/46/2023/12/85b6705c951b68cf94ec72bda4d435af-300x197.jpeg | Class: l-post small-post small-a-post m-pos-left
+
+FOUND 2 WIDGETS
+
+WIDGET: No Head (ID: smartmag-block-newsletter-2, Class: smartmag-widget-newsletter)
+
+WIDGET: What's Hot (ID: smartmag-block-posts-small-7, Class: smartmag-widget-posts-small)

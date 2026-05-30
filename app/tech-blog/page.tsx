@@ -81,7 +81,7 @@ export default function TechBlogPage() {
           </div>
 
           {/* People's Favorite Sidebar */}
-          <aside className="lg:col-span-4 self-start sticky top-24">
+          <aside className="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
              <div className="flex items-center gap-3 mb-8">
                 <h3 className="text-[18px] font-black text-black uppercase tracking-tight">People's <span className="text-[#ab07ab]">Favorite</span></h3>
                 <div className="flex-1 h-[1px] bg-gray-100"></div>
@@ -276,7 +276,7 @@ export default function TechBlogPage() {
          </div>
 
          {/* Right Sidebar Newsletter */}
-         <aside className="lg:col-span-4 space-y-16 sticky top-24">
+         <aside className="lg:col-span-4 space-y-16 lg:sticky lg:top-24 lg:self-start">
             <div className="bg-white border-2 border-[#f0f0f0] rounded-2xl p-10 flex flex-col items-center text-center shadow-sm relative overflow-hidden">
                <div className="w-16 h-16 bg-[#3c3fde] rounded-full flex items-center justify-center text-white mb-6 shadow-xl shadow-blue-200">
                   <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" className="w-8 h-8 invert" />

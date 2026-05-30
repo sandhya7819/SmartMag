@@ -524,7 +524,7 @@ export default function FamilyMagPage() {
           </div>
 
           {/* Right Column (4/12) — Sidebar ad & info */}
-          <div className="lg:col-span-4 space-y-8 lg:pl-4">
+          <div className="lg:col-span-4 space-y-8 lg:pl-4 lg:sticky lg:top-[80px] lg:self-start">
             
             {/* Sidebar ad container */}
             <div className="bg-white p-5 rounded-[4px] border border-gray-100 shadow-sm text-center">

@@ -1,0 +1,135 @@
+BRAND COLORS: []
+MAIN COLORS: ['#2ab391', '#f52549']
+FOUND 18 BLOCKS
+
+==========================================
+BLOCK: What's Hot (ID: 1, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] Running In Cold Weather: 8 Rules To Follow For A Safe And Healthy Exercise | Date: Jan  22, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d01cbcffe7151b9690a60ff450665d2e-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] The Unexpected Scenes That Gave Audience 'Lifelong Phobia' | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/9faf676d5ebf399427636b11d69dc46b-300x193.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] Dr. Jenny Pets Adds 5 Dog Diets Tailored To Specific Dietary Needs | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d1b998484548c9450b9b96f2c1e73c86-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+
+==========================================
+BLOCK: No Head (ID: 2, Class: block-grid mb-none)
+==========================================
+  - [] Dr. Jenny Pets Adds 5 Dog Diets Tailored To Specific Dietary Needs | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d1b998484548c9450b9b96f2c1e73c86-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Try These Tips And Tricks To Give Your Home A Festive Look | Date: Jan  15, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/231a204003e09661c31969bfd71eed25-450x450.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Review: 7 Future Fashion Trends Shaping the Future of Fashion | Date: Jan  15, 2021 | Rating: 72 | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/32e6c4cc58b14aa398767a73b3f80e7c-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Healthcare Group Calls for Return of Face Mask Guidance | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/e349d70df4d6621f01f289a3c22fe9a0-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] How To Make Sure Your Kids Are Prepared For A Beach Holiday | Date: Jan  12, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/ea904d63773b284cf93fe3b95d160779-450x300.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: No Head (ID: 3, Class: block-grid mb-none)
+==========================================
+  - [] The Unexpected Scenes That Gave Audience 'Lifelong Phobia' | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/9faf676d5ebf399427636b11d69dc46b-450x290.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Travel Demand Fuels a Boom in Asia Pacific — Hotel Rooms | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_159785724_XL-1-450x284.jpg | Class: l-post grid-post grid-sm-post
+  - [] Paris Fashion Week Opens With Drama And Dashes Of Humor | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_99891412_XL-1-450x234.jpg | Class: l-post grid-post grid-sm-post
+  - [] 15 Details You May Have Missed In The Netflix Series | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_436434486_XL-1-450x300.jpg | Class: l-post grid-post grid-sm-post
+  - [] Movie 'Love in the Villa' Cast, Synopsis, and Wallpapers | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_158116498_XL-1-450x288.jpg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: No Head (ID: 4, Class: block-grid block-sc mb-none)
+==========================================
+  - [Lifestyle] Hottest Sunglasses Trends Inspired by Hollywood Celebrities for Summer 2023 | Date: Jan  7, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/10b71532d978233fc01c636e75ce605b-768x469.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 5, Class: block-grid block-sc mb-none)
+==========================================
+  - [Health] Why Drinking Tea First Thing In The Morning Is Not Advisable For A Healthy Lifestyle | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/0826715ea5ec4adea2c62179f5405bbe-450x338.jpg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 6, Class: block-posts-list block-sc)
+==========================================
+  - [Lifestyle] Tips And Tricks For Summer To Give Your Home A Festive Colorful Look | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/38480a8083472dc1048eea05db81dc5b-300x228.jpg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Health] What Is Hand Sanitizer, And Does It Keep Your Hands Germ-Free? | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/fd602e240c94a0e689474e2f8ac2ba6c-300x207.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+
+==========================================
+BLOCK: Trending Now (ID: 7, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] These Stylish Beats EP Headphones Are A Way to Upgrade Your Style | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/ad1aadc876e79d8b37fcff7c582a157e-450x202.jpg | Class: l-post grid-post grid-sm-post
+  - [] Happy Weekend: Try This Healthy Fruit Cake Recipe For Your Children | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/6545b95d51ef1b84cdd657489cd5ca96-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] For Smartwatch Brands, 2024 To Be A Year Of Make Or Break | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/c3485841757d78e181a67c651430ce71-450x300.jpg | Class: l-post grid-post grid-sm-post
+  - [] What Is 'Coffee Badging'? New Office Trend Takes Over Workplaces | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/0d41477d070149a9cdf195d3fd333b7e-450x309.jpg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Health & Fitness (ID: 8, Class: block-grid block-sc mb-none)
+==========================================
+  - [Health] Only 45% School Kids In State Given Health Check Under New Central Health Scheme | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/07bb999275243b4d351043b5feaa9ffc-768x513.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 9, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] How Do You Stay Out of the Avoid the Medicare Donut Hole? | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/aa39bfb2cca6b32bf6b16f89872a65fe-450x292.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Reviving The Culture Of Watching TV With Family Members | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/f2eaa25f3e172e0d069b18f12dc7bec9-450x313.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Mood Changes: Causes of Mood Swings & Ways to Manage Them | Date: Jan  11, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d708af20d0b059afb782f31a7efa1887-450x300.jpg | Class: l-post grid-post grid-sm-post
+  - [] Jabra Invisible Earbuds For Exercise Go On A $20 Price Cut | Date: Jan  10, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/c152217bbc3252338993d8240151ef83-450x322.jpg | Class: l-post grid-post grid-sm-post
+  - [] Can Food Balance Hormones? 5 Hormone Diet Tips, Per Dietitians | Date: Jan  9, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d4ac0e9cd34c10b2388fba2c1776efd3-450x300.jpg | Class: l-post grid-post grid-sm-post
+  - [] Ways by Which Your Partner Impacts Your Life: Therapist Explains | Date: Jan  8, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/c1c050a03574b333d949b378927f5cf1-450x247.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Our Picks (ID: 10, Class: block-grid block-sc mb-none)
+==========================================
+  - [Lifestyle] These Two Face Makeup Trends Are Illuminating US Searches | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/76d0c895e33d8229f200f666dd4042eb-450x300.jpg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 11, Class: block-posts-small block-sc)
+==========================================
+  - [Technology] Apple Books Names 2023 Bestsellers, Launches 'Year in Review' Feature | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/c046a2f9c5031729e013296a74fa85bc-300x200.jpeg | Class: l-post small-post m-pos-right
+  - [Technology] The Rise of the Machines: A Look into the Fascinating World of Robotics | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/04b14f3f5c9fbe2fac1ba38f7c8c6987-300x200.jpeg | Class: l-post small-post m-pos-right
+  - [Technology] OnePlus Will Focus on a Premium Build Over Camera Performance | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/569a9b21b79b7a25fa3333af1e144612-300x200.jpeg | Class: l-post small-post m-pos-right
+  - [Lifestyle] Ricardo Ferreira Switches Soccer Allegiance to Canadian International Team | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/5ed1f8d6c2a2f339052fc6438bf252bd-300x200.jpeg | Class: l-post small-post m-pos-right
+  - [Lifestyle] Scuba-Diving Youtuber Helped Find The Body In A 10-Year-Old Cold Case | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/ceb46dd691a1fb29f8f656bb16b1bf50-300x200.jpeg | Class: l-post small-post m-pos-right
+
+==========================================
+BLOCK: No Head (ID: 12, Class: block-posts-list block-sc s-dark mb-none)
+==========================================
+  - [TV & Drama] Netflix's Red Notice Has Too Many Movie Stars & Not Enough Actors | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/3235ad75cf976747e8fb2baedca1219f-768x470.jpeg | Class: l-post list-post list-post-v-center grid-on-sm m-pos-right
+
+==========================================
+BLOCK: No Head (ID: 13, Class: block-grid block-sc cols-gap-sm mb-none)
+==========================================
+  - [] Hollywood Actress Hits 4.5 Million Followers On Instagram | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/516d93a7ca3a5a4ce8315b3bca82e7ef-450x360.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Creative Sisters Celebrate Culture in Nostalgic Animated Videos | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/4b6934a7b4c7a95e26a9b451c36d3f74-450x289.jpeg | Class: l-post grid-post grid-sm-post
+  - [] The 10 best TV Shows to Watch This Week on Netflix | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/085f346a4a96791f137bf4bd73499d40-450x300.jpeg | Class: l-post grid-post grid-sm-post
+  - [] Marvel Movies in Order: How to Watch Chronologically | Date: Mar  15, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/c45af34034b208f045fa583318e2ce3e-450x331.jpeg | Class: l-post grid-post grid-sm-post
+
+==========================================
+BLOCK: Latest Articles (ID: 14, Class: block-grid block-sc mb-none)
+==========================================
+  - [Health] Running In Cold Weather: 8 Rules To Follow For A Safe And Healthy Exercise | Date: Jan  22, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d01cbcffe7151b9690a60ff450665d2e-768x512.jpeg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: No Head (ID: 15, Class: block-posts-list block-sc mb-none)
+==========================================
+  - [TV & Drama] The Unexpected Scenes That Gave Audience 'Lifelong Phobia' | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/9faf676d5ebf399427636b11d69dc46b-450x290.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Lifestyle] Dr. Jenny Pets Adds 5 Dog Diets Tailored To Specific Dietary Needs | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d1b998484548c9450b9b96f2c1e73c86-450x300.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Technology] Review: Our Memories of COVID-19 are Biased — and Why it Matters | Date:  | Rating: 8.9 | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/3822b2af3d5e583534dc82de42e9486d-450x311.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Lifestyle] Try These Tips And Tricks To Give Your Home A Festive Look | Date:  | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/231a204003e09661c31969bfd71eed25-450x450.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+  - [Lifestyle] Review: 7 Future Fashion Trends Shaping the Future of Fashion | Date:  | Rating: 72 | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/32e6c4cc58b14aa398767a73b3f80e7c-450x300.jpeg | Class: l-post list-post list-post-v-center list-post-on-sm m-pos-left
+
+==========================================
+BLOCK: Most Viewed (ID: 16, Class: block-grid block-sc)
+==========================================
+  - [] How To Make Sure Your Kids Are Prepared For A Beach Holiday | Date: Jan  12, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/ea904d63773b284cf93fe3b95d160779-450x300.jpeg | Class: l-post grid-post grid-base-post
+  - [] 10 Lessons To Learn From The Book 'Sapiens: A Brief History Of Humankind' | Date: Mar  16, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/6d59ecac0e7ed2e115a3824b8bcafdde-450x300.jpeg | Class: l-post grid-post grid-base-post
+  - [] 50 Best Dog Instagram Captions – Short & Funny Captions for Dogs | Date: Mar  16, 2020 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/Depositphotos_185152932_XL-450x300.jpg | Class: l-post grid-post grid-base-post
+
+==========================================
+BLOCK: Our Picks (ID: 17, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] Running In Cold Weather: 8 Rules To Follow For A Safe And Healthy Exercise | Date: Jan  22, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d01cbcffe7151b9690a60ff450665d2e-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] The Unexpected Scenes That Gave Audience 'Lifelong Phobia' | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/9faf676d5ebf399427636b11d69dc46b-300x193.jpeg | Class: l-post small-post small-a-post m-pos-left
+  - [] Dr. Jenny Pets Adds 5 Dog Diets Tailored To Specific Dietary Needs | Date: Jan  16, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2023/12/d1b998484548c9450b9b96f2c1e73c86-300x200.jpeg | Class: l-post small-post small-a-post m-pos-left
+
+==========================================
+BLOCK: Most Popular (ID: 18, Class: block-posts-small block-sc mb-none)
+==========================================
+  - [] 10 Things You Didn't See on TV During the 2021 Latin Grammys | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_414215728_XL-2-300x253.jpg | Class: l-post small-post small-a-post m-pos-left
+  - [] 'No Time to Die' Wins at 2021 Hollywood Music in Media Awards | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_163097708_XL-1-300x200.jpg | Class: l-post small-post small-a-post m-pos-left
+  - [] Actress Receive Achievement Award at Palm Springs Film Festival | Date: Jan  14, 2021 | Rating:  | Img: https://smartmag.theme-sphere.com/lazy-busy/wp-content/uploads/sites/47/2021/01/Depositphotos_333764180_xl-2015-1-300x182.jpg | Class: l-post small-post small-a-post m-pos-left
+
+FOUND 2 WIDGETS
+
+WIDGET: No Head (ID: smartmag-block-newsletter-2, Class: smartmag-widget-newsletter)
+
+WIDGET: What's Hot (ID: smartmag-block-posts-small-7, Class: smartmag-widget-posts-small)

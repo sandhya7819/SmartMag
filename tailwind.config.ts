@@ -24,6 +24,8 @@ const config: Config = {
         serif: ["var(--font-roboto-slab)", "serif"],
         "pt-serif": ["var(--font-pt-serif)", "serif"],
         bitter: ["var(--font-bitter)", "serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        "ibm-plex": ["var(--font-ibm-plex)", "sans-serif"],
       },
       keyframes: {
         marquee: {
@@ -34,6 +36,9 @@ const config: Config = {
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(0)' },
         },
+      },
+      scale: {
+        "103": "1.03",
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
